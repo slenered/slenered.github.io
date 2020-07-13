@@ -2,10 +2,44 @@
 
 
 470px;
+49 3
+43 3
 
 
+.topnav ul li.dropDown ul li a{
+                float: left;
+                color: rgba(196, 35, 35, 0);
+                position: fixed;
+                text-align: center;
+                padding: 10px 3.62%;
+                top: 0px;
+                text-decoration: none;
+                font-size: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                left: 0px;
+                background-color: rgba(134, 105, 105, 0);
+                
+            
+            }            
+            
 
-
+            .topnav ul li.dropDown:hover ul li a{
+                float: left;
+                color: #f2f2f2;
+                position: relative;
+                left: 0;
+                line-height: normal;
+                text-align: center;
+                padding: 10px 3.62%;
+                top: 57px;
+                font-size: 100%;
+                white-space: normal;
+                overflow: auto;
+                width: 50px;
+                height: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
 
 
 

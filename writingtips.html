@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <!--Jadon Was Here!-->
+    <head>
+        <meta charset="utf-8">
+        <title>Corwyn - Ardor and Allegiance</title>
+    </head>
+    <body>
+        
+        <style>
+
+
+            body{
+                background-color: white;;
+                overflow-x: hidden;
+                font-size: 16px;
+            }
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Add a black background color to the top navigation */
+            .topnav {
+                position: fixed;
+                top: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                overflow: hidden;
+                z-index: 6;
+            
+            }
+
+            .topnav ul{
+                list-style: none;
+                line-height: 1;
+            }
+
+            /* Style the links inside the navigation bar */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 20px 6%;
+                text-decoration: none;
+                font-size: 17px;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            
+            }
+
+            /* Change the color of links on hover */
+            .topnav ul li:hover a {
+                background-color: rgba(221, 221, 221, 0.90);
+                color: black;
+            
+            }
+
+            /* Add a color to the active/current link */
+
+            .topnav ul li.dropDown ul{
+                position: fixed;
+                float: left;    
+                top: -100px;
+                left: 0px;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+                
+            
+            }            
+            
+
+            .topnav ul li.dropDown:hover ul{
+                position: fixed;
+                float: left;
+                top: 57px;
+            }
+
+            .topnav ul li.dropDown ul li a{
+                float: left;
+                color: rgba(196, 35, 35, 0);
+                text-align: center;
+                padding: 10px 3.62%;
+                text-decoration: none;
+                font-size: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                background-color: rgba(134, 105, 105, 0);
+                
+            
+            }
+
+            .topnav ul li.dropDown:hover ul li a{
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 10px 3.62%;
+                font-size: 100%;
+                white-space: normal;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+
+            .topnav ul li.dropDown ul li a:hover{
+                background-color: rgba(221, 221, 221, 0.90);
+                color: black;
+            }
+
+
+
+            .topnav ul li a.navHome {
+                background-color: rgba(85, 47, 47, 0.75);
+                 color: white;
+            
+            }
+
+            .topnav ul li:hover a.navHome {
+                background-color: rgb(155, 29, 29, 0.75);
+                 color: white;
+            
+            }
+
+
+
+            .topnav ul li.dropDown#home ul li{
+                position: relative;
+                left: 0%;
+            }
+
+            .topnav ul li.dropDown#home ul li a{
+                width: 402%;
+            }
+
+            .topnav ul li.dropDown#book ul li{
+                position: relative;
+                left: 1336%;
+            }
+
+            .topnav ul li.dropDown#book ul li{
+                width: 8250%;
+            }
+
+
+
+
+            #top_banner{
+                position: fixed;
+                width: 100%;
+                height: 300px;
+                z-index: 5;
+                transition: all 0.5s;
+            }
+
+
+            #twitter{
+                position: fixed;
+                width: 50px;
+                top: 5px;
+                right:0px;
+                z-index: 6;
+                transition: all 0.5s;
+            }
+            #twitter:hover{
+                top:0px
+            }
+            #instagram{
+                position: fixed;
+                width: 50px;
+                top: 5px;
+                right:50px;
+                z-index: 6;
+                transition: all 0.5s;
+            }
+            #instagram:hover{
+            top:0px
+            }
+            #facebook{
+                position: fixed;
+                width: 50px;
+                top: 5px;
+                right:100px;
+                z-index: 6;
+                transition: all 0.5s;
+            }
+            #facebook:hover{
+            top:0px
+            }
+
+            #left_top_text{
+                position: fixed;
+                top: 74px;
+                left: 20%;
+                font-size: 625%;
+                color: yellow;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                z-index: 5;
+                transition: all 0.5s;
+            }
+
+
+
+
+            #right_top_top_text{
+                position: fixed;
+                top: 74px;
+                right: 23%;
+                font-size: 100px;
+                color: yellow;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                z-index: 5;
+                transition: all 0.5s;
+            }
+
+            #right_bottom_top_text{
+                position: fixed;
+                top: 170px;
+                right: 11%;
+                font-size: 100px;
+                color: yellow;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                z-index: 5;
+                transition: all 0.5s;
+            }
+
+
+
+            footer{
+                position: absolute;
+                background-color: rgb(65, 53, 53);
+                display: block;
+                width: 100%;
+                height: 100px;
+                bottom: -1000px;
+                overflow: hidden;
+                padding: 20px;
+                color: rgb(219, 196, 196);
+            }
+        </style>
+    
+    <div class="topnav">
+        
+        <ul>
+            <li class="dropDown" id="home">
+                <a href="/authors/author2.html" class="navHome">Home</a>
+                    <ul>
+                        <li><a href="/index.html" >Top Menu</a></li>
+                    </ul>
+            </li>
+
+            <li>
+                <a href="/Bio.html">Bio</a>
+            </li>
+            <li class="dropDown" id="book">
+                <a href="/book.html">Books</a>
+                <ul>
+                    <li><a href="/book/series.html" >Series</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/audio.html">Audio</a>
+            </li>
+            <li>
+                <a href="/events.html">Events</a>
+            </li>
+            <li>
+                <a href="/writingtips.html">Writing Advice</a>
+            </li>
+            
+        </ul>
+      </div> 
+
+        <p>
+            <img src="/top_banner.png" id="top_banner">
+
+            <!--media-->
+
+            <a href="https://twitter.com/explore" target="_blank"><img src="/twitter.png" id="twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="/instagram.png" id="instagram"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="/facebook.png" id="facebook"></a>
+
+
+                                                                                                                                                                                            <div>
+                <p id="left_top_text">Coming...</p>
+                <p id="right_top_top_text">Ardor &</p>
+                <p id="right_bottom_top_text">Allegiance</p>
+            </div>
+            </div>
+        </p>
+
+
+        <script>
+        </script>
+
+            <footer>
+
+                © JAG
+            </footer>
+    </body>
+</html>
