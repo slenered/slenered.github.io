@@ -13,7 +13,6 @@
             body{
                 background-color: white;
                 overflow-x: hidden;
-                /*font-size: 16px;*/
                 font-family: 'Times New Roman', Times, serif;
             }
 
@@ -50,6 +49,22 @@
                 transition-duration: 0.3s;
             
             }
+            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+
+
+
+
 
             /* Change the color of links on hover */
             .topnav ul li:hover a {
@@ -65,14 +80,43 @@
                 float: left;    
                 top: -100px;
                 left: 0px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
                 transition-duration: 0.3s;
-                
+            }
+
+            .topnav ul li.dropDown li.BookCover ul{
+                position: fixed;
+                float: left;    
+                top: -157px;
+                left: 0px;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+
+            .topnav ul li.dropDown li.BookCover ul li img{
+                /*width: 273px;
+                height: 36px;*/
+                opacity: 0;
+
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+
+            .topnav a.active {
+                background-color: rgba(110, 110, 110, 0.5);
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
             
-            }            
+            }
             
 
             .topnav ul li.dropDown:hover ul{
+                position: fixed;
+                float: left;
+                top: 57px;
+            }
+
+            .topnav ul li.dropDown:hover ul li.BookCover ul{
                 position: fixed;
                 float: left;
                 top: 57px;
@@ -111,6 +155,44 @@
 
 
 
+
+            .topnav ul li.dropDown ul li.BookCover:hover ul{
+                position: fixed;
+                float: left;
+                top: 57px;
+                left: 0px;
+            }
+
+            .topnav ul li.dropDown ul li.BookCover ul li img{
+                float: left;
+                color: rgba(196, 35, 35, 0);
+                text-align: center;
+                text-decoration: none;
+                font-size: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                background-color: rgba(134, 105, 105, 0);
+                z-index: -10;
+            
+            }
+
+            .topnav ul li.dropDown ul li.BookCover:hover ul li img{
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                width: 100px;
+                font-size: 100%;
+                white-space: normal;
+                overflow: auto;
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.5);
+                
+
+            }
+
+
+
+
             .topnav ul li a.navHome {
                 background-color: rgba(85, 47, 47, 0.75);
                  color: white;
@@ -136,16 +218,22 @@
 
             .topnav ul li.dropDown#book ul li{
                 position: relative;
-                left: 1336%;
+                left: 1052%;
             }
 
-            .topnav ul li.dropDown#book ul li{
-                width: 8250%;
+            .topnav ul li.dropDown#book ul li a{
+                width: 539%;
             }
 
+            .topnav ul li.dropDown#book ul li.BookCover ul li{
+                position: relative;
+                left: 795%;
+                width: 100px;
+            }
 
-
-
+            .topnav ul li.dropDown#book ul li.BookCover ul li img{
+                width: 100px;
+            }
 
 
 
@@ -230,6 +318,7 @@
 
             #meira1{
                 width: 100px;
+                height: 100px;
                 position: relative;
                 top: 32px;
                 right: 5%;
@@ -239,20 +328,32 @@
                 top: 538px;
                 left: 584.64px;
                 font-size: 30px;
-                        }
+            }
             #meira_hidden_text{
                 position: absolute;
                 left: 576px;
                 top: 570px;
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
                 font-size: 4px;
                 overflow: hidden;
                 border-radius: 2%;
-                color: rgba(240, 248, 255, 0);
-                padding: 4px;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;
                 z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #meira_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
                 transition-duration: 0.3s;
             }
             #meira_hidden_text:hover{
@@ -260,20 +361,26 @@
                 position: absolute;
                 left: 390px;
                 top: 400px;
-                width: 25%;
-                height: 400px;
+                width: 458px;
+                height: 372px;
                 text-indent: 0%;
-                font-size: 125%;
+                font-size: 175%;
                 overflow: hidden;
-                color: aliceblue;
-                background-color: rgba(0, 0, 0, 0.705);
+                color: rgb(0, 0, 0);
                 z-index: 8;
+            }
+            #meira_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
             }
 
             #robert1{
                 width: 100px;
+                height: 100px;
                 position: relative;
-                top: 32px;
+                 top: 32px;
                 right: 5%;
             }
             #robert_text{
@@ -286,36 +393,54 @@
                 position: absolute;
                 left: 461px;
                 top: 700px;
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
                 font-size: 4px;
                 overflow: hidden;
                 border-radius: 2%;
                 color: rgba(0, 0, 0, 0);
-                padding: 4px;
+                padding: 10px;;
                 z-index: 1;
                 transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            }
+            #robert_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
                 transition-duration: 0.3s;
             }
             #robert_hidden_text:hover{
                 position: absolute;
                 left: 284px;
                 top: 550px;
-                width: 25%;
-                height: 400px;
+                width: 458px;
+                height: 372px;
                 text-indent: 0%;
-                font-size: 125%;
+                font-size: 175%;
                 white-space: normal;
                 overflow: hidden;
-                color: aliceblue;
-                background-color: rgba(0, 0, 0, 0.705);
+                color: rgb(0, 0, 0);
                 z-index: 5;
+            }
+            #robert_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
             }
 
             #amelia1{
                 width: 100px;
+                height: 100px;
                 position: relative;
-                top: 32px;
+                 top: 32px;
                 right: 5%;
             }
             #amelia_text{
@@ -328,36 +453,238 @@
                 position: absolute;
                 left: 575px;
                 top: 830px;
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
                 font-size: 4px;
                 overflow: hidden;
                 border-radius: 2%;
                 color: rgba(0, 0, 0, 0);
-                padding: 4px;
+                padding: 10px;;
                 z-index: 1;
                 transition-property: width, height, top, left, font-size, color, background-color, z-index;
                 transition-duration: 0.3s;
-                }
+            }
+            #amelia_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
             #amelia_hidden_text:hover{
                 position: absolute;
                 left: 390px;
                 top: 570px;
-                width: 25%;
-                height: 400px;
+                width: 458px;
+                height: 372px;
                 text-indent: 0%;
-                font-size: 125%;
+                font-size: 175%;
                 white-space: normal;
                 overflow: hidden;
-                color: aliceblue;
-                background-color: rgba(0, 0, 0, 0.705);
+                color: rgb(0, 0, 0);
                 z-index: 5;
             }
+            #amelia_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+            #mary1{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                 top: 32px;
+                right: 5%;
+            }
+            #mary_text{
+                position: absolute;
+                top: 928px;
+                left: 470px;
+                font-size: 30px;
+            }
+            #mary_hidden_text{
+                position: absolute;
+                left: 461px;
+                top: 959px;
+                width: 80px;
+                height: 80px;
+                font-size: 4px;
+                overflow: hidden;
+                border-radius: 2%;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;;
+                z-index: 1;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            }
+                #mary_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #mary_hidden_text:hover{
+                position: absolute;
+                left: 284px;
+                top: 700px;
+                width: 458px;
+                height: 372px;
+                text-indent: 0%;
+                font-size: 175%;
+                white-space: normal;
+                overflow: hidden;
+                color: rgb(0, 0, 0);
+                z-index: 5;
+            }
+            #mary_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+
+            #matthias1{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                 top: 32px;
+                right: 5%;
+            }
+            #matthias_text{
+                position: absolute;
+                top: 1089px;
+                left: 584.64px;
+                font-size: 30px;
+            }
+            #matthias_hidden_text{
+                position: absolute;
+                left: 575px;
+                top: 1120px;
+                width: 80px;
+                height: 80px;
+                font-size: 4px;
+                overflow: hidden;
+                border-radius: 2%;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;;
+                z-index: 1;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            }
+                #matthias_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #matthias_hidden_text:hover{
+                position: absolute;
+                left: 390px;
+                top: 900px;
+                width: 458px;
+                height: 372px;
+                text-indent: 0%;
+                font-size: 175%;
+                white-space: normal;
+                overflow: hidden;
+                color: rgb(0, 0, 0);
+                z-index: 5;
+            }
+            #matthias_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+            #lilliana1{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                 top: 32px;
+                right: 5%;
+            }
+            #lilliana_text{
+                position: absolute;
+                top: 1219px;
+                left: 470px;
+                font-size: 30px;
+            }
+            #lilliana_hidden_text{
+                position: absolute;
+                left: 461px;
+                top: 1250px;
+                width: 80px;
+                height: 80px;
+                font-size: 4px;
+                overflow: hidden;
+                border-radius: 2%;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;;
+                z-index: 1;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            }
+            #lilliana_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #lilliana_hidden_text:hover{
+                position: absolute;
+                left: 284px;
+                top: 1100px;
+                width: 458px;
+                height: 372px;
+                text-indent: 0%;
+                font-size: 175%;
+                white-space: normal;
+                overflow: hidden;
+                color: rgb(0, 0, 0);
+                z-index: 5;
+            }
+            #lilliana_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+
+/*The Great Division*/
 
 
 
             #mardok1{
                 width: 100px;
+                height: 100px;
                 position: relative;
                 top: 32px;
                 left: 108.5%;
@@ -371,40 +698,56 @@
             }
             #mardok_hidden_text{
                 position: absolute;
-                right: 571px;
+                right: 572px;
                 top: 570px;
-                width: 100px;
-                height: 100px;
+                width: 92px;
+                height: 92px;
                 font-size: 4px;
                 overflow: hidden;
                 border-radius: 2%;
                 color: rgba(0, 0, 0, 0);
-                padding: 4px;
+                padding: 10px;;
                 z-index: 5;
                 transition-property: width, height, top, right, font-size, color, background-color, z-index;
                 transition-duration: 0.3s;
-                }
+            }
+            #mardok_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
             #mardok_hidden_text:hover{
-
-
                 position: absolute;
                 right: 390px;
                 top: 400px;
-                width: 25%;
-                height: 400px;
+                width: 458px;
+                height: 372px;
                 text-indent: 0%;
-                font-size: 125%;
+                font-size: 175%;
                 white-space: normal;
                 overflow: hidden;
-                color: aliceblue;
-                background-color: rgba(0, 0, 0, 0.705);
+                color: rgb(0, 0, 0);
                 z-index: 5;
+            }
+            #mardok_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
             }
 
             #julia1{
                 width: 100px;
+                height: 100px;
                 position: relative;
-                top: 32px;
+                 top: 32px;
                 left: 108.5%;
             }
             #julia_text{
@@ -415,38 +758,56 @@
             }
             #julia_hidden_text{
                 position: absolute;
-                right: 461px;
+                right: 459px;
                 top: 700px;
-                width: 100px;
-                height: 100px;
+                width: 92px;
+                height: 92px;
                 font-size: 4px;
                 overflow: hidden;
                 border-radius: 2%;
                 color: rgba(0, 0, 0, 0);
-                padding: 4px;
+                padding: 10px;;
                 z-index: 1;
                 transition-property: width, height, top, right, font-size, color, background-color, z-index;
                 transition-duration: 0.3s;
-                }
+            }
+            #julia_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
             #julia_hidden_text:hover{
                 position: absolute;
                 right: 284px;
                 top: 550px;
-                width: 25%;
-                height: 400px;
+                width: 458px;
+                height: 372px;
                 text-indent: 0%;
-                font-size: 125%;
+                font-size: 175%;
                 white-space: normal;
                 overflow: hidden;
-                color: aliceblue;
-                background-color: rgba(0, 0, 0, 0.705);
+                color: rgb(0, 0, 0);
                 z-index: 5;
+            }
+            #julia_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
             }
 
             #corwyn1{
                 width: 100px;
+                height: 100px;
                 position: relative;
-                top: 32px;
+                 top: 32px;
                 left: 108.5%;
             }
             #corwyn_text{
@@ -457,46 +818,232 @@
             }
             #corwyn_hidden_text{
                 position: absolute;
-                right: 571px;
+                right: 572px;
                 top: 830px;
-                width: 100px;
-                height: 100px;
+                width: 92px;
+                height: 92px;
                 font-size: 4px;
                 overflow: hidden;
                 border-radius: 2%;
                 color: rgba(0, 0, 0, 0);
-                padding: 4px;
+                padding: 10px;;
                 z-index: 1;
                 transition-property: width, height, top, right, font-size, color, background-color, z-index;
                 transition-duration: 0.3s;
-                    }
+                }
+            #corwyn_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
             #corwyn_hidden_text:hover{
                 position: absolute;
                 right: 390px;
                 top: 570px;
+                width: 458px;
+                height: 372px;
+                text-indent: 0%;
+                font-size: 175%;
+                white-space: normal;
+                overflow: hidden;
+                color: rgb(0, 0, 0);
+                z-index: 5;
+            }
+            #corwyn_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+            #amos1{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                 top: 32px;
+                left: 108.5%;
+            }
+            #amos_text{
+                position: absolute;
+                top: 928px;
+                right: 574px;
+                font-size: 30px;
+            }
+            #amos_hidden_text{
+                position: absolute;
+                right: 459px;
+                top: 960px;
+                width: 92px;
+                height: 92px;
+                font-size: 4px;
+                overflow: hidden;
+                border-radius: 2%;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;;
+                z-index: 1;
+                transition-property: width, height, top, right, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            }
+            #amos_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #amos_hidden_text:hover{
+                position: absolute;
+                right: 284px;
+                top: 700px;
+                width: 458px;
+                height: 372px;
+                text-indent: 0%;
+                font-size: 175%;
+                white-space: normal;
+                overflow: hidden;
+                color: rgb(0, 0, 0);
+                z-index: 5;
+            }
+            #amos_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+            #gavin1{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                 top: 32px;
+                left: 108.5%;
+            }
+            #gavin_text{
+                position: absolute;
+                top: 1089px;
+                right: 688px;
+                font-size: 30px;
+            }
+            #gavin_hidden_text{
+                position: absolute;
+                right: 572px;
+                top: 1120px;
+                width: 92px;
+                height: 92px;
+                font-size: 4px;
+                overflow: hidden;
+                border-radius: 2%;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;;
+                z-index: 1;
+                transition-property: width, height, top, right, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+                }
+            #gavin_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #gavin_hidden_text:hover{
+                position: absolute;
+                right: 390px;
+                top: 900px;
+                width: 458px;
+                height: 372px;
+                text-indent: 0%;
+                font-size: 175%;
+                white-space: normal;
+                overflow: hidden;
+                color: rgb(0, 0, 0);
+                z-index: 5;
+            }
+            #gavin_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
+
+            #malachi1{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                 top: 32px;
+                left: 108.5%;
+            }
+            #malachi_text{
+                position: absolute;
+                top: 1219px;
+                right: 574px;
+                font-size: 30px;
+            }
+            #malachi_hidden_text{
+                position: absolute;
+                right: 459px;
+                top: 1250px;
+                width: 92px;
+                height: 92px;
+                font-size: 4px;
+                overflow: hidden;
+                border-radius: 2%;
+                color: rgba(0, 0, 0, 0);
+                padding: 10px;;
+                z-index: 1;
+                transition-property: width, height, top, right, font-size, color, background-color, z-index;
+                transition-duration: 0.3s;
+            }
+            #malachi_hidden_text img{
+                position: absolute;
+                left: -4px;
+                top: -4px;
+                opacity: 0%;
+                width: 92px;
+                height: 92px;
+                z-index: -2;
+                padding: 0;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+            #malachi_hidden_text:hover{
+                position: absolute;
+                right: 284px;
+                top: 1100px;
                 width: 25%;
                 height: 400px;
                 text-indent: 0%;
-                font-size: 125%;
+                font-size: 175%;
                 white-space: normal;
                 overflow: hidden;
-                color: aliceblue;
-                background-color: rgba(0, 0, 0, 0.705);
+                color: rgb(0, 0, 0);
                 z-index: 5;
             }
+            #malachi_hidden_text:hover img{
+                position: absolute;
+                width: 480px;
+                height: 400px;
+                opacity: 100%;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
+            
             footer{
                 position: absolute;
                 background-color: rgb(65, 53, 53);
@@ -524,19 +1071,30 @@
                 <a href="/Bio.html">Bio</a>
             </li>
             <li class="dropDown" id="book">
-                <a href="/book.html">Books</a>
-                <ul>
-                    <li><a href="/book/caprice.html" >Caprice</a></li>
-                </ul>
+                <a href="/books.html">Books</a>
+                    <ul>
+                        <li class="BookCover">
+                            <a href="/books/caprice.html">Caprice</a>
+                            <ul>
+                                <li>
+                                    <img src="/books/testbook.png">
+                                    
+
+
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
             </li>
             <li>
                 <a href="/audio.html">Audio</a>
             </li>
             <li>
-                <a href="/events.html">Events</a>
+                <a href="/logolepsy.html">Logolepsy</a>
             </li>
             <li>
-                <a href="/writingtips.html">Writing Advice</a>
+                <a href="/Q&A.html">Q & A</a>
             </li>
             
         </ul>
@@ -561,37 +1119,332 @@
 
 
         <p id="meira_text"><img src="/characters/Meira1.png" id="meira1">Meira</p>
-        <p id="meira_hidden_text" >This is alot of text: odshgwbgs kvbdsVBa, eugvssbszv bsvjbsb suBxcvius ,bgfAGDVSHhji dgzkiughisu zhgihealknogidsh zfjwaaaah gdbsjkgf ewJK.VHADDD FRJE.kvs deHVLYDVSG EJA;;;GGGN</p>
+        <p id="meira_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
         
         <p id="robert_text"><img src="/characters/Robert1.png" id="robert1">Robert</p>
-        <p id="robert_hidden_text">This is alot of text: Aaaaaaaaaaaaaaaaaaaaaaaaaaa Aaaaaaaaaaaa
-            Aaaaaaaaaa aaaaaaaaaa
-            Aaaaaaaaaaa  uhhhhhhhhhhhhhhhhhhhhuuhhh huuuuuuuuuuuuuh uuuuuuuuuuuhuhuh uuuuuuuuuuuuu</p>
+        <p id="robert_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
         <p id="amelia_text"><img src="/characters/Amelia1.png" id="amelia1">Amelia</p>
-        <p id="amelia_hidden_text">NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM NOM </p>
+        <p id="amelia_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+        <p id="mary_text"><img src="/characters/Mary1.png" id="mary1">Mary</p>
+        <p id="mary_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+        <p id="matthias_text"><img src="/characters/Matthias1.png" id="matthias1">Matthias</p>
+        <p id="matthias_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+        <p id="lilliana_text"><img src="/characters/Lilliana1.png" id="lilliana1">Lilliana</p>
+        <p id="lilliana_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
 
         <p id="mardok_text"><img src="/characters/Mardok1.png" id="mardok1">Mardok</p>
-        <p id="mardok_hidden_text">Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer Swardederwer </p>
+        <p id="mardok_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
         <p id="julia_text"><img src="/characters/Julia1.png" id="julia1">Julia</p>
-        <p id="julia_hidden_text">pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza pizza </p>
+        <p id="julia_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
         <p id="corwyn_text"><img src="/characters/Corwyn1.png" id="corwyn1">Corwyn</p>
-        <p id="corwyn_hidden_text">Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! Bats!?! </p>
+        <p id="corwyn_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+        <p id="amos_text"><img src="/characters/Amos1.png" id="amos1">Amos</p>
+        <p id="amos_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+        <p id="gavin_text"><img src="/characters/Gavin1.png" id="amos1">Gavin</p>
+        <p id="gavin_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+        <p id="malachi_text"><img src="/characters/Malachi1.png" id="amos1">Malachi</p>
+        <p id="malachi_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+
+
+
 
 
         <script>
-            window.onscroll = function() {scrollFunction()};
-            var british=0
 
+            
+
+        WinWidth = window.innerWidth
+                    || document.documentElement.clientWidth
+                    || document.body.clientWidth;
+
+        console.log(WinWidth)
+
+            window.onscroll = function() {scrollFunction()};
+            var british=0;
+
+//  Quotes
+            var trackNum=0;
+            var trackNum2=0;
+
+            var Meira = loadFile("/characters/quotes/Meira.txt");
+            var MeiraQuotes = [];
+
+            while (Meira.length > trackNum) {
+                if (Meira.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Meira.length > trackNum2) {
+                        if (Meira.charAt(trackNum2)==="#") {
+                            MeiraQuotes.push(Meira.substring(trackNum+1, trackNum2));
+                            break;
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("meira_hidden_text").innerHTML = '<img src="/parchment.png">'+MeiraQuotes[getRndInteger(0, MeiraQuotes.length)];
+
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Robert = loadFile("/characters/quotes/Robert.txt");
+            var RobertQuotes = [];
+
+            while (Robert.length > trackNum) {
+                if (Robert.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Robert.length > trackNum2) {
+                        if (Robert.charAt(trackNum2)==="#") {
+                            RobertQuotes.push(Robert.substring(trackNum+1, trackNum2));
+                            break;
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("robert_hidden_text").innerHTML = '<img src="/parchment.png">'+RobertQuotes[getRndInteger(0, RobertQuotes.length)];
+            
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Amelia = loadFile("/characters/quotes/Amelia.txt");
+            var AmeliaQuotes = [];
+
+            while (Amelia.length > trackNum) {
+                if (Amelia.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Amelia.length > trackNum2) {
+                        if (Amelia.charAt(trackNum2)==="#") {
+                            AmeliaQuotes.push(Amelia.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("amelia_hidden_text").innerHTML = '<img src="/parchment.png">'+AmeliaQuotes[getRndInteger(0, AmeliaQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Mardok = loadFile("/characters/quotes/Mardok.txt");
+            var MardokQuotes = [];
+
+            while (Mardok.length > trackNum) {
+                if (Mardok.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Mardok.length > trackNum2) {
+                        if (Mardok.charAt(trackNum2)==="#") {
+                            MardokQuotes.push(Mardok.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("mardok_hidden_text").innerHTML = '<img src="/parchment.png">'+MardokQuotes[getRndInteger(0, MardokQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Julia = loadFile("/characters/quotes/Julia.txt");
+            var JuliaQuotes = [];
+
+            while (Julia.length > trackNum) {
+                if (Julia.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Julia.length > trackNum2) {
+                        if (Julia.charAt(trackNum2)==="#") {
+                            JuliaQuotes.push(Julia.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("julia_hidden_text").innerHTML = '<img src="/parchment.png">'+JuliaQuotes[getRndInteger(0, JuliaQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Corwyn = loadFile("/characters/quotes/Corwyn.txt");
+            var CorwynQuotes = [];
+
+            while (Corwyn.length > trackNum) {
+                if (Corwyn.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Corwyn.length > trackNum2) {
+                        if (Corwyn.charAt(trackNum2)==="#") {
+                            CorwynQuotes.push(Corwyn.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("corwyn_hidden_text").innerHTML = '<img src="/parchment.png">'+CorwynQuotes[getRndInteger(0, CorwynQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Mary = loadFile("/characters/quotes/Mary.txt");
+            var MaryQuotes = [];
+
+            while (Mary.length > trackNum) {
+                if (Mary.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Mary.length > trackNum2) {
+                        if (Mary.charAt(trackNum2)==="#") {
+                            MaryQuotes.push(Mary.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("mary_hidden_text").innerHTML = '<img src="/parchment.png">'+MaryQuotes[getRndInteger(0, MaryQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Matthias = loadFile("/characters/quotes/Matthias.txt");
+            var MatthiasQuotes = [];
+
+            while (Matthias.length > trackNum) {
+                if (Matthias.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Matthias.length > trackNum2) {
+                        if (Matthias.charAt(trackNum2)==="#") {
+                            MatthiasQuotes.push(Matthias.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("matthias_hidden_text").innerHTML = '<img src="/parchment.png">'+MatthiasQuotes[getRndInteger(0, MatthiasQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Lilliana = loadFile("/characters/quotes/Lilliana.txt");
+            var LillianaQuotes = [];
+
+            while (Lilliana.length > trackNum) {
+                if (Lilliana.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Lilliana.length > trackNum2) {
+                        if (Lilliana.charAt(trackNum2)==="#") {
+                            LillianaQuotes.push(Lilliana.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("lilliana_hidden_text").innerHTML = '<img src="/parchment.png">'+LillianaQuotes[getRndInteger(0, LillianaQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Amos = loadFile("/characters/quotes/Amos.txt");
+            var AmosQuotes = [];
+
+            while (Amos.length > trackNum) {
+                if (Amos.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Amos.length > trackNum2) {
+                        if (Amos.charAt(trackNum2)==="#") {
+                            AmosQuotes.push(Amos.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("amos_hidden_text").innerHTML = '<img src="/parchment.png">'+AmosQuotes[getRndInteger(0, AmosQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Gavin = loadFile("/characters/quotes/Gavin.txt");
+            var GavinQuotes = [];
+
+            while (Gavin.length > trackNum) {
+                if (Gavin.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Gavin.length > trackNum2) {
+                        if (Gavin.charAt(trackNum2)==="#") {
+                            GavinQuotes.push(Gavin.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("gavin_hidden_text").innerHTML = '<img src="/parchment.png">'+GavinQuotes[getRndInteger(0, GavinQuotes.length)];
+
+            trackNum=0;
+            trackNum2=0;
+
+            var Malachi = loadFile("/characters/quotes/Malachi.txt");
+            var MalachiQuotes = [];
+
+            while (Malachi.length > trackNum) {
+                if (Malachi.charAt(trackNum)==="*") {
+                    trackNum2=trackNum;
+                    while (Malachi.length > trackNum2) {
+                        if (Malachi.charAt(trackNum2)==="#") {
+                            MalachiQuotes.push(Malachi.substring(trackNum+1, trackNum2));
+                            break
+                        }
+                    trackNum2++;
+                    }
+                }
+                trackNum++;
+            }
+            document.getElementById("malachi_hidden_text").innerHTML = '<img src="/parchment.png">'+MalachiQuotes[getRndInteger(0, MalachiQuotes.length)];
+
+
+//  Quotes end
+
+
+
+            function loadFile(filePath) {
+                var result = null;
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", filePath, false);
+                xmlhttp.send();
+                if (xmlhttp.status==200) {
+                    result = xmlhttp.responseText;
+                }
+                return result;
+            }
 
             window.addEventListener('keydown', (event) => {
-
-                
-
-                
                 switch (british) {
                     case 0:
                         if (event.key==="b") {
@@ -634,24 +1487,6 @@
 
                     break;
                 }
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-
-                console.log(event.key);
             });
 
             /*switch (e.keyCode) { 
@@ -669,6 +1504,11 @@
                     break; 
             }*/
 
+            function getRndInteger(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+
             function scrollFunction() {
               if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
                     
@@ -684,6 +1524,7 @@
                 document.getElementById("right_top_top_text").style.top = "254px";
                 document.getElementById("right_bottom_top_text").style.top = "350px";
               }
+              //console.debug(document.documentElement.scrollTop)
             }
             </script>
 

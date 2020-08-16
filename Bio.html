@@ -13,7 +13,7 @@
             body{
                 background-color: white;;
                 overflow-x: hidden;
-                font-size: 16px;
+
             }
 
             *{
@@ -49,6 +49,22 @@
                 transition-duration: 0.3s;
             
             }
+            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+
+
+
+
 
             /* Change the color of links on hover */
             .topnav ul li:hover a {
@@ -64,14 +80,43 @@
                 float: left;    
                 top: -100px;
                 left: 0px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
                 transition-duration: 0.3s;
-                
+            }
+
+            .topnav ul li.dropDown li.BookCover ul{
+                position: fixed;
+                float: left;    
+                top: -57px;
+                left: -1648px;
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+
+            .topnav ul li.dropDown li.BookCover ul li img{
+                width: 273px;
+                height: 36px;
+                opacity: 0;
+
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
+            }
+
+            .topnav a.active {
+                background-color: rgba(110, 110, 110, 0.5);
+                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+                transition-duration: 0.3s;
             
-            }            
+            }
             
 
             .topnav ul li.dropDown:hover ul{
+                position: fixed;
+                float: left;
+                top: 57px;
+            }
+
+            .topnav ul li.dropDown:hover ul li.BookCover ul{
                 position: fixed;
                 float: left;
                 top: 57px;
@@ -110,6 +155,45 @@
 
 
 
+
+            .topnav ul li.dropDown ul li.BookCover:hover ul{
+                position: fixed;
+                float: left;
+                top: 57px;
+                left: 0px;
+            }
+
+            .topnav ul li.dropDown ul li.BookCover ul li img{
+                float: left;
+                color: rgba(196, 35, 35, 0);
+                text-align: center;
+                text-decoration: none;
+                font-size: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                background-color: rgba(134, 105, 105, 0);
+                z-index: -10;
+            
+            }
+
+            .topnav ul li.dropDown ul li.BookCover:hover ul li img{
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                width: 100px;
+                font-size: 100%;
+                white-space: normal;
+                overflow: auto;
+                opacity: 1;
+                background-color: rgba(0, 0, 0, 0.5);
+                width: 100px;
+                height: auto;
+
+            }
+
+
+
+
             .topnav ul li a.navHome {
                 background-color: rgba(85, 47, 47, 0.75);
                  color: white;
@@ -135,11 +219,16 @@
 
             .topnav ul li.dropDown#book ul li{
                 position: relative;
-                left: 1336%;
+                left: 1052%;
             }
 
-            .topnav ul li.dropDown#book ul li{
-                width: 8250%;
+            .topnav ul li.dropDown#book ul li a{
+                width: 539%;
+            }
+
+            .topnav ul li.dropDown#book ul li.BookCover ul li{
+                position: relative;
+                left: 795%;
             }
 
 
@@ -224,38 +313,56 @@
                 transition: all 0.5s;
             }
 
-            #meira1{
-                width: 100px;
-                position: relative;
-                top: 32px;
-                right: 5%;
+            #corwyn1{
+                position: fixed;
+                top: 319px;
+                left: 50px;
+                width: 420px;
+                opacity: 100%;
+                z-index: 100;
+                transition-property: opacity;
+                transition-duration: 0.3s;
             }
-            #meira_text{
+
+            #corwyn2{
+                position: fixed;
+                top: 319px;
+                left: 50px;
+                width: 420px;
+                opacity: 0%;
+                z-index: 100;
+                transition-property: opacity;
+                transition-duration: 0.3s;
+            }
+
+            #corwyn_text{
                 position: absolute;
-                top: 340px;
-                left: 10%;
+                top: 0px;
+                left: 200%;
                 font-size: 30px;
                         }
 
-            #meira{
+            #corwyn{
                 position: absolute;
-                top: 500px;
-                left: 13%;
-                width: 300px;
+                top: 300px;
+                left: 25%;
+                width: 1300px;
                 height: 200px;
                 overflow: hidden;
                 margin: 1%;
                 color: white;
                 background-color: rgba(0, 0, 0, 0.5);
                 transition: all 0.3s;
+                font-size: 25px;
             }
 
-            #meira_button{
+            #corwyn_button{
                 position: absolute;
-                top: 720px;
-                left: 27.6%;
-                width: 40px;
-                height: 20px;
+                top: 489px;
+                left: 91.1%;
+                width: 60px;
+                height: 30px;
+                font-size: 25px;
                 overflow: hidden;
                 color: white;
                 background-color: black;
@@ -263,6 +370,11 @@
                 transition: all 0.3s;
             }
 
+            #tester{
+                opacity: 0;
+                width: 225;
+                height: 300;
+            }
 
 
 
@@ -271,8 +383,7 @@
 
 
 
-
-            footer{
+            #footer{
                 position: absolute;
                 background-color: rgb(65, 53, 53);
                 display: block;
@@ -299,23 +410,34 @@
                 <a href="/Bio.html">Bio</a>
             </li>
             <li class="dropDown" id="book">
-                <a href="/book.html">Books</a>
-                <ul>
-                    <li><a href="/book/caprice.html" >Caprice</a></li>
-                </ul>
+                <a href="/books.html">Books</a>
+                    <ul>
+                        <li class="BookCover">
+                            <a href="/books/caprice.html">Caprice</a>
+                            <ul>
+                                <li>
+                                    <img src="/books/testbook.png">
+                                    
+
+
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
             </li>
             <li>
                 <a href="/audio.html">Audio</a>
             </li>
             <li>
-                <a href="/events.html">Events</a>
+                <a href="/logolepsy.html">Logolepsy</a>
             </li>
             <li>
-                <a href="/writingtips.html">Writing Advice</a>
+                <a href="/Q&A.html">Q & A</a>
             </li>
             
         </ul>
-      </div> 
+      </div>
 
         <p>
             <img src="/top_banner.png" id="top_banner">
@@ -335,51 +457,253 @@
             </div>
         </p>
 
-        <p id="meira_text"><img src="/characters/Meira1.png" id="meira1">Meira</p>
+        <p id="corwyn_text">Corwyn</p>
+        <img src="/characters/Corwyn1Big.png" id="tester">
+        <img src="/characters/Corwyn1Big.png" id="corwyn1">
+        <img src="/characters/Corwyn2Big.png" id="corwyn2">
+        <p id="corwyn">
+            
 
-        <p id="meira">
-            Loooooooonnnnnnnnggge Stufffffffffffff aNUVHraoiwahvoeoffffff o ijqfoejOPFJ;lq hfi nqHFUIJK.nfuJ 8POF OQPUJF ;Qkfhluew;knouF il;onf ef ejvf biewkvewhvnl ke gy eniuf gek fvywuvbkjew 
-            yuek jbew aIOHGo;eh ouihwua g owlkgoi;gnwr nrenbjkerbk jrwbjreknfkdv nuifhbe sigwuib jigewnig  ej jehw ehjf ewhj gwjhg hefbwh writingtipswg jrwbjreknfkdvwe
-            k krw vjkr j fkjw j wj vkwej vhwe jbvwek vhj wek wkjwe fkje fiej kv vnwi ief wv k weh vkw kvuw ker v j rh fekv wk vk h wvk vjh vjr nv whjv kwnvnwkjnvr hrbv v wrv wnvwj vjwenv
-             bkwr vjh rhew h wh vhw vjn wrv r r rv kjwrv ew vewkjvewk vek e wivbds vnk viwk kjdfkjkfbjfdndblxk nd n dhfbvh fd nfd jhdfiufnbdbnx kfdiunfdkn ijfn jkkdbufdnvdfn
-             lkvjfnijvfndvwr vw jiweblk,hwrilvhsfihdfiluxnbjkvb lkdf
         </p>
 
-        <Button id="meira_button" onclick="meiraButton()">More
+        <Button id="corwyn_button" onclick="corwynButton()">More
         </Button>
 
 
 
 
         <script>
-            var meiraNum=0;
+            var ms=0;
+            var corwynimg=0;
+            var corwynNum=0;
 
+            var d = new Date();
 
-            function meiraButton(){
-                if (meiraNum===0){
+            var CorwynBio = loadFile("/characters/bio/CorwynBio.txt");
 
-                    document.getElementById("meira").style.height = "300px";
-                    document.getElementById("meira").style.width = "400px";
-                    document.getElementById("meira_button").innerHTML = "less";
-                    document.getElementById("meira_button").style.top = "820px";
-                    document.getElementById("meira_button").style.left = "33.1%";
-                    document.getElementById("meira_button").style.width = "35px";
-                    meiraNum=1;
-                }else{
+            document.getElementById("corwyn").innerHTML = CorwynBio;
+            var CorwynLongBio = loadFile("/characters/bio/CorwynLongBio.txt");
 
-                    document.getElementById("meira").style.height = "200px";
-                    document.getElementById("meira").style.width = "300px";
-                    document.getElementById("meira_button").innerHTML = "more";
-                    document.getElementById("meira_button").style.top = "720px";
-                    document.getElementById("meira_button").style.left = "27.6%";
-                    document.getElementById("meira_button").style.width = "40px";
-                    meiraNum=0;
+            var CorwynLongestBio = loadFile("/characters/bio/CorwynLongestBio.txt");
+
+            var CorwynPos = {
+                x: 50,
+                y: 319,
+                xx: 50+420,
+                yy: 319+560
+            }
+            console.debug(CorwynPos)
+            function corwynButton(){
+                if (corwynNum===0){
+                    window.open("#top","_self");
+                    document.getElementById("corwyn").style.left = "8%";
+                    document.getElementById("corwyn").style.height = "700px";
+                    document.getElementById("corwyn").style.width = "1500px";
+                    document.getElementById("corwyn").innerHTML = CorwynLongBio;
+                    document.getElementById("corwyn_button").innerHTML = "Much More";
+                    document.getElementById("corwyn_button").style.top = "989px";
+                    document.getElementById("corwyn_button").style.left = "80.9%";
+                    document.getElementById("corwyn_button").style.width = "130px";
+                    corwynNum=1;
+                }else if(corwynNum===1){
+                    window.open("#top","_self");
+                    document.getElementById("corwyn").style.left = "8%";
+                    document.getElementById("corwyn").style.height = "2100px";
+                    document.getElementById("corwyn").style.width = "1600px";
+                    document.getElementById("corwyn").innerHTML = CorwynLongestBio;
+                    document.getElementById("corwyn_button").innerHTML = "Less";
+                    document.getElementById("corwyn_button").style.top = "2389px";
+                    document.getElementById("corwyn_button").style.left = "89.9%";
+                    document.getElementById("corwyn_button").style.width = "60px";
+                    document.getElementById("footer").style.bottom = "-2000px";
+                    corwynNum=2;
+                }else if(corwynNum===2){
+                    window.open("#top","_self");
+                    document.getElementById("corwyn").style.left = "25%";
+                    document.getElementById("corwyn").style.height = "200px";
+                    document.getElementById("corwyn").style.width = "1300px";
+                    document.getElementById("corwyn").innerHTML = CorwynBio;
+                    document.getElementById("corwyn_button").innerHTML = "More";
+                    document.getElementById("corwyn_button").style.top = "489px";
+                    document.getElementById("corwyn_button").style.left = "91.1%";
+                    document.getElementById("corwyn_button").style.width = "60px";
+                    corwynNum=0;
                 }
 
             }
+            function loadFile(filePath) {
+                var result = null;
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", filePath, false);
+                xmlhttp.send();
+                if (xmlhttp.status==200) {
+                    result = xmlhttp.responseText;
+                }
+                return result;
+            }
+
+            var WinWidth = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+
+            var WinHeight = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+
+            (function() {
+            var mousePos;
+
+            document.onmousemove = handleMouseMove;
+            setInterval(getMousePosition, 100); // setInterval repeats every X ms
+
+            function handleMouseMove(event) {
+                var dot, eventDoc, doc, body, pageX, pageY;
+
+                event = event || window.event; // IE-ism
+
+                // If pageX/Y aren't available and clientX/Y are,
+                // calculate pageX/Y - logic taken from jQuery.
+                // (This is to support old IE)
+                if (event.pageX == null && event.clientX != null) {
+                    eventDoc = (event.target && event.target.ownerDocument) || document;
+                    doc = eventDoc.documentElement;
+                    body = eventDoc.body;
+
+                    event.pageX = event.clientX +
+                    (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+                    (doc && doc.clientLeft || body && body.clientLeft || 0);
+                    event.pageY = event.clientY +
+                    (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+                    (doc && doc.clientTop  || body && body.clientTop  || 0 );
+                }
+
+                mousePos = {
+                    x: event.pageX,
+                    y: event.pageY
+                };
+            }
+            function getMousePosition() {
+                var pos = mousePos;
+                if (!pos) {
+                    // We haven't seen any movement yet
+                }
+                else {
+                    if (CorwynPos.x <= pos.x && CorwynPos.xx >= pos.x && CorwynPos.y <= pos.y-document.documentElement.scrollTop && CorwynPos.yy >= pos.y-document.documentElement.scrollTop)
+                    {
+                        WinWidth = window.innerWidth
+                        || document.documentElement.clientWidth
+                        || document.body.clientWidth;
+
+                        WinHeight = window.innerHeight
+                        || document.documentElement.clientHeight
+                        || document.body.clientHeight;
+
+                        var rndX = getRndInteger(0,99);
+                        var rndXx = getRndInteger(0,100);
+                        rndX = (rndX + (rndXx/100))/100*WinWidth;
+                        var rndY = getRndInteger(0,99);
+                        var rndYy = getRndInteger(0,100);
+                        rndY = (rndY + (rndYy/100))/100*WinHeight;
+                        if(rndX+400 > WinWidth) {console.debug("X:"+rndX); rndX=rndX-(rndX+420-WinWidth)}
+                        if(rndY+400 > WinHeight) {console.debug("Y:"+rndY); rndY=rndY-(rndY+560-WinHeight)}
+
+                        var rndS = getRndInteger(225, 500);
+
+
+                        console.debug("rndX:"+rndX);
+                        console.debug("rndY:"+rndY);
+                        console.debug("rndS:"+rndS);
+                        
+
+                        document.getElementById("tester").style.width = rndS.toString()+"px";
+
+                        CorwynPos = {
+                            x: rndX,
+                            y: rndY,
+                            xx: rndX+document.getElementById("tester").offsetWidth,
+                            yy: rndY+document.getElementById("tester").offsetHeight
+                        }
+                        
+                        document.getElementById("corwyn1").style.left = CorwynPos.x.toString()+"px";
+                        document.getElementById("corwyn1").style.top = CorwynPos.y.toString()+"px";
+                        document.getElementById("corwyn1").style.width = rndS.toString()+"px";
+                        document.getElementById("corwyn2").style.left = CorwynPos.x.toString()+"px";
+                        document.getElementById("corwyn2").style.top = CorwynPos.y.toString()+"px";
+                        document.getElementById("corwyn2").style.width = rndS.toString()+"px";
+                        console.debug(CorwynPos.x.toString());
+                        console.debug(CorwynPos);
+
+                        console.debug("offsetWidth:"+document.getElementById("corwyn1").offsetWidth);
+                        console.debug("offsetHeight:"+document.getElementById("corwyn1").offsetHeight);
+                        }
+
+                    }
+                    //console.debug(pos)
+                    // Use pos.x and pos.y
+                    ms++;
+
+                        //console.debug(ms);
+
+                        if(ms===40){
+
+                            if(d.getMonth() === 3) {
+                                
+                                if(getRndInteger(0, 1000)===0){corwynimg=-301}
+                            }
+                            corwynimg++;
+
+
+                            switch (corwynimg
+                                
+                            ) {
+                                case 1:
+                                    document.getElementById("corwyn2").src = "/characters/Corwyn2Big.png";
+                                    document.getElementById("corwyn1").style.opacity = "0%"
+                                    document.getElementById("corwyn2").style.opacity = "100%"
+                                    document.getElementById("corwyn1").style.transitionDuration = "2s"
+                                    document.getElementById("corwyn2").style.transitionDuration = "1s"
+                                    corwynimg=-1;
+                                    ms=0;
+
+                                    //console.debug(corwynimg);
+                                    break;
+
+                                    case -300:
+                                    document.getElementById("corwyn2").src = "/authors/Ohno.png";
+                                    document.getElementById("corwyn1").style.opacity = "0%"
+                                    document.getElementById("corwyn2").style.opacity = "100%"
+                                    document.getElementById("corwyn1").style.transitionDuration = "2s"
+                                    document.getElementById("corwyn2").style.transitionDuration = "1s"
+                                    corwynimg=-301;
+                                    ms=0;
+
+                                    //console.debug(corwynimg);
+                                    break;
+                            
+                                default:
+                                    document.getElementById("corwyn1").src = "/characters/Corwyn1Big.png";
+                                    document.getElementById("corwyn1").style.opacity = "100%"
+                                    document.getElementById("corwyn2").style.opacity = "0%"
+                                    document.getElementById("corwyn1").style.transitionDuration = "0s"
+                                    document.getElementById("corwyn2").style.transitionDuration = "1s"
+                                    ms=0;
+                                    //console.debug(corwynimg);
+                                    break;
+                            }
+
+                }
+            }
+        })();
+        
+        function getRndInteger(min, max) {
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+
+
         </script>
 
-            <footer>
+            <footer id="footer">
 
                 © JAG
             </footer>
