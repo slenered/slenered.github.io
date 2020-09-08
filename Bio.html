@@ -87,15 +87,15 @@
             .topnav ul li.dropDown li.BookCover ul{
                 position: fixed;
                 float: left;    
-                top: -57px;
-                left: -1648px;
+                top: -157px;
+                left: 0px;
                 transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
                 transition-duration: 0.3s;
             }
 
             .topnav ul li.dropDown li.BookCover ul li img{
-                width: 273px;
-                height: 36px;
+                /*width: 273px;
+                height: 36px;*/
                 opacity: 0;
 
                 transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
@@ -186,8 +186,7 @@
                 overflow: auto;
                 opacity: 1;
                 background-color: rgba(0, 0, 0, 0.5);
-                width: 100px;
-                height: auto;
+                
 
             }
 
@@ -229,6 +228,11 @@
             .topnav ul li.dropDown#book ul li.BookCover ul li{
                 position: relative;
                 left: 795%;
+                width: 100px;
+            }
+
+            .topnav ul li.dropDown#book ul li.BookCover ul li img{
+                width: 100px;
             }
 
 
@@ -407,7 +411,7 @@
             </li>
 
             <li>
-                <a href="/Bio.html">Bio</a>
+                <a class="active" href="/Bio.html">Bio</a>
             </li>
             <li class="dropDown" id="book">
                 <a href="/books.html">Books</a>
