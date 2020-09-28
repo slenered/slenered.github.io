@@ -1,1536 +1,1930 @@
 <!DOCTYPE html>
 <html>
-    <!--Jadon Was Here!-->
-    <head>
-        <meta charset="utf-8">
-        <title>Corwyn - Ardor and Allegiance</title>
-    </head>
-    <body>
-        
-        <style>
+	<!--Jadon Was Here!-->
+	<head>
+		<meta charset="utf-8">
+		<title>Corwyn - Ardor and Allegiance</title>
+	</head>
+	<body>
+		
+		<style>
 
 
-            body{
-                background-color: white;
-                overflow-x: hidden;
-                font-family: 'Times New Roman', Times, serif;
-            }
+			body{
+				background-color: white;
+				overflow-x: hidden;
+				font-family: 'Times New Roman', Times, serif;
+			}
 
-            *{
-                margin: 0;
-                padding: 0;
-            }
+			*{
+				margin: 0;
+				padding: 0;
+			}
 
-            /* Add a black background color to the top navigation */
-            .topnav {
-                position: fixed;
-                top: auto;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
-                overflow: hidden;
-                z-index: 6;
-            
-            }
+			/* Add a black background color to the top navigation */
+			.topnav {
+				position: fixed;
+				top: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+				width: 100%;
+				overflow: hidden;
+				z-index: 6;
+			
+			}
 
-            .topnav ul{
-                list-style: none;
-                line-height: 1;
-            }
+			.topnav ul{
+				list-style: none;
+				line-height: 1;
+			}
 
-            /* Style the links inside the navigation bar */
-            .topnav a {
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 20px 6%;
-                text-decoration: none;
-                font-size: 17px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            
-            }
-            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
-            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
-            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
-            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
-            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
-            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
-            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
-            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
-            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
-            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
-            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
-            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+			/* Style the links inside the navigation bar */
+			.topnav a {
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 20px 100px;
+				text-decoration: none;
+				font-size: 17px;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+
+			
+			}
+			
+			@media (max-width: 1636px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+			@media (max-width: 1440px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+			@media (max-width: 1167px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+			@media (max-width: 925px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+			@media (max-width: 683px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+			@media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+			/*@media (max-width: 1636px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+			@media (max-width: 1440px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+			@media (max-width: 1167px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+			@media (max-width: 925px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+			@media (max-width: 683px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+			@media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}*/
+
+			@media (min-width: 1636px) {#downArrow {display: none;}}
+
+			@media (min-width: 1636px) {li#downArrow ul li a:nth-of-type(5) {display: none;}}
+			@media (min-width: 1440px) {li#downArrow ul li a:nth-of-type(4) {display: none;}}
+			@media (min-width: 1167px) {li#downArrow ul li a:nth-of-type(3) {display: none;}}
+			@media (min-width: 925px) {li#downArrow ul li a:nth-of-type(2) {display: none;}}
+			@media (min-width: 683px) {li#downArrow ul li a:nth-of-type(1) {display: none;}}
+
+/*			@media (min-width: 1636px) {li#downArrow ul li{left: 1224px;}*/
+
+			@media (max-width: 1636px) {li#downArrow ul li {left: 1224px;}}
+			@media (max-width: 1440px) {li#downArrow ul li {left: 952px;}}
+			@media (max-width: 1167px) {li#downArrow ul li {left: 710px;}}
+			@media (max-width: 925px) {li#downArrow ul li {left: 466px;}}
+			@media (max-width: 683px) {li#downArrow ul li {left: 242px;}}
+
+			/* Change the color of links on hover */
+			.topnav ul li:hover a {
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			
+			}
+
+			.topnav ul li:active a {
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			
+			}
+
+			/* Add a color to the active/current link */
+
+			.topnav ul li.dropDown ul{
+				position: fixed;
+				float: left;    
+				top: -300px;
+				left: 0px;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+
+			.topnav ul li.dropDown li.BookCover ul{
+				position: fixed;
+				float: left;    
+				top: -157px;
+				left: 0px;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+
+			.topnav ul li.dropDown li.BookCover ul li img{
+				/*width: 273px;
+				height: 36px;*/
+				opacity: 0;
+
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+
+			.topnav a.active {
+				background-color: rgba(110, 110, 110, 0.5);
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			
+			}
+			
+
+			.topnav ul li.dropDown:hover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown:hover ul li.BookCover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown:active ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown:active ul li.BookCover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown ul li a{
+				float: left;
+				color: rgba(196, 35, 35, 0);
+				text-align: center;
+				padding: 10px 3.62%;
+				text-decoration: none;
+				font-size: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				background-color: rgba(134, 105, 105, 0);
+				
+			
+			}
+
+			.topnav ul li.dropDown:hover ul li a{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 10px 3.62%;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
 
 
-
-
-
-            /* Change the color of links on hover */
-            .topnav ul li:hover a {
-                background-color: rgba(221, 221, 221, 0.90);
-                color: black;
-            
-            }
-
-            /* Add a color to the active/current link */
-
-            .topnav ul li.dropDown ul{
-                position: fixed;
-                float: left;    
-                top: -100px;
-                left: 0px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-
-            .topnav ul li.dropDown li.BookCover ul{
-                position: fixed;
-                float: left;    
-                top: -157px;
-                left: 0px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-
-            .topnav ul li.dropDown li.BookCover ul li img{
-                /*width: 273px;
-                height: 36px;*/
-                opacity: 0;
-
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-
-            .topnav a.active {
-                background-color: rgba(110, 110, 110, 0.5);
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            
-            }
-            
-
-            .topnav ul li.dropDown:hover ul{
-                position: fixed;
-                float: left;
-                top: 57px;
-            }
-
-            .topnav ul li.dropDown:hover ul li.BookCover ul{
-                position: fixed;
-                float: left;
-                top: 57px;
-            }
-
-            .topnav ul li.dropDown ul li a{
-                float: left;
-                color: rgba(196, 35, 35, 0);
-                text-align: center;
-                padding: 10px 3.62%;
-                text-decoration: none;
-                font-size: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-                background-color: rgba(134, 105, 105, 0);
-                
-            
-            }
-
-            .topnav ul li.dropDown:hover ul li a{
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 10px 3.62%;
-                font-size: 100%;
-                white-space: normal;
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-
-
-            .topnav ul li.dropDown ul li a:hover{
-                background-color: rgba(221, 221, 221, 0.90);
-                color: black;
-            }
-
-
-
-
-            .topnav ul li.dropDown ul li.BookCover:hover ul{
-                position: fixed;
-                float: left;
-                top: 57px;
-                left: 0px;
-            }
-
-            .topnav ul li.dropDown ul li.BookCover ul li img{
-                float: left;
-                color: rgba(196, 35, 35, 0);
-                text-align: center;
-                text-decoration: none;
-                font-size: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-                background-color: rgba(134, 105, 105, 0);
-                z-index: -10;
-            
-            }
-
-            .topnav ul li.dropDown ul li.BookCover:hover ul li img{
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                width: 100px;
-                font-size: 100%;
-                white-space: normal;
-                overflow: auto;
-                opacity: 1;
-                background-color: rgba(0, 0, 0, 0.5);
-                
-
-            }
+			.topnav ul li.dropDown ul li a:hover{
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			}
 
 
 
 
-            .topnav ul li a.navHome {
-                background-color: rgba(85, 47, 47, 0.75);
-                 color: white;
-            
-            }
-
-            .topnav ul li:hover a.navHome {
-                background-color: rgb(155, 29, 29, 0.75);
-                 color: white;
-            
-            }
-
-
-
-            .topnav ul li.dropDown#home ul li{
-                position: relative;
-                left: 0%;
-            }
-
-            .topnav ul li.dropDown#home ul li a{
-                width: 402%;
-            }
-
-            .topnav ul li.dropDown#book ul li{
-                position: relative;
-                left: 1052%;
-            }
-
-            .topnav ul li.dropDown#book ul li a{
-                width: 539%;
-            }
-
-            .topnav ul li.dropDown#book ul li.BookCover ul li{
-                position: relative;
-                left: 795%;
-                width: 100px;
-            }
-
-            .topnav ul li.dropDown#book ul li.BookCover ul li img{
-                width: 100px;
-            }
-
-
-
-            #top_banner{
-                position: fixed;
-                width: 100%;
-                height: 500px;
-                z-index: 5;
-                transition: all 0.5s;
-            }
-
-
-            #twitter{
-                position: fixed;
-                width: 50px;
-                top: 5px;
-                right:0px;
-                z-index: 6;
-                transition: all 0.5s;
-            }
-            #twitter:hover{
-                top:0px
-            }
-            #instagram{
-                position: fixed;
-                width: 50px;
-                top: 5px;
-                right:50px;
-                z-index: 6;
-                transition: all 0.5s;
-            }
-            #instagram:hover{
-            top:0px
-            }
-            #facebook{
-                position: fixed;
-                width: 50px;
-                top: 5px;
-                right:100px;
-                z-index: 6;
-                transition: all 0.5s;
-            }
-            #facebook:hover{
-            top:0px
-            }
-
-            #left_top_text{
-                position: fixed;
-                top: 254px;
-                left: 20%;
-                font-size: 100px;
-                color: yellow;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                z-index: 5;
-                transition: all 0.5s;
-            }
+			.topnav ul li.dropDown ul li.BookCover:hover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+				left: 0px;
+			}
 
 
 
 
-            #right_top_top_text{
-                position: fixed;
-                top: 254px;
-                right: 23%;
-                font-size: 100px;
-                color: yellow;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                z-index: 5;
-                transition: all 0.5s;
-            }
 
-            #right_bottom_top_text{
-                position: fixed;
-                top: 350px;
-                right: 11%;
-                font-size: 100px;
-                color: yellow;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                z-index: 5;
-                transition: all 0.5s;
-            }
-
-            #meira1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                top: 32px;
-                right: 5%;
-            }
-            #meira_text{
-                position: absolute;
-                top: 538px;
-                left: 584.64px;
-                font-size: 30px;
-            }
-            #meira_hidden_text{
-                position: absolute;
-                left: 576px;
-                top: 570px;
-                width: 80px;
-                height: 80px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;
-                z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #meira_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #meira_hidden_text:hover{
-
-                position: absolute;
-                left: 390px;
-                top: 400px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 8;
-            }
-            #meira_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #robert1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                right: 5%;
-            }
-            #robert_text{
-                position: absolute;
-                top: 668px;
-                left: 470px;
-                font-size: 30px;
-            }
-            #robert_hidden_text{
-                position: absolute;
-                left: 461px;
-                top: 700px;
-                width: 80px;
-                height: 80px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #robert_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #robert_hidden_text:hover{
-                position: absolute;
-                left: 284px;
-                top: 550px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #robert_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #amelia1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                right: 5%;
-            }
-            #amelia_text{
-                position: absolute;
-                top: 798px;
-                left: 584.64px;
-                font-size: 30px;
-            }
-            #amelia_hidden_text{
-                position: absolute;
-                left: 575px;
-                top: 830px;
-                width: 80px;
-                height: 80px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #amelia_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #amelia_hidden_text:hover{
-                position: absolute;
-                left: 390px;
-                top: 570px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #amelia_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #mary1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                right: 5%;
-            }
-            #mary_text{
-                position: absolute;
-                top: 928px;
-                left: 470px;
-                font-size: 30px;
-            }
-            #mary_hidden_text{
-                position: absolute;
-                left: 461px;
-                top: 959px;
-                width: 80px;
-                height: 80px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-                #mary_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #mary_hidden_text:hover{
-                position: absolute;
-                left: 284px;
-                top: 700px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #mary_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
+			.topnav ul li.dropDown:active ul li a{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 10px 3.62%;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
 
 
-            #matthias1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                right: 5%;
-            }
-            #matthias_text{
-                position: absolute;
-                top: 1089px;
-                left: 584.64px;
-                font-size: 30px;
-            }
-            #matthias_hidden_text{
-                position: absolute;
-                left: 575px;
-                top: 1120px;
-                width: 80px;
-                height: 80px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-                #matthias_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #matthias_hidden_text:hover{
-                position: absolute;
-                left: 390px;
-                top: 900px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #matthias_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
+			.topnav ul li.dropDown ul li a:active{
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			}
 
-            #lilliana1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                right: 5%;
-            }
-            #lilliana_text{
-                position: absolute;
-                top: 1219px;
-                left: 470px;
-                font-size: 30px;
-            }
-            #lilliana_hidden_text{
-                position: absolute;
-                left: 461px;
-                top: 1250px;
-                width: 80px;
-                height: 80px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #lilliana_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #lilliana_hidden_text:hover{
-                position: absolute;
-                left: 284px;
-                top: 1100px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #lilliana_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
+
+
+
+			.topnav ul li.dropDown ul li.BookCover:active ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+				left: 0px;
+			}
+
+
+
+
+
+			.topnav ul li.dropDown ul li.BookCover ul li img{
+				position: relative;
+				float: left;
+				color: rgba(196, 35, 35, 0);
+				text-align: center;
+				text-decoration: none;
+				font-size: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				background-color: rgba(134, 105, 105, 0);
+				z-index: -10;
+			
+			}
+
+			.topnav ul li.dropDown ul li.BookCover:hover ul li img{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				width: 100px;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				opacity: 1;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			.topnav ul li.dropDown ul li.BookCover:active ul li img{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				width: 100px;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				opacity: 1;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+
+
+
+			.topnav ul li a.navHome {
+				background-color: rgba(85, 47, 47, 0.75);
+				 color: white;
+			
+			}
+
+			.topnav ul li:hover a.navHome {
+				background-color: rgb(155, 29, 29, 0.75);
+				 color: white;
+			
+			}
+
+
+
+			.topnav ul li.dropDown#home ul li{
+				position: relative;
+				left: 0%;
+			}
+
+			.topnav ul li.dropDown#home ul li a{
+				width: 226px;
+			}
+
+			.topnav ul li.dropDown#book ul li{
+				position: relative;
+				left: 466px;
+			}
+
+			.topnav ul li.dropDown#book ul li a{
+				width: 227.5px;
+			}
+
+			.topnav ul li.dropDown#book ul li.BookCover ul li{
+				position: relative;
+				left: 710px;
+				width: 100px;
+			}
+
+			.topnav ul li.dropDown#book ul li.BookCover ul li img{
+				width: 100px;
+			}
+
+			#downArrow a{
+				padding: 19px 5px;
+			}
+
+			li#downArrow ul li{
+				position: fixed;
+				width: 80px;
+			}
+
+			li#downArrow ul li a{
+				width: 80px;
+			}
+
+
+
+			#top_banner{
+				position: fixed;
+				width: 100%;
+				height: 500px;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+
+			#twitter{
+				position: fixed;
+				width: 50px;
+				top: 5px;
+				right:0px;
+				z-index: 6;
+				transition: all 0.5s;
+			}
+			#twitter:hover{
+				top:0px
+			}
+			#instagram{
+				position: fixed;
+				width: 50px;
+				top: 5px;
+				right:50px;
+				z-index: 6;
+				transition: all 0.5s;
+			}
+			#instagram:hover{
+			top:0px
+			}
+			#facebook{
+				position: fixed;
+				width: 50px;
+				top: 5px;
+				right:100px;
+				z-index: 6;
+				transition: all 0.5s;
+			}
+			#facebook:hover{
+			top:0px
+			}
+
+			#left_top_text{
+				position: fixed;
+				top: 254px;
+				left: 20%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+			#right_top_top_text{
+				position: fixed;
+				top: 254px;
+				right: 23%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+			#right_bottom_top_text{
+				position: fixed;
+				top: 350px;
+				right: 11%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+
+			@media (max-width: 1252px) {#left_top_text {
+				left: 1% !important;
+				top: 104px !important;
+			}}
+			@media (max-width: 1252px) {#right_top_top_text {right: 10% !important;}}
+			@media (max-width: 1252px) {#right_bottom_top_text {right: 1% !important;}}
+
+
+			@media (max-width: 1580px) {#leftChar p{left: 25px !important;}}
+			#leftChar p{
+				
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.5s;
+				
+			}
+
+			@media (max-width: 1580px) {#rightChar p:not(.hidden_text){right: 125px !important;}}
+			#rightChar p{
+				
+				transition-property: width, height, top, right, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.5s;
+				
+			}
+
+			#meira1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				top: 32px;
+				right: 5%;
+			}
+			#meira_text{
+				position: absolute;
+				top: 538px;
+				left: 584.64px;
+				font-size: 30px;
+			}
+			#meira_hidden_text{
+				position: absolute;
+				left: 576px;
+				top: 570px;
+				width: 80px;
+				height: 80px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;
+				z-index: 1;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#meira_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#meira_hidden_text:hover{
+
+				position: absolute;
+				left: 390px;
+				top: 400px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 8;
+			}
+			#meira_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#meira_hidden_text:active{
+
+				position: absolute;
+				left: 390px;
+				top: 400px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 8;
+			}
+			#meira_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#robert1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				 top: 32px;
+				right: 5%;
+			}
+			#robert_text{
+				position: absolute;
+				top: 668px;
+				left: 470px;
+				font-size: 30px;
+			}
+			#robert_hidden_text{
+				position: absolute;
+				left: 461px;
+				top: 700px;
+				width: 80px;
+				height: 80px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#robert_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#robert_hidden_text:hover{
+				position: absolute;
+				left: 284px;
+				top: 550px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#robert_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#robert_hidden_text:active{
+				position: absolute;
+				left: 284px;
+				top: 550px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#robert_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#amelia1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				 top: 32px;
+				right: 5%;
+			}
+			#amelia_text{
+				position: absolute;
+				top: 798px;
+				left: 584.64px;
+				font-size: 30px;
+			}
+			#amelia_hidden_text{
+				position: absolute;
+				left: 575px;
+				top: 830px;
+				width: 80px;
+				height: 80px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#amelia_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#amelia_hidden_text:hover{
+				position: absolute;
+				left: 390px;
+				top: 570px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#amelia_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#amelia_hidden_text:active{
+				position: absolute;
+				left: 390px;
+				top: 570px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#amelia_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#mary1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				 top: 32px;
+				right: 5%;
+			}
+			#mary_text{
+				position: absolute;
+				top: 928px;
+				left: 470px;
+				font-size: 30px;
+			}
+			#mary_hidden_text{
+				position: absolute;
+				left: 461px;
+				top: 959px;
+				width: 80px;
+				height: 80px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+				#mary_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#mary_hidden_text:hover{
+				position: absolute;
+				left: 284px;
+				top: 700px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#mary_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#mary_hidden_text:active{
+				position: absolute;
+				left: 284px;
+				top: 700px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#mary_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+
+			#matthias1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				 top: 32px;
+				right: 5%;
+			}
+			#matthias_text{
+				position: absolute;
+				top: 1089px;
+				left: 584.64px;
+				font-size: 30px;
+			}
+			#matthias_hidden_text{
+				position: absolute;
+				left: 575px;
+				top: 1120px;
+				width: 80px;
+				height: 80px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+				#matthias_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#matthias_hidden_text:hover{
+				position: absolute;
+				left: 390px;
+				top: 900px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#matthias_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#matthias_hidden_text:active{
+				position: absolute;
+				left: 390px;
+				top: 900px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#matthias_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#lilliana1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				 top: 32px;
+				right: 5%;
+			}
+			#lilliana_text{
+				position: absolute;
+				top: 1219px;
+				left: 470px;
+				font-size: 30px;
+			}
+			#lilliana_hidden_text{
+				position: absolute;
+				left: 461px;
+				top: 1250px;
+				width: 80px;
+				height: 80px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#lilliana_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#lilliana_hidden_text:hover{
+				position: absolute;
+				left: 284px;
+				top: 1100px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#lilliana_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#lilliana_hidden_text:active{
+				position: absolute;
+				left: 284px;
+				top: 1100px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#lilliana_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
 
 
 /*The Great Division*/
 
 
-
-            #mardok1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                top: 32px;
-                left: 108.5%;
-            }
-            #mardok_text{
-                position: absolute;
-                top: 538px;
-                right: 688px; 
-                font-size: 30px;
-                z-index: 1;
-            }
-            #mardok_hidden_text{
-                position: absolute;
-                right: 572px;
-                top: 570px;
-                width: 92px;
-                height: 92px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 5;
-                transition-property: width, height, top, right, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #mardok_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #mardok_hidden_text:hover{
-                position: absolute;
-                right: 390px;
-                top: 400px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #mardok_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #julia1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                left: 108.5%;
-            }
-            #julia_text{
-                position: absolute;
-                top: 668px;
-                right: 574px;
-                font-size: 30px;
-            }
-            #julia_hidden_text{
-                position: absolute;
-                right: 459px;
-                top: 700px;
-                width: 92px;
-                height: 92px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, right, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #julia_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #julia_hidden_text:hover{
-                position: absolute;
-                right: 284px;
-                top: 550px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #julia_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #corwyn1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                left: 108.5%;
-            }
-            #corwyn_text{
-                position: absolute;
-                top: 798px;
-                right: 688px;
-                font-size: 30px;
-            }
-            #corwyn_hidden_text{
-                position: absolute;
-                right: 572px;
-                top: 830px;
-                width: 92px;
-                height: 92px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, right, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-                }
-            #corwyn_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #corwyn_hidden_text:hover{
-                position: absolute;
-                right: 390px;
-                top: 570px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #corwyn_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #amos1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                left: 108.5%;
-            }
-            #amos_text{
-                position: absolute;
-                top: 928px;
-                right: 574px;
-                font-size: 30px;
-            }
-            #amos_hidden_text{
-                position: absolute;
-                right: 459px;
-                top: 960px;
-                width: 92px;
-                height: 92px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, right, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #amos_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #amos_hidden_text:hover{
-                position: absolute;
-                right: 284px;
-                top: 700px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #amos_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #gavin1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                left: 108.5%;
-            }
-            #gavin_text{
-                position: absolute;
-                top: 1089px;
-                right: 688px;
-                font-size: 30px;
-            }
-            #gavin_hidden_text{
-                position: absolute;
-                right: 572px;
-                top: 1120px;
-                width: 92px;
-                height: 92px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, right, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-                }
-            #gavin_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #gavin_hidden_text:hover{
-                position: absolute;
-                right: 390px;
-                top: 900px;
-                width: 458px;
-                height: 372px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #gavin_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            #malachi1{
-                width: 100px;
-                height: 100px;
-                position: relative;
-                 top: 32px;
-                left: 108.5%;
-            }
-            #malachi_text{
-                position: absolute;
-                top: 1219px;
-                right: 574px;
-                font-size: 30px;
-            }
-            #malachi_hidden_text{
-                position: absolute;
-                right: 459px;
-                top: 1250px;
-                width: 92px;
-                height: 92px;
-                font-size: 4px;
-                overflow: hidden;
-                border-radius: 2%;
-                color: rgba(0, 0, 0, 0);
-                padding: 10px;;
-                z-index: 1;
-                transition-property: width, height, top, right, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            }
-            #malachi_hidden_text img{
-                position: absolute;
-                left: -4px;
-                top: -4px;
-                opacity: 0%;
-                width: 92px;
-                height: 92px;
-                z-index: -2;
-                padding: 0;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-            #malachi_hidden_text:hover{
-                position: absolute;
-                right: 284px;
-                top: 1100px;
-                width: 25%;
-                height: 400px;
-                text-indent: 0%;
-                font-size: 175%;
-                white-space: normal;
-                overflow: hidden;
-                color: rgb(0, 0, 0);
-                z-index: 5;
-            }
-            #malachi_hidden_text:hover img{
-                position: absolute;
-                width: 480px;
-                height: 400px;
-                opacity: 100%;
-            }
-
-            
-            footer{
-                position: absolute;
-                background-color: rgb(65, 53, 53);
-                display: block;
-                width: 100%;
-                height: 100px;
-                bottom: -1000px;
-                overflow: hidden;
-                padding: 20px;
-                color: rgb(219, 196, 196);
-            }
-        </style>
-    
-    <div class="topnav">
-        
-        <ul>
-            <li class="dropDown" id="home">
-                <a href="/authors/corwyn.html" class="navHome">Home</a>
-                    <ul>
-                        <li><a href="/index.html" >Top Menu</a></li>
-                    </ul>
-            </li>
-
-            <li>
-                <a href="/Bio.html">Bio</a>
-            </li>
-            <li class="dropDown" id="book">
-                <a href="/books.html">Books</a>
-                    <ul>
-                        <li class="BookCover">
-                            <a href="/books/caprice.html">Caprice</a>
-                            <ul>
-                                <li>
-                                    <img src="/books/testbook.png">
-                                    
+@media (max-width: 1580px) {.hidden_text{right: 10px !important;}}
 
 
+			#mardok1{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				top: 32px;
+				left: 204px;
+			}
+			#mardok_text{
+				position: absolute;
+				top: 538px;
+				right: 688px; 
+				font-size: 30px;
+				z-index: 1;
+			}
+			#mardok_hidden_text{
+				position: absolute;
+				right: 572px;
+				top: 570px;
+				width: 92px;
+				height: 92px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 4;
+				transition-property: width, height, top, right, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#mardok_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#mardok_hidden_text:hover{
+				position: absolute;
+				right: 390px;
+				top: 400px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#mardok_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
 
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-            </li>
-            <li>
-                <a href="/audio.html">Audio</a>
-            </li>
-            <li>
-                <a href="/logolepsy.html">Logolepsy</a>
-            </li>
-            <li>
-                <a href="/Q&A.html">Q & A</a>
-            </li>
-            
-        </ul>
-      </div> 
+			#mardok_hidden_text:active{
+				position: absolute;
+				right: 390px;
+				top: 400px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#mardok_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
 
-        <p>
-            <img src="/top_banner.png" id="top_banner">
+			#julia1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				 top: -35px;
+				left: 65px;
+			}
+			#julia_text{
+				position: absolute;
+				top: 741px;
+				right: 574px;
+				font-size: 30px;
+			}
+			#julia_hidden_text{
+				position: absolute;
+				right: 459px;
+				top: 700px;
+				width: 92px;
+				height: 92px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, right, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#julia_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#julia_hidden_text:hover{
+				position: absolute;
+				right: 284px;
+				top: 550px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#julia_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
 
-            <!--media-->
+			#julia_hidden_text:active{
+				position: absolute;
+				right: 284px;
+				top: 550px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#julia_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
 
-            <a href="https://twitter.com/explore" target="_blank"><img src="/twitter.png" id="twitter"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="/instagram.png" id="instagram"></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="/facebook.png" id="facebook"></a>
+			#corwyn1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				 top: -42px;
+				left: 107px;
+			}
+			#corwyn_text{
+				position: absolute;
+				top: 873px;
+				right: 688px;
+				font-size: 30px;
+			}
+			#corwyn_hidden_text{
+				position: absolute;
+				right: 572px;
+				top: 830px;
+				width: 92px;
+				height: 92px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, right, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+				}
+			#corwyn_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#corwyn_hidden_text:hover{
+				position: absolute;
+				right: 390px;
+				top: 570px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#corwyn_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
 
-            <div>
-                <p id="left_top_text">Coming...</p>
-                <p id="right_top_top_text">Ardor &</p>
-                <p id="right_bottom_top_text">Allegiance</p>
-            </div>
-            </div>
-        </p>
+			#corwyn_hidden_text:active{
+				position: absolute;
+				right: 390px;
+				top: 570px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#corwyn_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#amos1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: -42px;
+				left: 81px;
+			}
+			#amos_text{
+				position: absolute;
+				top: 1003px;
+				right: 574px;
+				font-size: 30px;
+			}
+			#amos_hidden_text{
+				position: absolute;
+				right: 459px;
+				top: 960px;
+				width: 92px;
+				height: 92px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, right, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#amos_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#amos_hidden_text:hover{
+				position: absolute;
+				right: 284px;
+				top: 700px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#amos_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#amos_hidden_text:active{
+				position: absolute;
+				right: 284px;
+				top: 700px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#amos_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#gavin1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				 top: -40px;
+				left: 84px;
+			}
+			#gavin_text{
+				position: absolute;
+				top: 1163px;
+				right: 688px;
+				font-size: 30px;
+			}
+			#gavin_hidden_text{
+				position: absolute;
+				right: 572px;
+				top: 1120px;
+				width: 92px;
+				height: 92px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, right, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+				}
+			#gavin_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#gavin_hidden_text:hover{
+				position: absolute;
+				right: 390px;
+				top: 900px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#gavin_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#gavin_hidden_text:active{
+				position: absolute;
+				right: 390px;
+				top: 900px;
+				width: 458px;
+				height: 372px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#gavin_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#malachi1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				top: -40px;
+				left: 107px;
+			}
+			#malachi_text{
+				position: absolute;
+				top: 1292px;
+				right: 574px;
+				font-size: 30px;
+			}
+			#malachi_hidden_text{
+				position: absolute;
+				right: 459px;
+				top: 1250px;
+				width: 92px;
+				height: 92px;
+				font-size: 4px;
+				overflow: hidden;
+				border-radius: 2%;
+				color: rgba(0, 0, 0, 0);
+				padding: 10px;;
+				z-index: 1;
+				transition-property: width, height, top, right, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+			}
+			#malachi_hidden_text img{
+				position: absolute;
+				left: -4px;
+				top: -4px;
+				opacity: 0%;
+				width: 92px;
+				height: 92px;
+				z-index: -2;
+				padding: 0;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+			#malachi_hidden_text:hover{
+				position: absolute;
+				right: 284px;
+				top: 1100px;
+				width: 25%;
+				height: 400px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#malachi_hidden_text:hover img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			#malachi_hidden_text:active{
+				position: absolute;
+				right: 284px;
+				top: 1100px;
+				width: 25%;
+				height: 400px;
+				text-indent: 0%;
+				font-size: 175%;
+				white-space: normal;
+				overflow: hidden;
+				color: rgb(0, 0, 0);
+				z-index: 5;
+			}
+			#malachi_hidden_text:active img{
+				position: absolute;
+				width: 480px;
+				height: 400px;
+				opacity: 100%;
+			}
+
+			
+			footer{
+				position: absolute;
+				background-color: rgb(65, 53, 53);
+				display: block;
+				width: 100%;
+				height: 100px;
+				bottom: -1000px;
+				overflow: hidden;
+				padding: 20px;
+				color: rgb(219, 196, 196);
+			}
+		</style>
+	
+	<div class="topnav">
+		
+		<ul>
+			<li class="dropDown" id="home">
+				<a href="/authors/corwyn.html" class="navHome">Home</a>
+					<ul>
+						<li><a href="/index.html" >Top Menu</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="/Bio.html">Bio</a>
+			</li>
+			<li class="dropDown" id="book">
+				<a href="/books.html">Books</a>
+					<ul>
+						<li class="BookCover">
+							<a href="/books/caprice.html">Caprice</a>
+							<ul>
+								<li>
+									<img src="/books/testbook.png">
+									
 
 
-        <p id="meira_text"><img src="/characters/Meira1.png" id="meira1">Meira</p>
-        <p id="meira_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
-        
-        <p id="robert_text"><img src="/characters/Robert1.png" id="robert1">Robert</p>
-        <p id="robert_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-        <p id="amelia_text"><img src="/characters/Amelia1.png" id="amelia1">Amelia</p>
-        <p id="amelia_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+			</li>
+			<li>
+				<a href="/audio.html">Audio</a>
+			</li>
+			<li>
+				<a href="/logolepsy.html">Logolepsy</a>
+			</li>
+			<li>
+				<a href="/Q&A.html">Q & A</a>
+			</li>
+			<li class="dropDown" id="downArrow">
+				<a><img src="/downArrow.png" width="30px"></a>
+				<ul>
+					<li>
+						<a href="/Bio.html">Bio</a>
+						<a href="/books.html">Books</a>
+						<a href="/audio.html">Audio</a>
+						<a href="/logolepsy.html">Logolepsy</a>
+						<a href="/Q&A.html">Q & A</a>
+					</li>
+				</ul>
+			</li>
 
-        <p id="mary_text"><img src="/characters/Mary1.png" id="mary1">Mary</p>
-        <p id="mary_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+		</ul>
+	</div>
 
-        <p id="matthias_text"><img src="/characters/Matthias1.png" id="matthias1">Matthias</p>
-        <p id="matthias_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+		<p>
+			<img src="/top_banner.png" id="top_banner">
 
-        <p id="lilliana_text"><img src="/characters/Lilliana1.png" id="lilliana1">Lilliana</p>
-        <p id="lilliana_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+			<!--media-->
+
+			<a href="https://twitter.com/explore" target="_blank"><img src="/twitter.png" id="twitter"></a>
+			<a href="https://www.instagram.com/" target="_blank"><img src="/instagram.png" id="instagram"></a>
+			<a href="https://www.facebook.com/" target="_blank"><img src="/facebook.png" id="facebook"></a>
+
+			<div>
+				<p id="left_top_text">Coming...</p>
+				<p id="right_top_top_text">Ardor &</p>
+				<p id="right_bottom_top_text">Allegiance</p>
+			</div>
+			</div>
+		</p>
+
+		<li id="leftChar">
+
+		<p id="meira_text"><img src="/characters/Meira1.png" id="meira1">Meira</p>
+		<p id="meira_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+		
+		<p id="robert_text"><img src="/characters/Robert1.png" id="robert1">Robert</p>
+		<p id="robert_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="amelia_text"><img src="/characters/Amelia1.png" id="amelia1">Amelia</p>
+		<p id="amelia_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="mary_text"><img src="/characters/Mary1.png" id="mary1">Mary</p>
+		<p id="mary_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="matthias_text"><img src="/characters/Matthias1.png" id="matthias1">Matthias</p>
+		<p id="matthias_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="lilliana_text"><img src="/characters/Lilliana1.png" id="lilliana1">Lilliana</p>
+		<p id="lilliana_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		</li>
+		<li id="rightChar">
+
+		<p id="mardok_text"><img src="/characters/Mardok1.png" id="mardok1">Mardok</p>
+		<p id="mardok_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="julia_text"><img src="/characters/Julia1.png" id="julia1">Julia</p>
+		<p id="julia_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="corwyn_text"><img src="/characters/Corwyn1.png" id="corwyn1">Corwyn</p>
+		<p id="corwyn_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="amos_text"><img src="/characters/Amos1.png" id="amos1">Amos</p>
+		<p id="amos_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="gavin_text"><img src="/characters/Gavin1.png" id="gavin1">Gavin</p>
+		<p id="gavin_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+		<p id="malachi_text"><img src="/characters/Malachi1.png" id="malachi1">Malachi</p>
+		<p id="malachi_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
+
+	</li>
 
 
-        <p id="mardok_text"><img src="/characters/Mardok1.png" id="mardok1">Mardok</p>
-        <p id="mardok_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
-
-        <p id="julia_text"><img src="/characters/Julia1.png" id="julia1">Julia</p>
-        <p id="julia_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
-
-        <p id="corwyn_text"><img src="/characters/Corwyn1.png" id="corwyn1">Corwyn</p>
-        <p id="corwyn_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
-
-        <p id="amos_text"><img src="/characters/Amos1.png" id="amos1">Amos</p>
-        <p id="amos_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
-
-        <p id="gavin_text"><img src="/characters/Gavin1.png" id="amos1">Gavin</p>
-        <p id="gavin_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
-
-        <p id="malachi_text"><img src="/characters/Malachi1.png" id="amos1">Malachi</p>
-        <p id="malachi_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
 
+		<script>
 
+			
 
+		WinWidth = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
 
+		console.log(WinWidth)
 
-        <script>
-
-            
-
-        WinWidth = window.innerWidth
-                    || document.documentElement.clientWidth
-                    || document.body.clientWidth;
-
-        console.log(WinWidth)
-
-            window.onscroll = function() {scrollFunction()};
-            var british=0;
+			window.onscroll = function() {scrollFunction()};
+			var british=0;
 
 //  Quotes
-            var trackNum=0;
-            var trackNum2=0;
+			var trackNum=0;
+			var trackNum2=0;
 
-            var Meira = loadFile("/characters/quotes/Meira.txt");
-            var MeiraQuotes = [];
+			var Meira = loadFile("/characters/quotes/Meira.txt");
+			var MeiraQuotes = [];
 
-            while (Meira.length > trackNum) {
-                if (Meira.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Meira.length > trackNum2) {
-                        if (Meira.charAt(trackNum2)==="#") {
-                            MeiraQuotes.push(Meira.substring(trackNum+1, trackNum2));
-                            break;
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("meira_hidden_text").innerHTML = '<img src="/parchment.png">'+MeiraQuotes[getRndInteger(0, MeiraQuotes.length)];
+			while (Meira.length > trackNum) {
+				if (Meira.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Meira.length > trackNum2) {
+						if (Meira.charAt(trackNum2)==="#") {
+							MeiraQuotes.push(Meira.substring(trackNum+1, trackNum2));
+							break;
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("meira_hidden_text").innerHTML = '<img src="/parchment.png">'+MeiraQuotes[getRndInteger(0, MeiraQuotes.length)];
 
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Robert = loadFile("/characters/quotes/Robert.txt");
-            var RobertQuotes = [];
+			var Robert = loadFile("/characters/quotes/Robert.txt");
+			var RobertQuotes = [];
 
-            while (Robert.length > trackNum) {
-                if (Robert.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Robert.length > trackNum2) {
-                        if (Robert.charAt(trackNum2)==="#") {
-                            RobertQuotes.push(Robert.substring(trackNum+1, trackNum2));
-                            break;
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("robert_hidden_text").innerHTML = '<img src="/parchment.png">'+RobertQuotes[getRndInteger(0, RobertQuotes.length)];
-            
+			while (Robert.length > trackNum) {
+				if (Robert.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Robert.length > trackNum2) {
+						if (Robert.charAt(trackNum2)==="#") {
+							RobertQuotes.push(Robert.substring(trackNum+1, trackNum2));
+							break;
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("robert_hidden_text").innerHTML = '<img src="/parchment.png">'+RobertQuotes[getRndInteger(0, RobertQuotes.length)];
+			
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Amelia = loadFile("/characters/quotes/Amelia.txt");
-            var AmeliaQuotes = [];
+			var Amelia = loadFile("/characters/quotes/Amelia.txt");
+			var AmeliaQuotes = [];
 
-            while (Amelia.length > trackNum) {
-                if (Amelia.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Amelia.length > trackNum2) {
-                        if (Amelia.charAt(trackNum2)==="#") {
-                            AmeliaQuotes.push(Amelia.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("amelia_hidden_text").innerHTML = '<img src="/parchment.png">'+AmeliaQuotes[getRndInteger(0, AmeliaQuotes.length)];
+			while (Amelia.length > trackNum) {
+				if (Amelia.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Amelia.length > trackNum2) {
+						if (Amelia.charAt(trackNum2)==="#") {
+							AmeliaQuotes.push(Amelia.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("amelia_hidden_text").innerHTML = '<img src="/parchment.png">'+AmeliaQuotes[getRndInteger(0, AmeliaQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Mardok = loadFile("/characters/quotes/Mardok.txt");
-            var MardokQuotes = [];
+			var Mardok = loadFile("/characters/quotes/Mardok.txt");
+			var MardokQuotes = [];
 
-            while (Mardok.length > trackNum) {
-                if (Mardok.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Mardok.length > trackNum2) {
-                        if (Mardok.charAt(trackNum2)==="#") {
-                            MardokQuotes.push(Mardok.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("mardok_hidden_text").innerHTML = '<img src="/parchment.png">'+MardokQuotes[getRndInteger(0, MardokQuotes.length)];
+			while (Mardok.length > trackNum) {
+				if (Mardok.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Mardok.length > trackNum2) {
+						if (Mardok.charAt(trackNum2)==="#") {
+							MardokQuotes.push(Mardok.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("mardok_hidden_text").innerHTML = '<img src="/parchment.png">'+MardokQuotes[getRndInteger(0, MardokQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Julia = loadFile("/characters/quotes/Julia.txt");
-            var JuliaQuotes = [];
+			var Julia = loadFile("/characters/quotes/Julia.txt");
+			var JuliaQuotes = [];
 
-            while (Julia.length > trackNum) {
-                if (Julia.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Julia.length > trackNum2) {
-                        if (Julia.charAt(trackNum2)==="#") {
-                            JuliaQuotes.push(Julia.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("julia_hidden_text").innerHTML = '<img src="/parchment.png">'+JuliaQuotes[getRndInteger(0, JuliaQuotes.length)];
+			while (Julia.length > trackNum) {
+				if (Julia.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Julia.length > trackNum2) {
+						if (Julia.charAt(trackNum2)==="#") {
+							JuliaQuotes.push(Julia.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("julia_hidden_text").innerHTML = '<img src="/parchment.png">'+JuliaQuotes[getRndInteger(0, JuliaQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Corwyn = loadFile("/characters/quotes/Corwyn.txt");
-            var CorwynQuotes = [];
+			var Corwyn = loadFile("/characters/quotes/Corwyn.txt");
+			var CorwynQuotes = [];
 
-            while (Corwyn.length > trackNum) {
-                if (Corwyn.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Corwyn.length > trackNum2) {
-                        if (Corwyn.charAt(trackNum2)==="#") {
-                            CorwynQuotes.push(Corwyn.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("corwyn_hidden_text").innerHTML = '<img src="/parchment.png">'+CorwynQuotes[getRndInteger(0, CorwynQuotes.length)];
+			while (Corwyn.length > trackNum) {
+				if (Corwyn.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Corwyn.length > trackNum2) {
+						if (Corwyn.charAt(trackNum2)==="#") {
+							CorwynQuotes.push(Corwyn.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("corwyn_hidden_text").innerHTML = '<img src="/parchment.png">'+CorwynQuotes[getRndInteger(0, CorwynQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Mary = loadFile("/characters/quotes/Mary.txt");
-            var MaryQuotes = [];
+			var Mary = loadFile("/characters/quotes/Mary.txt");
+			var MaryQuotes = [];
 
-            while (Mary.length > trackNum) {
-                if (Mary.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Mary.length > trackNum2) {
-                        if (Mary.charAt(trackNum2)==="#") {
-                            MaryQuotes.push(Mary.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("mary_hidden_text").innerHTML = '<img src="/parchment.png">'+MaryQuotes[getRndInteger(0, MaryQuotes.length)];
+			while (Mary.length > trackNum) {
+				if (Mary.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Mary.length > trackNum2) {
+						if (Mary.charAt(trackNum2)==="#") {
+							MaryQuotes.push(Mary.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("mary_hidden_text").innerHTML = '<img src="/parchment.png">'+MaryQuotes[getRndInteger(0, MaryQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Matthias = loadFile("/characters/quotes/Matthias.txt");
-            var MatthiasQuotes = [];
+			var Matthias = loadFile("/characters/quotes/Matthias.txt");
+			var MatthiasQuotes = [];
 
-            while (Matthias.length > trackNum) {
-                if (Matthias.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Matthias.length > trackNum2) {
-                        if (Matthias.charAt(trackNum2)==="#") {
-                            MatthiasQuotes.push(Matthias.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("matthias_hidden_text").innerHTML = '<img src="/parchment.png">'+MatthiasQuotes[getRndInteger(0, MatthiasQuotes.length)];
+			while (Matthias.length > trackNum) {
+				if (Matthias.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Matthias.length > trackNum2) {
+						if (Matthias.charAt(trackNum2)==="#") {
+							MatthiasQuotes.push(Matthias.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("matthias_hidden_text").innerHTML = '<img src="/parchment.png">'+MatthiasQuotes[getRndInteger(0, MatthiasQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Lilliana = loadFile("/characters/quotes/Lilliana.txt");
-            var LillianaQuotes = [];
+			var Lilliana = loadFile("/characters/quotes/Lilliana.txt");
+			var LillianaQuotes = [];
 
-            while (Lilliana.length > trackNum) {
-                if (Lilliana.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Lilliana.length > trackNum2) {
-                        if (Lilliana.charAt(trackNum2)==="#") {
-                            LillianaQuotes.push(Lilliana.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("lilliana_hidden_text").innerHTML = '<img src="/parchment.png">'+LillianaQuotes[getRndInteger(0, LillianaQuotes.length)];
+			while (Lilliana.length > trackNum) {
+				if (Lilliana.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Lilliana.length > trackNum2) {
+						if (Lilliana.charAt(trackNum2)==="#") {
+							LillianaQuotes.push(Lilliana.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("lilliana_hidden_text").innerHTML = '<img src="/parchment.png">'+LillianaQuotes[getRndInteger(0, LillianaQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Amos = loadFile("/characters/quotes/Amos.txt");
-            var AmosQuotes = [];
+			var Amos = loadFile("/characters/quotes/Amos.txt");
+			var AmosQuotes = [];
 
-            while (Amos.length > trackNum) {
-                if (Amos.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Amos.length > trackNum2) {
-                        if (Amos.charAt(trackNum2)==="#") {
-                            AmosQuotes.push(Amos.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("amos_hidden_text").innerHTML = '<img src="/parchment.png">'+AmosQuotes[getRndInteger(0, AmosQuotes.length)];
+			while (Amos.length > trackNum) {
+				if (Amos.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Amos.length > trackNum2) {
+						if (Amos.charAt(trackNum2)==="#") {
+							AmosQuotes.push(Amos.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("amos_hidden_text").innerHTML = '<img src="/parchment.png">'+AmosQuotes[getRndInteger(0, AmosQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Gavin = loadFile("/characters/quotes/Gavin.txt");
-            var GavinQuotes = [];
+			var Gavin = loadFile("/characters/quotes/Gavin.txt");
+			var GavinQuotes = [];
 
-            while (Gavin.length > trackNum) {
-                if (Gavin.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Gavin.length > trackNum2) {
-                        if (Gavin.charAt(trackNum2)==="#") {
-                            GavinQuotes.push(Gavin.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("gavin_hidden_text").innerHTML = '<img src="/parchment.png">'+GavinQuotes[getRndInteger(0, GavinQuotes.length)];
+			while (Gavin.length > trackNum) {
+				if (Gavin.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Gavin.length > trackNum2) {
+						if (Gavin.charAt(trackNum2)==="#") {
+							GavinQuotes.push(Gavin.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("gavin_hidden_text").innerHTML = '<img src="/parchment.png">'+GavinQuotes[getRndInteger(0, GavinQuotes.length)];
 
-            trackNum=0;
-            trackNum2=0;
+			trackNum=0;
+			trackNum2=0;
 
-            var Malachi = loadFile("/characters/quotes/Malachi.txt");
-            var MalachiQuotes = [];
+			var Malachi = loadFile("/characters/quotes/Malachi.txt");
+			var MalachiQuotes = [];
 
-            while (Malachi.length > trackNum) {
-                if (Malachi.charAt(trackNum)==="*") {
-                    trackNum2=trackNum;
-                    while (Malachi.length > trackNum2) {
-                        if (Malachi.charAt(trackNum2)==="#") {
-                            MalachiQuotes.push(Malachi.substring(trackNum+1, trackNum2));
-                            break
-                        }
-                    trackNum2++;
-                    }
-                }
-                trackNum++;
-            }
-            document.getElementById("malachi_hidden_text").innerHTML = '<img src="/parchment.png">'+MalachiQuotes[getRndInteger(0, MalachiQuotes.length)];
+			while (Malachi.length > trackNum) {
+				if (Malachi.charAt(trackNum)==="*") {
+					trackNum2=trackNum;
+					while (Malachi.length > trackNum2) {
+						if (Malachi.charAt(trackNum2)==="#") {
+							MalachiQuotes.push(Malachi.substring(trackNum+1, trackNum2));
+							break
+						}
+					trackNum2++;
+					}
+				}
+				trackNum++;
+			}
+			document.getElementById("malachi_hidden_text").innerHTML = '<img src="/parchment.png">'+MalachiQuotes[getRndInteger(0, MalachiQuotes.length)];
 
 
 //  Quotes end
 
 
 
-            function loadFile(filePath) {
-                var result = null;
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", filePath, false);
-                xmlhttp.send();
-                if (xmlhttp.status==200) {
-                    result = xmlhttp.responseText;
-                }
-                return result;
-            }
+			function loadFile(filePath) {
+				var result = null;
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", filePath, false);
+				xmlhttp.send();
+				if (xmlhttp.status==200) {
+					result = xmlhttp.responseText;
+				}
+				return result;
+			}
 
-            window.addEventListener('keydown', (event) => {
-                switch (british) {
-                    case 0:
-                        if (event.key==="b") {
-                        british++;}else{british=0;}
-                    break;
-                    
-                    case 1:
-                        if (event.key==="r") {
-                        british++;}else{british=0;}
-                    break;
-                        
-                    case 2:
-                        if (event.key==="i") {
-                        british++;}else{british=0;}
-                    break;
+			window.addEventListener('keydown', (event) => {
+				switch (british) {
+					case 0:
+						if (event.key==="b") {
+						british++;}else{british=0;}
+					break;
+					
+					case 1:
+						if (event.key==="r") {
+						british++;}else{british=0;}
+					break;
+						
+					case 2:
+						if (event.key==="i") {
+						british++;}else{british=0;}
+					break;
 
-                    case 3:
-                        if (event.key==="t") {
-                        british++;}else{british=0;}
-                    break;
+					case 3:
+						if (event.key==="t") {
+						british++;}else{british=0;}
+					break;
 
-                    case 4:
-                        if (event.key==="i") {
-                        british++;}else{british=0;}
-                    break;
+					case 4:
+						if (event.key==="i") {
+						british++;}else{british=0;}
+					break;
 
-                    case 5:
-                        if (event.key==="s") {
-                        british++;}else{british=0;}
-                    break;
+					case 5:
+						if (event.key==="s") {
+						british++;}else{british=0;}
+					break;
 
-                    case 6:
-                        if (event.key==="h") {
-                            document.getElementById("top_banner").src = "/NotBritish.png";
-                            british++
-                        }else{british=0;}
-                    break;
+					case 6:
+						if (event.key==="h") {
+							document.getElementById("top_banner").src = "/NotBritish.png";
+							british++
+						}else{british=0;}
+					break;
 
-                    default:
+					default:
 
-                    break;
-                }
-            });
+					break;
+				}
+			});
 
-            /*switch (e.keyCode) { 
-                case 37: 
-                    str = 'Left Key pressed!'; 
-                    break; 
-                case 38: 
-                    str = 'Up Key pressed!'; 
-                    break; 
-                case 39: 
-                    str = 'Right Key pressed!'; 
-                    break; 
-                case 40: 
-                    str = 'Down Key pressed!'; 
-                    break; 
-            }*/
+			/*switch (e.keyCode) { 
+				case 37: 
+					str = 'Left Key pressed!'; 
+					break; 
+				case 38: 
+					str = 'Up Key pressed!'; 
+					break; 
+				case 39: 
+					str = 'Right Key pressed!'; 
+					break; 
+				case 40: 
+					str = 'Down Key pressed!'; 
+					break; 
+			}*/
 
-            function getRndInteger(min, max) {
-                return Math.floor(Math.random() * (max - min)) + min;
-            }
+			function getRndInteger(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
 
 
-            function scrollFunction() {
-              if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
-                    
-                document.getElementById("top_banner").style.height = "300px";
-                document.getElementById("left_top_text").style.top = "74px ";
-                document.getElementById("right_top_top_text").style.top = "74px";
-                document.getElementById("right_bottom_top_text").style.top = "170px";
-              
-              
-              } else {
-                document.getElementById("top_banner").style.height = "500px";
-                document.getElementById("left_top_text").style.top = "254px";
-                document.getElementById("right_top_top_text").style.top = "254px";
-                document.getElementById("right_bottom_top_text").style.top = "350px";
-              }
-              //console.debug(document.documentElement.scrollTop)
-            }
-            </script>
+			function scrollFunction() {
 
-            <footer>
+					WinWidth = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
 
-                © JAG
-            </footer>
-    </body>
+
+				if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70){
+					document.getElementById("top_banner").style.height = "300px";
+					document.getElementById("left_top_text").style.top = "74px ";
+					document.getElementById("right_top_top_text").style.top = "74px";
+					document.getElementById("right_bottom_top_text").style.top = "170px";
+
+
+					if(WinWidth < 1252){
+					document.getElementById("top_banner").style.fontSize = "50px";
+					document.getElementById("left_top_text").style.fontSize = "50px";
+					document.getElementById("right_top_top_text").style.fontSize = "50px";
+					document.getElementById("right_bottom_top_text").style.fontSize = "50px";
+
+					document.getElementById("right_top_top_text").style.top = "124px";
+					}else{
+					document.getElementById("top_banner").style.fontSize = "100px";
+					document.getElementById("left_top_text").style.fontSize = "100px";
+					document.getElementById("right_top_top_text").style.fontSize = "100px";
+					document.getElementById("right_bottom_top_text").style.fontSize = "100px";
+					}
+
+				}else{
+					document.getElementById("top_banner").style.height = "500px";
+					document.getElementById("left_top_text").style.top = "254px";
+					document.getElementById("right_top_top_text").style.top = "254px";
+					document.getElementById("right_bottom_top_text").style.top = "350px";
+
+					document.getElementById("top_banner").style.fontSize = "100px";
+					document.getElementById("left_top_text").style.fontSize = "100px";
+					document.getElementById("right_top_top_text").style.fontSize = "100px";
+					document.getElementById("right_bottom_top_text").style.fontSize = "100px";
+
+
+				}
+				//console.debug(document.documentElement.scrollTop)
+			}
+			</script>
+
+			<footer>
+
+				© JAG
+			</footer>
+	</body>
 </html>

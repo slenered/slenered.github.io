@@ -1,715 +1,817 @@
 <!DOCTYPE html>
 <html>
-    <!--Jadon Was Here!-->
-    <head>
-        <meta charset="utf-8">
-        <title>Corwyn - Ardor and Allegiance</title>
-    </head>
-    <body>
-        
-        <style>
-
-
-            body{
-                background-color: white;;
-                overflow-x: hidden;
-
-            }
-
-            *{
-                margin: 0;
-                padding: 0;
-            }
-
-            /* Add a black background color to the top navigation */
-            .topnav {
-                position: fixed;
-                top: auto;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
-                overflow: hidden;
-                z-index: 6;
-            
-            }
-
-            .topnav ul{
-                list-style: none;
-                line-height: 1;
-            }
-
-            /* Style the links inside the navigation bar */
-            .topnav a {
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 20px 6%;
-                text-decoration: none;
-                font-size: 17px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index;
-                transition-duration: 0.3s;
-            
-            }
-            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
-            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
-            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
-            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
-            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
-            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
-            @media (max-width: 1252px) {.topnav ul li:nth-of-type(6) a {display: none;}}
-            @media (max-width: 830px) {.topnav ul li:nth-of-type(5) a {display: none;}}
-            @media (max-width: 530px) {.topnav ul li:nth-of-type(4) a {display: none;}}
-            @media (max-width: 385px) {.topnav ul li:nth-of-type(3) a {display: none;}}
-            @media (max-width: 272px) {.topnav ul li:nth-of-type(2) a {display: none;}}
-            @media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
-
-
-
-
-
-            /* Change the color of links on hover */
-            .topnav ul li:hover a {
-                background-color: rgba(221, 221, 221, 0.90);
-                color: black;
-            
-            }
-
-            /* Add a color to the active/current link */
-
-            .topnav ul li.dropDown ul{
-                position: fixed;
-                float: left;    
-                top: -100px;
-                left: 0px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-
-            .topnav ul li.dropDown li.BookCover ul{
-                position: fixed;
-                float: left;    
-                top: -157px;
-                left: 0px;
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-
-            .topnav ul li.dropDown li.BookCover ul li img{
-                /*width: 273px;
-                height: 36px;*/
-                opacity: 0;
-
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            }
-
-            .topnav a.active {
-                background-color: rgba(110, 110, 110, 0.5);
-                transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-                transition-duration: 0.3s;
-            
-            }
-            
-
-            .topnav ul li.dropDown:hover ul{
-                position: fixed;
-                float: left;
-                top: 57px;
-            }
-
-            .topnav ul li.dropDown:hover ul li.BookCover ul{
-                position: fixed;
-                float: left;
-                top: 57px;
-            }
-
-            .topnav ul li.dropDown ul li a{
-                float: left;
-                color: rgba(196, 35, 35, 0);
-                text-align: center;
-                padding: 10px 3.62%;
-                text-decoration: none;
-                font-size: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-                background-color: rgba(134, 105, 105, 0);
-                
-            
-            }
-
-            .topnav ul li.dropDown:hover ul li a{
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                padding: 10px 3.62%;
-                font-size: 100%;
-                white-space: normal;
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-
-
-            .topnav ul li.dropDown ul li a:hover{
-                background-color: rgba(221, 221, 221, 0.90);
-                color: black;
-            }
-
-
-
-
-            .topnav ul li.dropDown ul li.BookCover:hover ul{
-                position: fixed;
-                float: left;
-                top: 57px;
-                left: 0px;
-            }
-
-            .topnav ul li.dropDown ul li.BookCover ul li img{
-                float: left;
-                color: rgba(196, 35, 35, 0);
-                text-align: center;
-                text-decoration: none;
-                font-size: 100%;
-                white-space: nowrap;
-                overflow: hidden;
-                background-color: rgba(134, 105, 105, 0);
-                z-index: -10;
-            
-            }
-
-            .topnav ul li.dropDown ul li.BookCover:hover ul li img{
-                float: left;
-                color: #f2f2f2;
-                text-align: center;
-                width: 100px;
-                font-size: 100%;
-                white-space: normal;
-                overflow: auto;
-                opacity: 1;
-                background-color: rgba(0, 0, 0, 0.5);
-                
-
-            }
-
-
-
-
-            .topnav ul li a.navHome {
-                background-color: rgba(85, 47, 47, 0.75);
-                 color: white;
-            
-            }
-
-            .topnav ul li:hover a.navHome {
-                background-color: rgb(155, 29, 29, 0.75);
-                 color: white;
-            
-            }
-
-
-
-            .topnav ul li.dropDown#home ul li{
-                position: relative;
-                left: 0%;
-            }
-
-            .topnav ul li.dropDown#home ul li a{
-                width: 402%;
-            }
-
-            .topnav ul li.dropDown#book ul li{
-                position: relative;
-                left: 1052%;
-            }
-
-            .topnav ul li.dropDown#book ul li a{
-                width: 539%;
-            }
-
-            .topnav ul li.dropDown#book ul li.BookCover ul li{
-                position: relative;
-                left: 795%;
-                width: 100px;
-            }
-
-            .topnav ul li.dropDown#book ul li.BookCover ul li img{
-                width: 100px;
-            }
-
-
-
-
-            #top_banner{
-                position: fixed;
-                width: 100%;
-                height: 300px;
-                z-index: 5;
-                transition: all 0.5s;
-            }
-
-
-            #twitter{
-                position: fixed;
-                width: 50px;
-                top: 5px;
-                right:0px;
-                z-index: 6;
-                transition: all 0.5s;
-            }
-            #twitter:hover{
-                top:0px
-            }
-            #instagram{
-                position: fixed;
-                width: 50px;
-                top: 5px;
-                right:50px;
-                z-index: 6;
-                transition: all 0.5s;
-            }
-            #instagram:hover{
-            top:0px
-            }
-            #facebook{
-                position: fixed;
-                width: 50px;
-                top: 5px;
-                right:100px;
-                z-index: 6;
-                transition: all 0.5s;
-            }
-            #facebook:hover{
-            top:0px
-            }
-
-            #left_top_text{
-                position: fixed;
-                top: 74px;
-                left: 20%;
-                font-size: 100px;
-                color: yellow;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                z-index: 5;
-                transition: all 0.5s;
-            }
-
-
-
-
-            #right_top_top_text{
-                position: fixed;
-                top: 74px;
-                right: 23%;
-                font-size: 100px;
-                color: yellow;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                z-index: 5;
-                transition: all 0.5s;
-            }
-
-            #right_bottom_top_text{
-                position: fixed;
-                top: 170px;
-                right: 11%;
-                font-size: 100px;
-                color: yellow;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                z-index: 5;
-                transition: all 0.5s;
-            }
-
-            #corwyn1{
-                position: fixed;
-                top: 319px;
-                left: 50px;
-                width: 420px;
-                opacity: 100%;
-                z-index: 100;
-                transition-property: opacity;
-                transition-duration: 0.3s;
-            }
-
-            #corwyn2{
-                position: fixed;
-                top: 319px;
-                left: 50px;
-                width: 420px;
-                opacity: 0%;
-                z-index: 100;
-                transition-property: opacity;
-                transition-duration: 0.3s;
-            }
-
-            #corwyn_text{
-                position: absolute;
-                top: 0px;
-                left: 200%;
-                font-size: 30px;
-                        }
-
-            #corwyn{
-                position: absolute;
-                top: 300px;
-                left: 25%;
-                width: 1300px;
-                height: 200px;
-                overflow: hidden;
-                margin: 1%;
-                color: white;
-                background-color: rgba(0, 0, 0, 0.5);
-                transition: all 0.3s;
-                font-size: 25px;
-            }
-
-            #corwyn_button{
-                position: absolute;
-                top: 489px;
-                left: 91.1%;
-                width: 60px;
-                height: 30px;
-                font-size: 25px;
-                overflow: hidden;
-                color: white;
-                background-color: black;
-                border: 0;
-                transition: all 0.3s;
-            }
-
-            #tester{
-                opacity: 0;
-                width: 225;
-                height: 300;
-            }
-
-
-
-
-
-
-
-
-            #footer{
-                position: absolute;
-                background-color: rgb(65, 53, 53);
-                display: block;
-                width: 100%;
-                height: 100px;
-                bottom: -1000px;
-                overflow: hidden;
-                padding: 20px;
-                color: rgb(219, 196, 196);
-            }
-        </style>
-    
-    <div class="topnav">
-        
-        <ul>
-            <li class="dropDown" id="home">
-                <a href="/authors/corwyn.html" class="navHome">Home</a>
-                    <ul>
-                        <li><a href="/index.html" >Top Menu</a></li>
-                    </ul>
-            </li>
-
-            <li>
-                <a class="active" href="/Bio.html">Bio</a>
-            </li>
-            <li class="dropDown" id="book">
-                <a href="/books.html">Books</a>
-                    <ul>
-                        <li class="BookCover">
-                            <a href="/books/caprice.html">Caprice</a>
-                            <ul>
-                                <li>
-                                    <img src="/books/testbook.png">
-                                    
-
-
-
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-            </li>
-            <li>
-                <a href="/audio.html">Audio</a>
-            </li>
-            <li>
-                <a href="/logolepsy.html">Logolepsy</a>
-            </li>
-            <li>
-                <a href="/Q&A.html">Q & A</a>
-            </li>
-            
-        </ul>
-      </div>
-
-        <p>
-            <img src="/top_banner.png" id="top_banner">
-
-            <!--media-->
-
-            <a href="https://twitter.com/explore" target="_blank"><img src="/twitter.png" id="twitter"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="/instagram.png" id="instagram"></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="/facebook.png" id="facebook"></a>
-
-
-                                                                                                                                                                                            <div>
-                <p id="left_top_text">Coming...</p>
-                <p id="right_top_top_text">Ardor &</p>
-                <p id="right_bottom_top_text">Allegiance</p>
-            </div>
-            </div>
-        </p>
-
-        <p id="corwyn_text">Corwyn</p>
-        <img src="/characters/Corwyn1Big.png" id="tester">
-        <img src="/characters/Corwyn1Big.png" id="corwyn1">
-        <img src="/characters/Corwyn2Big.png" id="corwyn2">
-        <p id="corwyn">
-            
-
-        </p>
-
-        <Button id="corwyn_button" onclick="corwynButton()">More
-        </Button>
-
-
-
-
-        <script>
-            var ms=0;
-            var corwynimg=0;
-            var corwynNum=0;
-
-            var d = new Date();
-
-            var CorwynBio = loadFile("/characters/bio/CorwynBio.txt");
-
-            document.getElementById("corwyn").innerHTML = CorwynBio;
-            var CorwynLongBio = loadFile("/characters/bio/CorwynLongBio.txt");
-
-            var CorwynLongestBio = loadFile("/characters/bio/CorwynLongestBio.txt");
-
-            var CorwynPos = {
-                x: 50,
-                y: 319,
-                xx: 50+420,
-                yy: 319+560
-            }
-            console.debug(CorwynPos)
-            function corwynButton(){
-                if (corwynNum===0){
-                    window.open("#top","_self");
-                    document.getElementById("corwyn").style.left = "8%";
-                    document.getElementById("corwyn").style.height = "700px";
-                    document.getElementById("corwyn").style.width = "1500px";
-                    document.getElementById("corwyn").innerHTML = CorwynLongBio;
-                    document.getElementById("corwyn_button").innerHTML = "Much More";
-                    document.getElementById("corwyn_button").style.top = "989px";
-                    document.getElementById("corwyn_button").style.left = "80.9%";
-                    document.getElementById("corwyn_button").style.width = "130px";
-                    corwynNum=1;
-                }else if(corwynNum===1){
-                    window.open("#top","_self");
-                    document.getElementById("corwyn").style.left = "8%";
-                    document.getElementById("corwyn").style.height = "2100px";
-                    document.getElementById("corwyn").style.width = "1600px";
-                    document.getElementById("corwyn").innerHTML = CorwynLongestBio;
-                    document.getElementById("corwyn_button").innerHTML = "Less";
-                    document.getElementById("corwyn_button").style.top = "2389px";
-                    document.getElementById("corwyn_button").style.left = "89.9%";
-                    document.getElementById("corwyn_button").style.width = "60px";
-                    document.getElementById("footer").style.bottom = "-2000px";
-                    corwynNum=2;
-                }else if(corwynNum===2){
-                    window.open("#top","_self");
-                    document.getElementById("corwyn").style.left = "25%";
-                    document.getElementById("corwyn").style.height = "200px";
-                    document.getElementById("corwyn").style.width = "1300px";
-                    document.getElementById("corwyn").innerHTML = CorwynBio;
-                    document.getElementById("corwyn_button").innerHTML = "More";
-                    document.getElementById("corwyn_button").style.top = "489px";
-                    document.getElementById("corwyn_button").style.left = "91.1%";
-                    document.getElementById("corwyn_button").style.width = "60px";
-                    corwynNum=0;
-                }
-
-            }
-            function loadFile(filePath) {
-                var result = null;
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", filePath, false);
-                xmlhttp.send();
-                if (xmlhttp.status==200) {
-                    result = xmlhttp.responseText;
-                }
-                return result;
-            }
-
-            var WinWidth = window.innerWidth
-            || document.documentElement.clientWidth
-            || document.body.clientWidth;
-
-            var WinHeight = window.innerHeight
-            || document.documentElement.clientHeight
-            || document.body.clientHeight;
-
-            (function() {
-            var mousePos;
-
-            document.onmousemove = handleMouseMove;
-            setInterval(getMousePosition, 100); // setInterval repeats every X ms
-
-            function handleMouseMove(event) {
-                var dot, eventDoc, doc, body, pageX, pageY;
-
-                event = event || window.event; // IE-ism
-
-                // If pageX/Y aren't available and clientX/Y are,
-                // calculate pageX/Y - logic taken from jQuery.
-                // (This is to support old IE)
-                if (event.pageX == null && event.clientX != null) {
-                    eventDoc = (event.target && event.target.ownerDocument) || document;
-                    doc = eventDoc.documentElement;
-                    body = eventDoc.body;
-
-                    event.pageX = event.clientX +
-                    (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-                    (doc && doc.clientLeft || body && body.clientLeft || 0);
-                    event.pageY = event.clientY +
-                    (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
-                    (doc && doc.clientTop  || body && body.clientTop  || 0 );
-                }
-
-                mousePos = {
-                    x: event.pageX,
-                    y: event.pageY
-                };
-            }
-            function getMousePosition() {
-                var pos = mousePos;
-                if (!pos) {
-                    // We haven't seen any movement yet
-                }
-                else {
-                    if (CorwynPos.x <= pos.x && CorwynPos.xx >= pos.x && CorwynPos.y <= pos.y-document.documentElement.scrollTop && CorwynPos.yy >= pos.y-document.documentElement.scrollTop)
-                    {
-                        WinWidth = window.innerWidth
-                        || document.documentElement.clientWidth
-                        || document.body.clientWidth;
-
-                        WinHeight = window.innerHeight
-                        || document.documentElement.clientHeight
-                        || document.body.clientHeight;
-
-                        var rndX = getRndInteger(0,99);
-                        var rndXx = getRndInteger(0,100);
-                        rndX = (rndX + (rndXx/100))/100*WinWidth;
-                        var rndY = getRndInteger(0,99);
-                        var rndYy = getRndInteger(0,100);
-                        rndY = (rndY + (rndYy/100))/100*WinHeight;
-                        if(rndX+400 > WinWidth) {console.debug("X:"+rndX); rndX=rndX-(rndX+420-WinWidth)}
-                        if(rndY+400 > WinHeight) {console.debug("Y:"+rndY); rndY=rndY-(rndY+560-WinHeight)}
-
-                        var rndS = getRndInteger(225, 500);
-
-
-                        console.debug("rndX:"+rndX);
-                        console.debug("rndY:"+rndY);
-                        console.debug("rndS:"+rndS);
-                        
-
-                        document.getElementById("tester").style.width = rndS.toString()+"px";
-
-                        CorwynPos = {
-                            x: rndX,
-                            y: rndY,
-                            xx: rndX+document.getElementById("tester").offsetWidth,
-                            yy: rndY+document.getElementById("tester").offsetHeight
-                        }
-                        
-                        document.getElementById("corwyn1").style.left = CorwynPos.x.toString()+"px";
-                        document.getElementById("corwyn1").style.top = CorwynPos.y.toString()+"px";
-                        document.getElementById("corwyn1").style.width = rndS.toString()+"px";
-                        document.getElementById("corwyn2").style.left = CorwynPos.x.toString()+"px";
-                        document.getElementById("corwyn2").style.top = CorwynPos.y.toString()+"px";
-                        document.getElementById("corwyn2").style.width = rndS.toString()+"px";
-                        console.debug(CorwynPos.x.toString());
-                        console.debug(CorwynPos);
-
-                        console.debug("offsetWidth:"+document.getElementById("corwyn1").offsetWidth);
-                        console.debug("offsetHeight:"+document.getElementById("corwyn1").offsetHeight);
-                        }
-
-                    }
-                    //console.debug(pos)
-                    // Use pos.x and pos.y
-                    ms++;
-
-                        //console.debug(ms);
-
-                        if(ms===40){
-
-                            if(d.getMonth() === 3) {
-                                
-                                if(getRndInteger(0, 1000)===0){corwynimg=-301}
-                            }
-                            corwynimg++;
-
-
-                            switch (corwynimg
-                                
-                            ) {
-                                case 1:
-                                    document.getElementById("corwyn2").src = "/characters/Corwyn2Big.png";
-                                    document.getElementById("corwyn1").style.opacity = "0%"
-                                    document.getElementById("corwyn2").style.opacity = "100%"
-                                    document.getElementById("corwyn1").style.transitionDuration = "2s"
-                                    document.getElementById("corwyn2").style.transitionDuration = "1s"
-                                    corwynimg=-1;
-                                    ms=0;
-
-                                    //console.debug(corwynimg);
-                                    break;
-
-                                    case -300:
-                                    document.getElementById("corwyn2").src = "/authors/Ohno.png";
-                                    document.getElementById("corwyn1").style.opacity = "0%"
-                                    document.getElementById("corwyn2").style.opacity = "100%"
-                                    document.getElementById("corwyn1").style.transitionDuration = "2s"
-                                    document.getElementById("corwyn2").style.transitionDuration = "1s"
-                                    corwynimg=-301;
-                                    ms=0;
-
-                                    //console.debug(corwynimg);
-                                    break;
-                            
-                                default:
-                                    document.getElementById("corwyn1").src = "/characters/Corwyn1Big.png";
-                                    document.getElementById("corwyn1").style.opacity = "100%"
-                                    document.getElementById("corwyn2").style.opacity = "0%"
-                                    document.getElementById("corwyn1").style.transitionDuration = "0s"
-                                    document.getElementById("corwyn2").style.transitionDuration = "1s"
-                                    ms=0;
-                                    //console.debug(corwynimg);
-                                    break;
-                            }
-
-                }
-            }
-        })();
-        
-        function getRndInteger(min, max) {
-                return Math.floor(Math.random() * (max - min)) + min;
-            }
-
-
-
-        </script>
-
-            <footer id="footer">
-
-                © JAG
-            </footer>
-    </body>
+	<!--Jadon Was Here!-->
+	<head>
+		<meta charset="utf-8">
+		<title>Corwyn - Ardor and Allegiance</title>
+	</head>
+	<body>
+		
+		<style>
+
+
+			body{
+				background-color: white;;
+				overflow-x: hidden;
+
+			}
+
+			*{
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Add a black background color to the top navigation */
+			.topnav {
+				position: fixed;
+				top: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+				width: 100%;
+				overflow: hidden;
+				z-index: 6;
+			
+			}
+
+			.topnav ul{
+				list-style: none;
+				line-height: 1;
+			}
+
+			/* Style the links inside the navigation bar */
+			.topnav a {
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 20px 100px;
+				text-decoration: none;
+				font-size: 17px;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index;
+				transition-duration: 0.3s !important;
+
+			
+			}
+			
+			@media (max-width: 1636px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+			@media (max-width: 1440px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+			@media (max-width: 1167px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+			@media (max-width: 925px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+			@media (max-width: 683px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+			@media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+			/*@media (max-width: 1636px) {.topnav ul li:nth-of-type(6) a {display: none;}}
+			@media (max-width: 1440px) {.topnav ul li:nth-of-type(5) a {display: none;}}
+			@media (max-width: 1167px) {.topnav ul li:nth-of-type(4) a {display: none;}}
+			@media (max-width: 925px) {.topnav ul li:nth-of-type(3) a {display: none;}}
+			@media (max-width: 683px) {.topnav ul li:nth-of-type(2) a {display: none;}}
+			@media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}*/
+
+			@media (min-width: 1636px) {#downArrow {display: none;}}
+
+			@media (min-width: 1636px) {li#downArrow ul li a:nth-of-type(5) {display: none;}}
+			@media (min-width: 1440px) {li#downArrow ul li a:nth-of-type(4) {display: none;}}
+			@media (min-width: 1167px) {li#downArrow ul li a:nth-of-type(3) {display: none;}}
+			@media (min-width: 925px) {li#downArrow ul li a:nth-of-type(2) {display: none;}}
+			@media (min-width: 683px) {li#downArrow ul li a:nth-of-type(1) {display: none;}}
+
+/*			@media (min-width: 1636px) {li#downArrow ul li{left: 1224px;}*/
+
+			@media (max-width: 1636px) {li#downArrow ul li {left: 1224px;}}
+			@media (max-width: 1440px) {li#downArrow ul li {left: 952px;}}
+			@media (max-width: 1167px) {li#downArrow ul li {left: 710px;}}
+			@media (max-width: 925px) {li#downArrow ul li {left: 466px;}}
+			@media (max-width: 683px) {li#downArrow ul li {left: 242px;}}
+
+			/* Change the color of links on hover */
+			.topnav ul li:hover a {
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			
+			}
+
+			.topnav ul li:active a {
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			
+			}
+
+			/* Add a color to the active/current link */
+
+			.topnav ul li.dropDown ul{
+				position: fixed;
+				float: left;    
+				top: -300px;
+				left: 0px;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+
+			.topnav ul li.dropDown li.BookCover ul{
+				position: fixed;
+				float: left;    
+				top: -157px;
+				left: 0px;
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+
+			.topnav ul li.dropDown li.BookCover ul li img{
+				/*width: 273px;
+				height: 36px;*/
+				opacity: 0;
+
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			}
+
+			.topnav a.active {
+				background-color: rgba(110, 110, 110, 0.5);
+				transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
+				transition-duration: 0.3s !important;
+			
+			}
+			
+
+			.topnav ul li.dropDown:hover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown:hover ul li.BookCover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown:active ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown:active ul li.BookCover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+			}
+
+			.topnav ul li.dropDown ul li a{
+				float: left;
+				color: rgba(196, 35, 35, 0);
+				text-align: center;
+				padding: 10px 3.62%;
+				text-decoration: none;
+				font-size: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				background-color: rgba(134, 105, 105, 0);
+				
+			
+			}
+
+			.topnav ul li.dropDown:hover ul li a{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 10px 3.62%;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+
+			.topnav ul li.dropDown ul li a:hover{
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			}
+
+
+
+
+			.topnav ul li.dropDown ul li.BookCover:hover ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+				left: 0px;
+			}
+
+
+
+
+
+			.topnav ul li.dropDown:active ul li a{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				padding: 10px 3.62%;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+
+			.topnav ul li.dropDown ul li a:active{
+				background-color: rgba(221, 221, 221, 0.90);
+				color: black;
+			}
+
+
+
+
+			.topnav ul li.dropDown ul li.BookCover:active ul{
+				position: fixed;
+				float: left;
+				top: 57px;
+				left: 0px;
+			}
+
+
+
+
+
+			.topnav ul li.dropDown ul li.BookCover ul li img{
+				position: relative;
+				float: left;
+				color: rgba(196, 35, 35, 0);
+				text-align: center;
+				text-decoration: none;
+				font-size: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				background-color: rgba(134, 105, 105, 0);
+				z-index: -10;
+			
+			}
+
+			.topnav ul li.dropDown ul li.BookCover:hover ul li img{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				width: 100px;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				opacity: 1;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			.topnav ul li.dropDown ul li.BookCover:active ul li img{
+				float: left;
+				color: #f2f2f2;
+				text-align: center;
+				width: 100px;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				opacity: 1;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+
+
+
+			.topnav ul li a.navHome {
+				background-color: rgba(85, 47, 47, 0.75);
+				 color: white;
+			
+			}
+
+			.topnav ul li:hover a.navHome {
+				background-color: rgb(155, 29, 29, 0.75);
+				 color: white;
+			
+			}
+
+
+
+			.topnav ul li.dropDown#home ul li{
+				position: relative;
+				left: 0%;
+			}
+
+			.topnav ul li.dropDown#home ul li a{
+				width: 226px;
+			}
+
+			.topnav ul li.dropDown#book ul li{
+				position: relative;
+				left: 466px;
+			}
+
+			.topnav ul li.dropDown#book ul li a{
+				width: 227.5px;
+			}
+
+			.topnav ul li.dropDown#book ul li.BookCover ul li{
+				position: relative;
+				left: 710px;
+				width: 100px;
+			}
+
+			.topnav ul li.dropDown#book ul li.BookCover ul li img{
+				width: 100px;
+			}
+
+			#downArrow a{
+				padding: 19px 5px;
+			}
+
+			li#downArrow ul li{
+				position: fixed;
+				width: 80px;
+			}
+
+			li#downArrow ul li a{
+				width: 80px;
+			}
+
+
+
+
+			#top_banner{
+				position: fixed;
+				width: 100%;
+				height: 300px;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+
+			#twitter{
+				position: fixed;
+				width: 50px;
+				top: 5px;
+				right:0px;
+				z-index: 6;
+				transition: all 0.5s;
+			}
+			#twitter:hover{
+				top:0px
+			}
+			#instagram{
+				position: fixed;
+				width: 50px;
+				top: 5px;
+				right:50px;
+				z-index: 6;
+				transition: all 0.5s;
+			}
+			#instagram:hover{
+			top:0px
+			}
+			#facebook{
+				position: fixed;
+				width: 50px;
+				top: 5px;
+				right:100px;
+				z-index: 6;
+				transition: all 0.5s;
+			}
+			#facebook:hover{
+			top:0px
+			}
+
+			#left_top_text{
+				position: fixed;
+				top: 74px;
+				left: 20%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+
+
+
+			#right_top_top_text{
+				position: fixed;
+				top: 74px;
+				right: 23%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+			#right_bottom_top_text{
+				position: fixed;
+				top: 170px;
+				right: 11%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+			#corwyn1{
+				position: fixed;
+				top: 319px;
+				left: 50px;
+				width: 420px;
+				opacity: 100%;
+				z-index: 100;
+				transition-property: opacity;
+				transition-duration: 0.3s;
+			}
+
+			#corwyn2{
+				position: fixed;
+				top: 319px;
+				left: 50px;
+				width: 420px;
+				opacity: 0%;
+				z-index: 100;
+				transition-property: opacity;
+				transition-duration: 0.3s;
+			}
+
+			#corwyn_text{
+				position: absolute;
+				top: 0px;
+				left: 200%;
+				font-size: 30px;
+						}
+
+			#corwyn{
+				position: absolute;
+				top: 300px;
+				left: 25%;
+				width: 1300px;
+				height: 200px;
+				overflow: hidden;
+				margin: 1%;
+				color: white;
+				background-color: rgba(0, 0, 0, 0.5);
+				transition: all 0.3s;
+				font-size: 25px;
+			}
+
+			#corwyn_button{
+				position: absolute;
+				top: 489px;
+				left: 91.1%;
+				width: 60px;
+				height: 30px;
+				font-size: 25px;
+				overflow: hidden;
+				color: white;
+				background-color: black;
+				border: 0;
+				transition: all 0.3s;
+			}
+
+			#tester{
+				opacity: 0;
+				width: 225;
+				height: 300;
+			}
+
+
+
+
+
+
+
+
+			#footer{
+				position: absolute;
+				background-color: rgb(65, 53, 53);
+				display: block;
+				width: 100%;
+				height: 100px;
+				bottom: -1000px;
+				overflow: hidden;
+				padding: 20px;
+				color: rgb(219, 196, 196);
+			}
+		</style>
+	
+	<div class="topnav">
+		
+		<ul>
+			<li class="dropDown" id="home">
+				<a href="/authors/corwyn.html" class="navHome">Home</a>
+					<ul>
+						<li><a href="/index.html" >Top Menu</a></li>
+					</ul>
+			</li>
+			<li>
+				<a href="/Bio.html">Bio</a>
+			</li>
+			<li class="dropDown" id="book">
+				<a href="/books.html">Books</a>
+					<ul>
+						<li class="BookCover">
+							<a href="/books/caprice.html">Caprice</a>
+							<ul>
+								<li>
+									<img src="/books/testbook.png">
+									
+
+
+
+								</li>
+							</ul>
+						</li>
+					</ul>
+			</li>
+			<li>
+				<a href="/audio.html">Audio</a>
+			</li>
+			<li>
+				<a href="/logolepsy.html">Logolepsy</a>
+			</li>
+			<li>
+				<a href="/Q&A.html">Q & A</a>
+			</li>
+			<li class="dropDown" id="downArrow">
+				<a><img src="/downArrow.png" width="30px"></a>
+				<ul>
+					<li>
+						<a href="/Bio.html">Bio</a>
+						<a href="/books.html">Books</a>
+						<a href="/audio.html">Audio</a>
+						<a href="/logolepsy.html">Logolepsy</a>
+						<a href="/Q&A.html">Q & A</a>
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+
+		<p>
+			<img src="/top_banner.png" id="top_banner">
+
+			<!--media-->
+
+			<a href="https://twitter.com/explore" target="_blank"><img src="/twitter.png" id="twitter"></a>
+			<a href="https://www.instagram.com/" target="_blank"><img src="/instagram.png" id="instagram"></a>
+			<a href="https://www.facebook.com/" target="_blank"><img src="/facebook.png" id="facebook"></a>
+
+
+			<div>
+				<p id="left_top_text">Coming...</p>
+				<p id="right_top_top_text">Ardor &</p>
+				<p id="right_bottom_top_text">Allegiance</p>
+			</div>
+			</div>
+		</p>
+
+		<p id="corwyn_text">Corwyn</p>
+		<img src="/characters/Corwyn1Big.png" id="tester">
+		<img src="/characters/Corwyn1Big.png" id="corwyn1">
+		<img src="/characters/Corwyn2Big.png" id="corwyn2">
+		<p id="corwyn">
+			
+
+		</p>
+
+		<Button id="corwyn_button" onclick="corwynButton()">More
+		</Button>
+
+
+
+
+		<script>
+			var ms=0;
+			var corwynimg=0;
+			var corwynNum=0;
+
+			var d = new Date();
+
+			var CorwynBio = loadFile("/characters/bio/CorwynBio.txt");
+
+			document.getElementById("corwyn").innerHTML = CorwynBio;
+			var CorwynLongBio = loadFile("/characters/bio/CorwynLongBio.txt");
+
+			var CorwynLongestBio = loadFile("/characters/bio/CorwynLongestBio.txt");
+
+			var CorwynPos = {
+				x: 50,
+				y: 319,
+				xx: 50+420,
+				yy: 319+560
+			}
+			console.debug(CorwynPos)
+			function corwynButton(){
+				if (corwynNum===0){
+					window.open("#top","_self");
+					document.getElementById("corwyn").style.left = "8%";
+					document.getElementById("corwyn").style.height = "700px";
+					document.getElementById("corwyn").style.width = "1500px";
+					document.getElementById("corwyn").innerHTML = CorwynLongBio;
+					document.getElementById("corwyn_button").innerHTML = "Much More";
+					document.getElementById("corwyn_button").style.top = "989px";
+					document.getElementById("corwyn_button").style.left = "80.9%";
+					document.getElementById("corwyn_button").style.width = "130px";
+					corwynNum=1;
+				}else if(corwynNum===1){
+					window.open("#top","_self");
+					document.getElementById("corwyn").style.left = "8%";
+					document.getElementById("corwyn").style.height = "2100px";
+					document.getElementById("corwyn").style.width = "1600px";
+					document.getElementById("corwyn").innerHTML = CorwynLongestBio;
+					document.getElementById("corwyn_button").innerHTML = "Less";
+					document.getElementById("corwyn_button").style.top = "2389px";
+					document.getElementById("corwyn_button").style.left = "89.9%";
+					document.getElementById("corwyn_button").style.width = "60px";
+					document.getElementById("footer").style.bottom = "-2000px";
+					corwynNum=2;
+				}else if(corwynNum===2){
+					window.open("#top","_self");
+					document.getElementById("corwyn").style.left = "25%";
+					document.getElementById("corwyn").style.height = "200px";
+					document.getElementById("corwyn").style.width = "1300px";
+					document.getElementById("corwyn").innerHTML = CorwynBio;
+					document.getElementById("corwyn_button").innerHTML = "More";
+					document.getElementById("corwyn_button").style.top = "489px";
+					document.getElementById("corwyn_button").style.left = "91.1%";
+					document.getElementById("corwyn_button").style.width = "60px";
+					corwynNum=0;
+				}
+
+			}
+			function loadFile(filePath) {
+				var result = null;
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", filePath, false);
+				xmlhttp.send();
+				if (xmlhttp.status==200) {
+					result = xmlhttp.responseText;
+				}
+				return result;
+			}
+
+			var WinWidth = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+
+			var WinHeight = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+
+			(function() {
+			var mousePos;
+
+			document.onmousemove = handleMouseMove;
+			setInterval(getMousePosition, 100); // setInterval repeats every X ms
+
+			function handleMouseMove(event) {
+				var dot, eventDoc, doc, body, pageX, pageY;
+
+				event = event || window.event; // IE-ism
+
+				// If pageX/Y aren't available and clientX/Y are,
+				// calculate pageX/Y - logic taken from jQuery.
+				// (This is to support old IE)
+				if (event.pageX == null && event.clientX != null) {
+					eventDoc = (event.target && event.target.ownerDocument) || document;
+					doc = eventDoc.documentElement;
+					body = eventDoc.body;
+
+					event.pageX = event.clientX +
+					(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+					(doc && doc.clientLeft || body && body.clientLeft || 0);
+					event.pageY = event.clientY +
+					(doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+					(doc && doc.clientTop  || body && body.clientTop  || 0 );
+				}
+
+				mousePos = {
+					x: event.pageX,
+					y: event.pageY
+				};
+			}
+			function getMousePosition() {
+				var pos = mousePos;
+				if (!pos) {
+					// We haven't seen any movement yet
+				}
+				else {
+					if (CorwynPos.x <= pos.x && CorwynPos.xx >= pos.x && CorwynPos.y <= pos.y-document.documentElement.scrollTop && CorwynPos.yy >= pos.y-document.documentElement.scrollTop)
+					{
+						WinWidth = window.innerWidth
+						|| document.documentElement.clientWidth
+						|| document.body.clientWidth;
+
+						WinHeight = window.innerHeight
+						|| document.documentElement.clientHeight
+						|| document.body.clientHeight;
+
+						var rndX = getRndInteger(0,99);
+						var rndXx = getRndInteger(0,100);
+						rndX = (rndX + (rndXx/100))/100*WinWidth;
+						var rndY = getRndInteger(0,99);
+						var rndYy = getRndInteger(0,100);
+						rndY = (rndY + (rndYy/100))/100*WinHeight;
+						if(rndX+400 > WinWidth) {console.debug("X:"+rndX); rndX=rndX-(rndX+420-WinWidth)}
+						if(rndY+400 > WinHeight) {console.debug("Y:"+rndY); rndY=rndY-(rndY+560-WinHeight)}
+
+						var rndS = getRndInteger(225, 500);
+
+
+						console.debug("rndX:"+rndX);
+						console.debug("rndY:"+rndY);
+						console.debug("rndS:"+rndS);
+						
+
+						document.getElementById("tester").style.width = rndS.toString()+"px";
+
+						CorwynPos = {
+							x: rndX,
+							y: rndY,
+							xx: rndX+document.getElementById("tester").offsetWidth,
+							yy: rndY+document.getElementById("tester").offsetHeight
+						}
+						
+						document.getElementById("corwyn1").style.left = CorwynPos.x.toString()+"px";
+						document.getElementById("corwyn1").style.top = CorwynPos.y.toString()+"px";
+						document.getElementById("corwyn1").style.width = rndS.toString()+"px";
+						document.getElementById("corwyn2").style.left = CorwynPos.x.toString()+"px";
+						document.getElementById("corwyn2").style.top = CorwynPos.y.toString()+"px";
+						document.getElementById("corwyn2").style.width = rndS.toString()+"px";
+						console.debug(CorwynPos.x.toString());
+						console.debug(CorwynPos);
+
+						console.debug("offsetWidth:"+document.getElementById("corwyn1").offsetWidth);
+						console.debug("offsetHeight:"+document.getElementById("corwyn1").offsetHeight);
+						}
+
+					}
+					//console.debug(pos)
+					// Use pos.x and pos.y
+					ms++;
+
+						//console.debug(ms);
+
+						if(ms===40){
+
+							if(d.getMonth() === 3) {
+								
+								if(getRndInteger(0, 1000)===0){corwynimg=-301}
+							}
+							corwynimg++;
+
+
+							switch (corwynimg
+								
+							) {
+								case 1:
+									document.getElementById("corwyn2").src = "/characters/Corwyn2Big.png";
+									document.getElementById("corwyn1").style.opacity = "0%"
+									document.getElementById("corwyn2").style.opacity = "100%"
+									document.getElementById("corwyn1").style.transitionDuration = "2s"
+									document.getElementById("corwyn2").style.transitionDuration = "1s"
+									corwynimg=-1;
+									ms=0;
+
+									//console.debug(corwynimg);
+									break;
+
+									case -300:
+									document.getElementById("corwyn2").src = "/authors/Ohno.png";
+									document.getElementById("corwyn1").style.opacity = "0%"
+									document.getElementById("corwyn2").style.opacity = "100%"
+									document.getElementById("corwyn1").style.transitionDuration = "2s"
+									document.getElementById("corwyn2").style.transitionDuration = "1s"
+									corwynimg=-301;
+									ms=0;
+
+									//console.debug(corwynimg);
+									break;
+							
+								default:
+									document.getElementById("corwyn1").src = "/characters/Corwyn1Big.png";
+									document.getElementById("corwyn1").style.opacity = "100%"
+									document.getElementById("corwyn2").style.opacity = "0%"
+									document.getElementById("corwyn1").style.transitionDuration = "0s"
+									document.getElementById("corwyn2").style.transitionDuration = "1s"
+									ms=0;
+									//console.debug(corwynimg);
+									break;
+							}
+
+				}
+			}
+		})();
+		
+		function getRndInteger(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
+
+
+		</script>
+
+			<footer id="footer">
+
+				© JAG
+			</footer>
+	</body>
 </html>
