@@ -408,6 +408,15 @@
 				transition: all 0.5s;
 			}
 
+			@media (max-width: 1252px) {#left_top_text {
+				left: 1% !important;
+				top: 104px !important;
+			}}
+			@media (max-width: 1252px) {#right_top_top_text {right: 10% !important;}}
+			@media (max-width: 1252px) {#right_bottom_top_text {right: 1% !important;}}
+
+
+
 			#QaA{
 				position: relative;
 				padding-top: 100px;
@@ -415,10 +424,7 @@
 				padding-right: 600px;
 				font-size: 175%;
 				top: 300px;
-
 			}
-
-
 
 			footer{
 				position: absolute;
@@ -553,15 +559,29 @@
 
 
 		<script>
-			function scrollFunction() {
-			  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+			function resize() {
+				WinWidth = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
+
+						if(WinWidth < 846){
+							
+							document.getElementById("left_top_text").style.fontSize = "50px";
+							document.getElementById("right_top_top_text").style.fontSize = "50px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "50px";
+
+							document.getElementById("right_top_top_text").style.top = "124px";
+						}
+						else{
+							
+							document.getElementById("right_top_top_text").style.top = "74px";
+							document.getElementById("left_top_text").style.fontSize = "100px";
+							document.getElementById("right_top_top_text").style.fontSize = "100px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "100px";
+
 					
-				
-			  
-			  
-			  } else {
-				
-			  }
+						}
+	
 			}
 		</script>
 

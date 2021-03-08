@@ -241,7 +241,6 @@
 				overflow: hidden;
 				background-color: rgba(134, 105, 105, 0);
 				z-index: -10;
-			
 			}
 
 			.topnav ul li.dropDown ul li.BookCover:hover ul li img{
@@ -1530,14 +1529,64 @@
 
 		<script>
 
-			
 
-		WinWidth = window.innerWidth
+
+
+			function resize() {
+				WinWidth = window.innerWidth
 					|| document.documentElement.clientWidth
 					|| document.body.clientWidth;
 
-		console.log(WinWidth)
+					if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70){
 
+						document.getElementById("left_top_text").style.top = "74px ";
+						document.getElementById("right_top_top_text").style.top = "74px";
+						document.getElementById("right_bottom_top_text").style.top = "170px";
+
+						if(WinWidth < 1252){
+							
+							document.getElementById("left_top_text").style.fontSize = "50px";
+							document.getElementById("right_top_top_text").style.fontSize = "50px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "50px";
+
+							document.getElementById("right_top_top_text").style.top = "124px";
+						}
+						else{
+							
+
+							document.getElementById("left_top_text").style.fontSize = "100px";
+							document.getElementById("right_top_top_text").style.fontSize = "100px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "100px";
+
+					
+						}
+
+						}
+						else{
+							document.getElementById("left_top_text").style.top = "254px";
+							document.getElementById("right_top_top_text").style.top = "254px";
+							document.getElementById("right_bottom_top_text").style.top = "350px";
+
+							document.getElementById("top_banner").style.fontSize = "100px";
+							document.getElementById("left_top_text").style.fontSize = "100px";
+							document.getElementById("right_top_top_text").style.fontSize = "100px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "100px";
+							
+							
+						}
+			}
+			WinWidth = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
+
+
+
+
+
+
+
+		console.log(WinWidth)
+			window.onresize = function() {resize()};
 			window.onscroll = function() {scrollFunction()};
 			var british=0;
 
@@ -1548,21 +1597,25 @@
 			var Meira = loadFile("/characters/quotes/Meira.txt");
 			var MeiraQuotes = [];
 
-			while (Meira.length > trackNum) {
-				if (Meira.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Meira.length > trackNum2) {
-						if (Meira.charAt(trackNum2)==="#") {
-							MeiraQuotes.push(Meira.substring(trackNum+1, trackNum2));
-							break;
-						}
-					trackNum2++;
-					}
-				}
-				trackNum++;
-			}
-			document.getElementById("meira_hidden_text").innerHTML = '<img src="/parchment.png">'+MeiraQuotes[getRndInteger(0, MeiraQuotes.length)];
+			if (Meira===null) {
+				document.getElementById("meira_text").innerHTML = '<img src="/characters/missing_character.png" id="meira1">Meira';
+			}else{
 
+				while (Meira.length > trackNum) {
+					if (Meira.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Meira.length > trackNum2) {
+							if (Meira.charAt(trackNum2)==="#") {
+								MeiraQuotes.push(Meira.substring(trackNum+1, trackNum2));
+								break;
+							}
+						trackNum2++;
+						}
+					}
+					trackNum++;
+				}
+				document.getElementById("meira_hidden_text").innerHTML = '<img src="/parchment.png">'+MeiraQuotes[getRndInteger(0, MeiraQuotes.length)];
+			}
 
 			trackNum=0;
 			trackNum2=0;
@@ -1570,21 +1623,25 @@
 			var Robert = loadFile("/characters/quotes/Robert.txt");
 			var RobertQuotes = [];
 
-			while (Robert.length > trackNum) {
-				if (Robert.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Robert.length > trackNum2) {
-						if (Robert.charAt(trackNum2)==="#") {
-							RobertQuotes.push(Robert.substring(trackNum+1, trackNum2));
-							break;
+			if (Robert===null) {
+				document.getElementById("robert_text").innerHTML = '<img src="/characters/missing_character.png" id="robert1">Robert';
+			}else{
+
+				while (Robert.length > trackNum) {
+					if (Robert.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Robert.length > trackNum2) {
+							if (Robert.charAt(trackNum2)==="#") {
+								RobertQuotes.push(Robert.substring(trackNum+1, trackNum2));
+								break;
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("robert_hidden_text").innerHTML = '<img src="/parchment.png">'+RobertQuotes[getRndInteger(0, RobertQuotes.length)];
 			}
-			document.getElementById("robert_hidden_text").innerHTML = '<img src="/parchment.png">'+RobertQuotes[getRndInteger(0, RobertQuotes.length)];
-			
 
 			trackNum=0;
 			trackNum2=0;
@@ -1592,20 +1649,25 @@
 			var Amelia = loadFile("/characters/quotes/Amelia.txt");
 			var AmeliaQuotes = [];
 
-			while (Amelia.length > trackNum) {
-				if (Amelia.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Amelia.length > trackNum2) {
-						if (Amelia.charAt(trackNum2)==="#") {
-							AmeliaQuotes.push(Amelia.substring(trackNum+1, trackNum2));
-							break
+			if (Amelia===null) {
+				document.getElementById("amelia_text").innerHTML = '<img src="/characters/missing_character.png" id="amelia1">Amelia';
+			}else{
+
+				while (Amelia.length > trackNum) {
+					if (Amelia.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Amelia.length > trackNum2) {
+							if (Amelia.charAt(trackNum2)==="#") {
+								AmeliaQuotes.push(Amelia.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("amelia_hidden_text").innerHTML = '<img src="/parchment.png">'+AmeliaQuotes[getRndInteger(0, AmeliaQuotes.length)];
 			}
-			document.getElementById("amelia_hidden_text").innerHTML = '<img src="/parchment.png">'+AmeliaQuotes[getRndInteger(0, AmeliaQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1613,62 +1675,76 @@
 			var Mardok = loadFile("/characters/quotes/Mardok.txt");
 			var MardokQuotes = [];
 
-			while (Mardok.length > trackNum) {
-				if (Mardok.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Mardok.length > trackNum2) {
-						if (Mardok.charAt(trackNum2)==="#") {
-							MardokQuotes.push(Mardok.substring(trackNum+1, trackNum2));
-							break
-						}
-					trackNum2++;
-					}
-				}
-				trackNum++;
-			}
-			document.getElementById("mardok_hidden_text").innerHTML = '<img src="/parchment.png">'+MardokQuotes[getRndInteger(0, MardokQuotes.length)];
+			if (Mardok===null) {
+				document.getElementById("mardok_text").innerHTML = '<img src="/characters/missing_character.png" id="mardok1">Mardok';
+			}else{
 
+				while (Mardok.length > trackNum) {
+					if (Mardok.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Mardok.length > trackNum2) {
+							if (Mardok.charAt(trackNum2)==="#") {
+								MardokQuotes.push(Mardok.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
+						}
+					}
+					trackNum++;
+				}
+				document.getElementById("mardok_hidden_text").innerHTML = '<img src="/parchment.png">'+MardokQuotes[getRndInteger(0, MardokQuotes.length)];
+			}
 			trackNum=0;
 			trackNum2=0;
 
 			var Julia = loadFile("/characters/quotes/Julia.txt");
 			var JuliaQuotes = [];
 
-			while (Julia.length > trackNum) {
-				if (Julia.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Julia.length > trackNum2) {
-						if (Julia.charAt(trackNum2)==="#") {
-							JuliaQuotes.push(Julia.substring(trackNum+1, trackNum2));
-							break
+			if (Julia===null) {
+				document.getElementById("julia_text").innerHTML = '<img src="/characters/missing_character.png" id="julia1">Julia';
+			}else{
+
+				while (Julia.length > trackNum) {
+					if (Julia.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Julia.length > trackNum2) {
+							if (Julia.charAt(trackNum2)==="#") {
+								JuliaQuotes.push(Julia.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("julia_hidden_text").innerHTML = '<img src="/parchment.png">'+JuliaQuotes[getRndInteger(0, JuliaQuotes.length)];
 			}
-			document.getElementById("julia_hidden_text").innerHTML = '<img src="/parchment.png">'+JuliaQuotes[getRndInteger(0, JuliaQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
 
 			var Corwyn = loadFile("/characters/quotes/Corwyn.txt");
 			var CorwynQuotes = [];
+			
+			if (Corwyn===null) {
+				document.getElementById("corwyn_text").innerHTML = '<img src="/characters/missing_character.png" id="corwyn1">Corwyn';
+			}else{
 
-			while (Corwyn.length > trackNum) {
-				if (Corwyn.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Corwyn.length > trackNum2) {
-						if (Corwyn.charAt(trackNum2)==="#") {
-							CorwynQuotes.push(Corwyn.substring(trackNum+1, trackNum2));
-							break
+				while (Corwyn.length > trackNum) {
+					if (Corwyn.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Corwyn.length > trackNum2) {
+							if (Corwyn.charAt(trackNum2)==="#") {
+								CorwynQuotes.push(Corwyn.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("corwyn_hidden_text").innerHTML = '<img src="/parchment.png">'+CorwynQuotes[getRndInteger(0, CorwynQuotes.length)];
 			}
-			document.getElementById("corwyn_hidden_text").innerHTML = '<img src="/parchment.png">'+CorwynQuotes[getRndInteger(0, CorwynQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1676,20 +1752,25 @@
 			var Mary = loadFile("/characters/quotes/Mary.txt");
 			var MaryQuotes = [];
 
-			while (Mary.length > trackNum) {
-				if (Mary.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Mary.length > trackNum2) {
-						if (Mary.charAt(trackNum2)==="#") {
-							MaryQuotes.push(Mary.substring(trackNum+1, trackNum2));
-							break
+			if (Mary===null) {
+				document.getElementById("mary_text").innerHTML = '<img src="/characters/missing_character.png" id="mary1">Mary';
+			}else{
+
+				while (Mary.length > trackNum) {
+					if (Mary.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Mary.length > trackNum2) {
+							if (Mary.charAt(trackNum2)==="#") {
+								MaryQuotes.push(Mary.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("mary_hidden_text").innerHTML = '<img src="/parchment.png">'+MaryQuotes[getRndInteger(0, MaryQuotes.length)];
 			}
-			document.getElementById("mary_hidden_text").innerHTML = '<img src="/parchment.png">'+MaryQuotes[getRndInteger(0, MaryQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1697,20 +1778,25 @@
 			var Matthias = loadFile("/characters/quotes/Matthias.txt");
 			var MatthiasQuotes = [];
 
-			while (Matthias.length > trackNum) {
-				if (Matthias.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Matthias.length > trackNum2) {
-						if (Matthias.charAt(trackNum2)==="#") {
-							MatthiasQuotes.push(Matthias.substring(trackNum+1, trackNum2));
-							break
+			if (Matthias===null) {
+				document.getElementById("matthias_text").innerHTML = '<img src="/characters/missing_character.png" id="matthias1">Matthias';
+			}else{
+
+				while (Matthias.length > trackNum) {
+					if (Matthias.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Matthias.length > trackNum2) {
+							if (Matthias.charAt(trackNum2)==="#") {
+								MatthiasQuotes.push(Matthias.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("matthias_hidden_text").innerHTML = '<img src="/parchment.png">'+MatthiasQuotes[getRndInteger(0, MatthiasQuotes.length)];
 			}
-			document.getElementById("matthias_hidden_text").innerHTML = '<img src="/parchment.png">'+MatthiasQuotes[getRndInteger(0, MatthiasQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1718,20 +1804,25 @@
 			var Lilliana = loadFile("/characters/quotes/Lilliana.txt");
 			var LillianaQuotes = [];
 
-			while (Lilliana.length > trackNum) {
-				if (Lilliana.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Lilliana.length > trackNum2) {
-						if (Lilliana.charAt(trackNum2)==="#") {
-							LillianaQuotes.push(Lilliana.substring(trackNum+1, trackNum2));
-							break
+			if (Lilliana===null) {
+				document.getElementById("lilliana_text").innerHTML = '<img src="/characters/missing_character.png" id="lilliana1">Lilliana';
+			}else{
+
+				while (Lilliana.length > trackNum) {
+					if (Lilliana.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Lilliana.length > trackNum2) {
+							if (Lilliana.charAt(trackNum2)==="#") {
+								LillianaQuotes.push(Lilliana.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("lilliana_hidden_text").innerHTML = '<img src="/parchment.png">'+LillianaQuotes[getRndInteger(0, LillianaQuotes.length)];
 			}
-			document.getElementById("lilliana_hidden_text").innerHTML = '<img src="/parchment.png">'+LillianaQuotes[getRndInteger(0, LillianaQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1739,20 +1830,25 @@
 			var Amos = loadFile("/characters/quotes/Amos.txt");
 			var AmosQuotes = [];
 
-			while (Amos.length > trackNum) {
-				if (Amos.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Amos.length > trackNum2) {
-						if (Amos.charAt(trackNum2)==="#") {
-							AmosQuotes.push(Amos.substring(trackNum+1, trackNum2));
-							break
+			if (Amos===null) {
+				document.getElementById("amos_text").innerHTML = '<img src="/characters/missing_character.png" id="amos1">Amos';
+			}else{
+
+				while (Amos.length > trackNum) {
+					if (Amos.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Amos.length > trackNum2) {
+							if (Amos.charAt(trackNum2)==="#") {
+								AmosQuotes.push(Amos.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("amos_hidden_text").innerHTML = '<img src="/parchment.png">'+AmosQuotes[getRndInteger(0, AmosQuotes.length)];
 			}
-			document.getElementById("amos_hidden_text").innerHTML = '<img src="/parchment.png">'+AmosQuotes[getRndInteger(0, AmosQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1760,20 +1856,25 @@
 			var Gavin = loadFile("/characters/quotes/Gavin.txt");
 			var GavinQuotes = [];
 
-			while (Gavin.length > trackNum) {
-				if (Gavin.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Gavin.length > trackNum2) {
-						if (Gavin.charAt(trackNum2)==="#") {
-							GavinQuotes.push(Gavin.substring(trackNum+1, trackNum2));
-							break
+			if (Gavin===null) {
+				document.getElementById("gavin_text").innerHTML = '<img src="/characters/missing_character.png" id="gavin1">Gavin';
+			}else{
+
+				while (Gavin.length > trackNum) {
+					if (Gavin.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Gavin.length > trackNum2) {
+							if (Gavin.charAt(trackNum2)==="#") {
+								GavinQuotes.push(Gavin.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
 						}
-					trackNum2++;
 					}
+					trackNum++;
 				}
-				trackNum++;
+				document.getElementById("gavin_hidden_text").innerHTML = '<img src="/parchment.png">'+GavinQuotes[getRndInteger(0, GavinQuotes.length)];
 			}
-			document.getElementById("gavin_hidden_text").innerHTML = '<img src="/parchment.png">'+GavinQuotes[getRndInteger(0, GavinQuotes.length)];
 
 			trackNum=0;
 			trackNum2=0;
@@ -1781,21 +1882,25 @@
 			var Malachi = loadFile("/characters/quotes/Malachi.txt");
 			var MalachiQuotes = [];
 
-			while (Malachi.length > trackNum) {
-				if (Malachi.charAt(trackNum)==="*") {
-					trackNum2=trackNum;
-					while (Malachi.length > trackNum2) {
-						if (Malachi.charAt(trackNum2)==="#") {
-							MalachiQuotes.push(Malachi.substring(trackNum+1, trackNum2));
-							break
-						}
-					trackNum2++;
-					}
-				}
-				trackNum++;
-			}
-			document.getElementById("malachi_hidden_text").innerHTML = '<img src="/parchment.png">'+MalachiQuotes[getRndInteger(0, MalachiQuotes.length)];
+			if (Malachi===null) {
+				document.getElementById("malachi_text").innerHTML = '<img src="/characters/missing_character.png" id="malachi1">Malachi';
+			}else{
 
+				while (Malachi.length > trackNum) {
+					if (Malachi.charAt(trackNum)==="*") {
+						trackNum2=trackNum;
+						while (Malachi.length > trackNum2) {
+							if (Malachi.charAt(trackNum2)==="#") {
+								MalachiQuotes.push(Malachi.substring(trackNum+1, trackNum2));
+								break
+							}
+						trackNum2++;
+						}
+					}
+					trackNum++;
+				}
+				document.getElementById("malachi_hidden_text").innerHTML = '<img src="/parchment.png">'+MalachiQuotes[getRndInteger(0, MalachiQuotes.length)];
+			}
 
 //  Quotes end
 
