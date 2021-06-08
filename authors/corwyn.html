@@ -3,6 +3,7 @@
 	<!--Jadon Was Here!-->
 	<head>
 		<meta charset="utf-8">
+		<link rel=icon type=image/png href=/corwynfavicon.png>
 		<title>Corwyn - Ardor and Allegiance</title>
 	</head>
 	<body>
@@ -478,7 +479,7 @@
 				font-size: 175%;
 				overflow: hidden;
 				color: rgb(0, 0, 0);
-				z-index: 8;
+				z-index: 5;
 			}
 			#meira_hidden_text:hover img{
 				position: absolute;
@@ -498,7 +499,7 @@
 				font-size: 175%;
 				overflow: hidden;
 				color: rgb(0, 0, 0);
-				z-index: 8;
+				z-index: 5;
 			}
 			#meira_hidden_text:active img{
 				position: absolute;
@@ -511,7 +512,7 @@
 				width: 100px;
 				height: 100px;
 				position: relative;
-				 top: 32px;
+				top: 32px;
 				right: 5%;
 			}
 			#robert_text{
@@ -1483,43 +1484,43 @@
 
 		<li id="leftChar">
 
-		<p id="meira_text"><img src="/characters/Meira1.png" id="meira1">Meira</p>
+		<p id="meira_text"><img src="/characters/Meira1.png" onerror="MeiraErr()" id="meira1">Meira</p>
 		<p id="meira_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 		
-		<p id="robert_text"><img src="/characters/Robert1.png" id="robert1">Robert</p>
+		<p id="robert_text"><img src="/characters/Robert1.png" onerror="RobertErr()" id="robert1">Robert</p>
 		<p id="robert_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="amelia_text"><img src="/characters/Amelia1.png" id="amelia1">Amelia</p>
+		<p id="amelia_text"><img src="/characters/Amelia1.png" onerror="AmeliaErr()" id="amelia1">Amelia</p>
 		<p id="amelia_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="mary_text"><img src="/characters/Mary1.png" id="mary1">Mary</p>
+		<p id="mary_text"><img src="/characters/Mary1.png" onerror="MaryErr()" id="mary1">Mary</p>
 		<p id="mary_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="matthias_text"><img src="/characters/Matthias1.png" id="matthias1">Matthias</p>
+		<p id="matthias_text"><img src="/characters/Matthias1.png" onerror="MatthiasErr()" id="matthias1">Matthias</p>
 		<p id="matthias_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="lilliana_text"><img src="/characters/Lilliana1.png" id="lilliana1">Lilliana</p>
+		<p id="lilliana_text"><img src="/characters/Lilliana1.png" onerror="LillianaErr()" id="lilliana1">Lilliana</p>
 		<p id="lilliana_hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
 		</li>
 		<li id="rightChar">
 
-		<p id="mardok_text"><img src="/characters/Mardok1.png" id="mardok1">Mardok</p>
+		<p id="mardok_text"><img src="/characters/Mardok1.png" onerror="MardokErr()" id="mardok1">Mardok</p>
 		<p id="mardok_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="julia_text"><img src="/characters/Julia1.png" id="julia1">Julia</p>
+		<p id="julia_text"><img src="/characters/Julia1.png" onerror="JuliaErr()" id="julia1">Julia</p>
 		<p id="julia_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="corwyn_text"><img src="/characters/Corwyn1.png" id="corwyn1">Corwyn</p>
+		<p id="corwyn_text"><img src="/characters/Corwyn1.png" onerror="CorwynErr()" id="corwyn1">Corwyn</p>
 		<p id="corwyn_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="amos_text"><img src="/characters/Amos1.png" id="amos1">Amos</p>
+		<p id="amos_text"><img src="/characters/Amos1.png" onerror="AmosErr()" id="amos1">Amos</p>
 		<p id="amos_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="gavin_text"><img src="/characters/Gavin1.png" id="gavin1">Gavin</p>
+		<p id="gavin_text"><img src="/characters/Gavin1.png" onerror="GavinErr()" id="gavin1">Gavin</p>
 		<p id="gavin_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
-		<p id="malachi_text"><img src="/characters/Malachi1.png" id="malachi1">Malachi</p>
+		<p id="malachi_text"><img src="/characters/Malachi1.png" onerror="MalachiErr()" id="malachi1">Malachi</p>
 		<p id="malachi_hidden_text", class="hidden_text"><img src="/parchment.png">Loading Some Groovy text... If you still see this reload the page...</p>
 
 	</li>
@@ -1529,9 +1530,44 @@
 
 		<script>
 
-
-
-
+			function MeiraErr(){
+				document.getElementById("meira_text").innerHTML = '<img src="/characters/missing_character.png" id="meira1">Meira';
+			}
+			function RobertErr(){
+				document.getElementById("robert_text").innerHTML = '<img src="/characters/missing_character.png" id="robert1">Robert';
+			}
+			function AmeliaErr(){
+				document.getElementById("amelia_text").innerHTML = '<img src="/characters/missing_character.png" id="amelia1">Amelia';
+			}
+			function MardokErr(){
+				document.getElementById("mardok_text").innerHTML = '<img src="/characters/missing_character.png" id="mardok1">Mardok';
+			}
+			function JuliaErr(){
+				document.getElementById("julia_text").innerHTML = '<img src="/characters/missing_character.png" id="julia1">Julia';
+			}
+			function CorwynErr(){
+				document.getElementById("corwyn_text").innerHTML = '<img src="/characters/missing_character.png" id="corwyn1">Corwyn';
+			}
+			function MaryErr(){
+				document.getElementById("mary_text").innerHTML = '<img src="/characters/missing_character.png" id="mary1">Mary';
+			}
+			function MatthiasErr(){
+				document.getElementById("matthias_text").innerHTML = '<img src="/characters/missing_character.png" id="matthias1">Matthias';
+			}
+			function LillianaErr(){
+				document.getElementById("lilliana_text").innerHTML = '<img src="/characters/missing_character.png" id="lilliana1">Lilliana';
+			}
+			function AmosErr(){
+				document.getElementById("amos_text").innerHTML = '<img src="/characters/missing_character.png" id="amos1">Amos';
+			}
+			function GavinErr(){
+				document.getElementById("gavin_text").innerHTML = '<img src="/characters/missing_character.png" id="gavin1">Gavin';
+			}
+			function MalachiErr(){
+				document.getElementById("malachi_text").innerHTML = '<img src="/characters/missing_character.png" id="malachi1">Malachi';
+			}
+			
+			
 			function resize() {
 				WinWidth = window.innerWidth
 					|| document.documentElement.clientWidth
