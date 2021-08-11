@@ -117,9 +117,11 @@
 				if(DarkMode===0){
 					document.cookie = "DarkMode=true";
 					body.style.setProperty('--DarkMode', '1');
+					DarkMode=1
 				}else{
 					document.cookie = "DarkMode=false";
 					body.style.setProperty('--DarkMode', '0');
+					DarkMode=0
 				}
 				console.debug(DarkMode)
 			}
