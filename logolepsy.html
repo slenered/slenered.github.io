@@ -12,9 +12,23 @@
 
 
 			body{
+				color: black;
+				transition: all 0.3s;
 				background-color: white;;
 				overflow-x: hidden;
-
+				font-family: 'Times New Roman', Times, serif;
+			}
+			body::after {
+				background-color: black;
+				bottom: -900px;
+				content: "";
+				position: absolute;
+				left: 0;
+				opacity: var(--DarkMode);
+				right: 0;
+				top: 0;
+				z-index: -1;
+				transition: all 0.3s;
 			}
 
 			*{
@@ -122,6 +136,7 @@
 		if (document.cookie === "DarkMode=true") {
 					var DarkMode=1;
 					body.style.setProperty('--DarkMode', '1');
+					document.body.style.color = "white";
 				}else{
 					var DarkMode=0;
 				}
@@ -134,10 +149,12 @@
 				if(DarkMode===0){
 					document.cookie = "DarkMode=true";
 					body.style.setProperty('--DarkMode', '1');
+					document.body.style.color = "white";
 					DarkMode=1
 				}else{
 					document.cookie = "DarkMode=false";
 					body.style.setProperty('--DarkMode', '0');
+					document.body.style.color = "black";
 					DarkMode=0
 				}
 				console.debug(DarkMode)
