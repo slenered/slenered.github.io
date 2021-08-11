@@ -9,6 +9,18 @@
 		:root{
 				--DarkMode:0;
 			}
+			body::after {
+				background-color: black;
+				bottom: -900px;
+				content: "";
+				position: absolute;
+				left: 0;
+				opacity: var(--DarkMode);
+				right: 0;
+				top: 0;
+				z-index: -1;
+				transition: all 0.3s;
+			}
 		/* Add a black background color to the top navigation */
 		.topnav {
 			position: fixed;
@@ -364,7 +376,7 @@
 		
 	<ul>
 		<li class="dropDown" id="home">
-			<a href="/authors/corwyn.html" class="navHome">Home</a>
+			<a href="/authors/corwyn/corwyn.html" class="navHome">Home</a>
 				<ul>
 					<li><a href="/index.html" >Top Menu</a></li>
 				</ul>
