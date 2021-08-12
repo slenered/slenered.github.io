@@ -89,8 +89,21 @@
 
 			#words{
 				position: relative;
-				top: 300px;
+				top: 350px;
+				text-align: center;
+				font-size: 175%;
 			}
+			#refresh{
+				position: relative;
+				z-index: 8;
+				left: 50%;
+				top: 600px;
+				font-size: 15px;
+			}
+
+
+
+
 			#Page{
 				position: relative;
 				top: 0;
@@ -121,6 +134,7 @@
 			<div w3-include-html="/authors/corwyn/corwynNavBar.html"></div> 
 
 
+			<button id="refresh" onclick="refresh()">Next Word</button>
 			<p id="words">
 				default
 			</p>
@@ -168,6 +182,7 @@
 
 			var trackNum=0;
 			var trackNum2=0;
+			var WordWrap=170;
 
 			var Words = loadFile("/characters/corwyn/logolepsy.txt");
 			var WordsLogolepsy = [];
@@ -181,6 +196,21 @@
 						trackNum2=trackNum;
 						while (Words.length > trackNum2) {
 							if (Words.charAt(trackNum2)==="#") {
+
+								if (trackNum2 - trackNum+1 >= WordWrap) {
+									trackNum3=trackNum2 - (trackNum2 - trackNum+1 - WordWrap)
+									while (trackNum <= trackNum3) {
+										//console.debug(Words.charAt(trackNum3	-1)===" ")
+										if (Words.charAt(trackNum3 - 1)===" "){
+											Words = Words.replace(Words.substring(trackNum+1, trackNum3-1), Words.substring(trackNum+1, trackNum3-1) + "<br>")
+											trackNum2=trackNum2+4
+											break;
+										}else{
+											trackNum3--
+										}
+									}
+											
+								}
 								WordsLogolepsy.push(Words.substring(trackNum+1, trackNum2));
 								break;
 							}
@@ -189,10 +219,17 @@
 					}
 					trackNum++;
 				}
-				console.debug(WordsLogolepsy)
-				document.getElementById("words").innerHTML = WordsLogolepsy[getRndInteger(0, WordsLogolepsy.length)];
+				refresh()
 			}
+			//console.debug(WordsLogolepsy)
 
+			function refresh(){
+				if (WordsLogolepsy.length===0) {
+					document.getElementById("words").innerHTML = 'ERR';
+				}else{
+					document.getElementById("words").innerHTML = WordsLogolepsy[272/*getRndInteger(0, WordsLogolepsy.length)*/];
+				}
+			}
 
 
 
