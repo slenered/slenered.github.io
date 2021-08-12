@@ -93,14 +93,18 @@
 				text-align: center;
 				font-size: 175%;
 			}
-			#refresh{
-				position: relative;
-				z-index: 8;
-				left: 50%;
-				top: 600px;
-				font-size: 15px;
-			}
 
+			#refresh{
+				margin: 0;
+				position: absolute;
+				top: 500px;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			#refresh button{
+				font-size: 35px;
+			}
 
 
 
@@ -134,7 +138,8 @@
 			<div w3-include-html="/authors/corwyn/corwynNavBar.html"></div> 
 
 
-			<button id="refresh" onclick="refresh()">Next Word</button>
+		<div id="refresh"><button onclick="refresh()">Get New Word</button></div>
+
 			<p id="words">
 				default
 			</p>
@@ -183,6 +188,7 @@
 			var trackNum=0;
 			var trackNum2=0;
 			var WordWrap=170;
+			var WordNum=-1;
 
 			var Words = loadFile("/characters/corwyn/logolepsy.txt");
 			var WordsLogolepsy = [];
@@ -224,10 +230,11 @@
 			//console.debug(WordsLogolepsy)
 
 			function refresh(){
+				WordNum++
 				if (WordsLogolepsy.length===0) {
 					document.getElementById("words").innerHTML = 'ERR';
 				}else{
-					document.getElementById("words").innerHTML = WordsLogolepsy[272/*getRndInteger(0, WordsLogolepsy.length)*/];
+					document.getElementById("words").innerHTML = WordsLogolepsy[WordNum/*getRndInteger(0, WordsLogolepsy.length)272*/];
 				}
 			}
 
