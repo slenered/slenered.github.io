@@ -9,7 +9,9 @@
 	<body>
 		
 		<style>
-
+			:root{
+				--bodyHight: 1700px;
+			}
 
 			body{
 				background-color: white;;
@@ -143,7 +145,12 @@
 				width: 225;
 				height: 300;
 			}
-
+			#Page{
+				position: relative;
+				top: 0;
+				width: 100%;
+				height: var(--bodyHight);
+			}
 
 
 
@@ -152,7 +159,7 @@
 
 
 			#footer{
-				position: absolute;
+				position: relative;
 				background-color: rgb(65, 53, 53);
 				display: block;
 				width: 100%;

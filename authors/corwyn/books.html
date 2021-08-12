@@ -9,7 +9,9 @@
 	<body>
 		
 		<style>
-			
+			:root{
+				--bodyHight: 1700px;
+			}
 
 			body{
 				color: black;
@@ -84,15 +86,20 @@
 			@media (max-width: 1252px) {#right_top_top_text {right: 10% !important;}}
 			@media (max-width: 1252px) {#right_bottom_top_text {right: 1% !important;}}
 
-
+			#Page{
+				position: relative;
+				top: 0;
+				width: 100%;
+				height: var(--bodyHight);
+			}
 
 			footer{
-				position: absolute;
+				position: relative;
 				background-color: rgb(65, 53, 53);
 				display: block;
 				width: 100%;
 				height: 100px;
-				bottom: -1000px;
+				bottom: 0px;
 				overflow: hidden;
 				padding: 20px;
 				color: rgb(219, 196, 196);
