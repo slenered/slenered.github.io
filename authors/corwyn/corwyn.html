@@ -30,8 +30,8 @@
 
 			#left_top_text{
 				position: fixed;
-				top: 254px;
-				left: 20%;
+				top: 250px;
+				left: 12%;
 				font-size: 100px;
 				color: yellow;
 				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -60,14 +60,27 @@
 				transition: all 0.5s;
 			}
 
-
-			@media (max-width: 1252px) {#left_top_text {
+			
+			
+			@media (max-width: 1595px) {#right_top_top_text {right: 10% !important;}}
+			@media (max-width: 1595px) {#right_bottom_top_text {right: 1% !important;}}
+			@media (max-width: 1595px) {#left_top_text {
 				left: 1% !important;
-				top: 104px !important;
+				top: 70px !important;
 			}}
-			@media (max-width: 1252px) {#right_top_top_text {right: 10% !important;}}
-			@media (max-width: 1252px) {#right_bottom_top_text {right: 1% !important;}}
 
+			@media (max-width: 655px) {#right_top_top_text {font-size: 60px !important;}}
+			@media (max-width: 655px) {#right_bottom_top_text {font-size: 60px !important;}}
+		
+			@media (max-width: 655px) {#left_top_text {
+				font-size: 60px !important;
+			}}
+
+			
+
+
+
+			
 
 			@media (max-width: 1580px) {#leftChar p{left: 25px !important;}}
 			#leftChar p{
@@ -1213,12 +1226,13 @@
 						document.getElementById("right_top_top_text").style.top = "74px";
 						document.getElementById("right_bottom_top_text").style.top = "170px";
 
-						if(WinWidth < 1252){
+						if(WinWidth < 1595){
 							
 							document.getElementById("left_top_text").style.fontSize = "50px";
 							document.getElementById("right_top_top_text").style.fontSize = "50px";
 							document.getElementById("right_bottom_top_text").style.fontSize = "50px";
 
+							document.getElementById("right_bottom_top_text").style.top = "170px";
 							document.getElementById("right_top_top_text").style.top = "124px";
 						}
 						else{
@@ -1255,7 +1269,7 @@
 
 
 
-		console.log(WinWidth)
+			console.log(WinWidth)
 			window.onresize = function() {resize()};
 			window.onscroll = function() {scrollFunction()};
 			var british=0;
