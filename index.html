@@ -80,8 +80,8 @@
 		</header>
 
 		<div id="dynamic_box">
-			<button onclick="Author()">About the Author</button>
-			<button onclick="Testimonials()">Testimonials and Recommendations</button>
+			<button onclick="Author()" style="position: relative; left: 100px;">About the Author</button>
+			<button onclick="Testimonials()" style="position: relative; left: 100px;">Testimonials and Recommendations</button>
 			<button onclick="Whackedinhead()">Sioux Shaman Whackedinhead</button>
 			<button onclick="College()">Shelly in College</button>
 			<button onclick="Ex()">Email with Robert’s Ex</button>
@@ -108,6 +108,8 @@
 			document.getElementById("author").style.left = "100px";
 			document.getElementById("author").style.top = "0px";
 
+			document.getElementById("dynamic_box").style.width = "905px;";
+			
 		}
 
 
