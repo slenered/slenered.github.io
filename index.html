@@ -1,141 +1,178 @@
 <!DOCTYPE html>
 <html>
-	<!--Jadon Was Here!-->
 	<head>
 		<meta charset="utf-8">
 		<link rel=icon type=image/png href=/favicon.png>
-		<title>Main</title>
+		<title>Robert and Shelly</title>
 	</head>
 	<body>
-		
 		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: 'Times New Roman', Times, serif;
+			}
 			body{
-				background-color: silver;
+				background-color: #c3c3c3;
+			}
+
+			header img{
+				/* width: 1900px; */
+				width: 100%;
+				margin-bottom: 100px;
+
+			}
+			#dynamic_box{
+				transition-duration: 0.3s;
+				margin-left: 115px;
+				margin-bottom: 115px;
+				padding: 8px;
+				width: 905px;
+				height: 130px;
+				border: 2px;
+				/* border-style: solid;
+				border-color: purple; */
+				font-size: 24px;
+				overflow: hidden;
+			}
+			#dynamic_box button{
+				margin: 16px;
+				display: inline-block;
+				box-sizing: content-box;
+				border: 0;
+				background-color: #c3c3c3;
+				font-size: 24px;
+				font-family: 'Times New Roman', Times, serif;
+				color: blue;
+			}
+			#dynamic_box p{
+				margin: 16px;
+			}
+
+			#bookcover{
+				position: absolute;
+				left: 1000px;
+				top: 700px;
+			}
+			#bookcover img{
+				width: 843px;
+			}
+			#author{
+				position: absolute;
+				left: 1000px;
+				top: 1300px;
+			}
+			#author img{
+				width: 840px;
+			}
+			#author button{
+				display: inline-block;
+				box-sizing: content-box;
+				border: 0;
+				background-color: #c3c3c3;
+				font-size: 24px;
 				font-family: 'Times New Roman', Times, serif;
 			}
 
-			#kathrineG_text{
-				position: absolute;
-				top: 120px;
-				left: 8%;
-			}
-
-			#kathrineG{
-				position: relative;
-				top: 50px;
-				right: 6.4%;
-				width: 41.1%;
-			}
-
-			#kathrineG_hidden{
-				position: absolute;
-				top: 186px;
-				left: 7.1%;
-				width: 109px;
-				height: 109px;
-				opacity: 0.0;
-				overflow: hidden;
-				transition: all 0.3s;
-			}
-
-			#kathrineG_hidden img{
-				position: relative;
-				margin: -120px 0px 0px -300px;
-				width: 800px;
-				opacity: 0.90;
-				overflow: hidden;
-			}
-
-			#kathrineG_hidden:hover{
-				position: absolute;
-				top: 141px;
-				left: 4.8%;
-				width: 200px;
-				height: 200px;
-				opacity: 0.95;
-				z-index: 3;
-				overflow: hidden;
-			}
-
-
-			#Kniffen_text{
-				position: absolute;
-				top: 360px;
-				left: 13.7%;
-			}
-
-			#Kniffen{
-				position: absolute;
-				top: 326px;
-				left: 136px;
-				width: 109px;
-				height: 109px;
-				overflow: hidden;
-			}
-
-/*            #Kniffen img{
-				position: relative;
-				margin: -50px 0px 0px -55px;
-				width: 200px;
-				overflow: hidden;
-			}*/
-
-			#Kniffen_hidden{
-				position: absolute;
-				top: 326px;
-				left: 7.1%;
-				width: 109px;
-				height: 109px;
-				opacity: 0.00;
-				overflow: hidden;
-				transition: all 0.3s;
-			}
-
-			#Kniffen_hidden img{
-				position: relative;
-				margin: 0px 0px 0px -260px;
-				width: 800px;
-				opacity: 0.90;
-				overflow: hidden;
-			}
-
-			#Kniffen_hidden:hover{
-				position: absolute;
-				top: 280px;
-				left: 4.6%;
-				width: 200px;
-				height: 200px;
-				opacity: 0.95;
-				z-index: 3;
-				overflow: hidden;
-			}
-
-
-
-
-			#publisher{
-				position: absolute;
-				top: 250px;
-				right: 10%;
-				width: 700px;
-			}
-
-
 		</style>
-		<p style="font-size: 190%;">Image and blank pages are work in progess</p>
-		<div>
-			<p id="kathrineG_text"><img src="/authors/kathrineG.png" id="kathrineG">Kathrine Garvin</p>
-			<div id="kathrineG_hidden"><a href="/authors/author1.html"><img src="/nottop_banner.png"></a></div>
+		<header>
+			<img src="Header.png">
+		</header>
+
+		<div id="dynamic_box">
+			<button onclick="Author()">About the Author</button>
+			<button onclick="Testimonials()">Testimonials and Recommendations</button>
+			<button onclick="Whackedinhead()">Sioux Shaman Whackedinhead</button>
+			<button onclick="College()">Shelly in College</button>
+			<button onclick="Ex()">Email with Robert’s Ex</button>
+			<p id="TextBox"></p>
 		</div>
 
-		<div>
-			<p id="Kniffen_text">Rebekkah Kniffen</p>
-			<img src="/authors/Kniffen.png" id="Kniffen">
-			<div id="Kniffen_hidden"><a href="/authors/corwyn/corwyn.html"><img src="/top_banner.png"></a></div>
+		<div id="bookcover">
+			<a href="https://www.amazon.com/Robert-Shelly-206th-Street-Crossing/dp/B098GY3WYX/ref=sr_1_1?crid=3O91UL0YCL839&dchild=1&keywords=robert+and+shelly+yakov&qid=1635262038&qsid=134-5354740-6621008&sprefix=robert+and+shelly+yakov%2Caps%2C94&sr=8-1&sres=B098GY3WYX%2CB08SRFDFK2%2CB000093HYV%2CB01EZV35QU&srpt=ABIS_BOOK"target="_blank"><img src="Sale Link.png"></a>
 		</div>
 
-		<a href="/publisher.html"><img src="/Alonili_Press.jpg" id="publisher"></a>
+		<div id="author">
+			<button onclick="Author()"><img src="Author.png"></button>
+		</div>
 
+		<script>
+
+			var vWhackedinhead = loadFile("/Text/Sioux Shaman Whackedinhead.txt");
+			var vCollege = loadFile("/Text/Shelly in College.txt");
+			var vAuthor = loadFile("/Text/About the Author.txt");
+			var vTestimonials = loadFile("/Text/Testimonials and Recommendations.txt");
+			var vEx = loadFile("/Text/Email with Robert’s Ex.txt");
+
+			async function Whackedinhead(){
+					document.getElementById("TextBox").innerHTML = vWhackedinhead;
+					document.getElementById("dynamic_box").style.transitionDuration = "0s";
+					document.getElementById("dynamic_box").style.height = "130px";
+					await sleep(1)
+					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
+					document.getElementById("dynamic_box").style.height = "630px";
+			}
+			async function College(){
+					document.getElementById("TextBox").innerHTML = vCollege;
+					document.getElementById("dynamic_box").style.transitionDuration = "0s";
+					document.getElementById("dynamic_box").style.height = "130px";
+					await sleep(1)
+					document.getElementById("dynamic_box").style.transitionDuration = "1s";
+					document.getElementById("dynamic_box").style.height = "4160px";
+			}
+			async function Author(){
+					document.getElementById("TextBox").innerHTML = vAuthor;
+					document.getElementById("dynamic_box").style.transitionDuration = "0s";
+					document.getElementById("dynamic_box").style.height = "130px";
+					await sleep(1)
+					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
+					document.getElementById("dynamic_box").style.height = "300px";
+			}
+			async function Testimonials(){
+					document.getElementById("TextBox").innerHTML = vTestimonials;
+					document.getElementById("dynamic_box").style.transitionDuration = "0s";
+					document.getElementById("dynamic_box").style.height = "130px";
+					await sleep(1)
+					document.getElementById("dynamic_box").style.transitionDuration = "0.5s";
+					document.getElementById("dynamic_box").style.height = "1100px";
+			}
+			async function Ex(){
+					document.getElementById("TextBox").innerHTML = vEx;
+					document.getElementById("dynamic_box").style.transitionDuration = "0s";
+					document.getElementById("dynamic_box").style.height = "130px";
+					await sleep(1)
+					document.getElementById("dynamic_box").style.transitionDuration = "0.8s";
+					document.getElementById("dynamic_box").style.height = "2170px";
+			}
+
+
+
+			function loadFile(filePath) {
+				var result = null;
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", filePath, false);
+				xmlhttp.send();
+				if (xmlhttp.status==200) {
+					result = xmlhttp.responseText;
+				}
+				return result;
+			}
+			
+			
+		function sleep(milliseconds) {  
+			return new Promise(resolve => setTimeout(resolve, milliseconds));  
+		}
+
+		async function fun() {  
+		document.write('Hello World');  
+		for (let i = 1; i <=10 ; i++) {          
+			await sleep(2000);  
+			document.write( i + " " + "Welcome to the javaTpoint.com" + " " + "</br>");  
+		}  
+	}  
+	
+
+		</script>
 
 	</body>
 </html>
