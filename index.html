@@ -110,7 +110,7 @@
 			document.getElementById("author").style.top = "0px";
 
 			document.getElementById("dynamic_box").style.width = "945px";
-			dynamicBoxH = 316
+			dynamicBoxH = 1
 		}
 
 
@@ -134,7 +134,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "1s";
-					document.getElementById("dynamic_box").style.height = (4160+dynamicBoxH).toString() + "px";
+					document.getElementById("dynamic_box").style.height = (4160+516*dynamicBoxH).toString() + "px";
 			}
 			async function Author(){
 					document.getElementById("TextBox").innerHTML = vAuthor;
@@ -142,7 +142,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
-					document.getElementById("dynamic_box").style.height = (300+dynamicBoxH).toString() + "px";
+					document.getElementById("dynamic_box").style.height = (300+100*dynamicBoxH).toString() + "px";
 			}
 			async function Testimonials(){
 					document.getElementById("TextBox").innerHTML = vTestimonials;
@@ -150,7 +150,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.5s";
-					document.getElementById("dynamic_box").style.height = (1130+dynamicBoxH).toString() + "px";
+					document.getElementById("dynamic_box").style.height = (1130+280*dynamicBoxH).toString() + "px";
 			}
 			async function Ex(){
 					document.getElementById("TextBox").innerHTML = vEx;
@@ -158,7 +158,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.8s";
-					document.getElementById("dynamic_box").style.height = (2170+dynamicBoxH).toString() + "px";
+					document.getElementById("dynamic_box").style.height = (2170+316*dynamicBoxH).toString() + "px";
 			}
 
 
