@@ -28,7 +28,7 @@
 				margin-bottom: 115px;
 				padding: 8px;
 				width: 810px;
-				/* height: 130px; */
+				height: 130px;
 				border: 2px;
 				border-style: solid;
 				border-color: purple;
@@ -109,7 +109,7 @@
 			document.getElementById("author").style.left = "100px";
 			document.getElementById("author").style.top = "0px";
 
-			document.getElementById("dynamic_box").style.width = "950px";
+			document.getElementById("dynamic_box").style.width = "945px";
 			dynamicBoxH = 316
 		}
 
@@ -126,7 +126,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
-					document.getElementById("dynamic_box").style.height = "630px";
+					document.getElementById("dynamic_box").style.height = toString(630+dynamicBoxH) + "px";
 			}
 			async function College(){
 					document.getElementById("TextBox").innerHTML = vCollege;
@@ -134,7 +134,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "1s";
-					document.getElementById("dynamic_box").style.height = "4160px";
+					document.getElementById("dynamic_box").style.height = toString(4160+dynamicBoxH) + "px";
 			}
 			async function Author(){
 					document.getElementById("TextBox").innerHTML = vAuthor;
@@ -142,7 +142,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
-					document.getElementById("dynamic_box").style.height = "300px";
+					document.getElementById("dynamic_box").style.height = toString(300+dynamicBoxH) + "px";
 			}
 			async function Testimonials(){
 					document.getElementById("TextBox").innerHTML = vTestimonials;
@@ -150,7 +150,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.5s";
-					document.getElementById("dynamic_box").style.height = "1130px";
+					document.getElementById("dynamic_box").style.height = toString(1130+dynamicBoxH) + "px";
 			}
 			async function Ex(){
 					document.getElementById("TextBox").innerHTML = vEx;
@@ -158,7 +158,7 @@
 					document.getElementById("dynamic_box").style.height = "130px";
 					await sleep(1)
 					document.getElementById("dynamic_box").style.transitionDuration = "0.8s";
-					document.getElementById("dynamic_box").style.height = "2170px";
+					document.getElementById("dynamic_box").style.height = toString(2170+dynamicBoxH) + "px";
 			}
 
 
