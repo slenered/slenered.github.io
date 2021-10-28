@@ -123,11 +123,12 @@
 				dyBB[i].style.fontSize = "30px"
 			}
 			
-			document.getElementById("dynamic_box").style.marginLeft = "10px";
-			document.getElementById("dynamic_box").style.width = "100%";
-			document.getElementById("SalePng").style.width = (WinWidth).toString() + "px";
-			document.getElementById("AuthorPng").style.width = (WinWidth).toString() + "px";
-			document.getElementById("banner").style.width = (WinWidth).toString() + "px";
+			document.getElementById("dynamic_box").style.marginLeft = "0px";
+			document.getElementById("dynamic_box").style.width = (WinWidth-40).toString() + "px";
+			document.getElementById("dynamic_box").style.fontSize = "30px";
+			document.getElementById("SalePng").style.width = (WinWidth-20).toString() + "px";
+			document.getElementById("AuthorPng").style.width = (WinWidth-20).toString() + "px";
+			document.getElementById("banner").style.width = (WinWidth-20).toString() + "px";
 			document.getElementById("banner").src = "/MobileHeader.png"
 			dynamicBoxH = 1
 		}
