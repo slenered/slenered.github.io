@@ -44,7 +44,7 @@
 				font-size: 24px;
 				font-family: 'Times New Roman', Times, serif;
 				color: blue;
-				cursor:pointer;
+				cursor: pointer;
 			}
 			#dynamic_box p{
 				margin: 16px;
@@ -54,7 +54,7 @@
 				position: absolute;
 				left: 1000px;
 				top: 700px;
-				cursor:pointer;
+				cursor: pointer;
 			}
 			#bookcover img{
 				width: 843px;
@@ -74,13 +74,22 @@
 				background-color: #c3c3c3;
 				font-size: 24px;
 				font-family: 'Times New Roman', Times, serif;
-				cursor:pointer;
+				cursor: pointer;
 			}
 
 		</style>
 		<header>
 			<img src="Header.png">
 		</header>
+		
+		<div id="bookcover">
+			<a href="https://www.amazon.com/Robert-Shelly-206th-Street-Crossing/dp/B098GY3WYX/ref=sr_1_1?crid=3O91UL0YCL839&dchild=1&keywords=robert+and+shelly+yakov&qid=1635262038&qsid=134-5354740-6621008&sprefix=robert+and+shelly+yakov%2Caps%2C94&sr=8-1&sres=B098GY3WYX%2CB08SRFDFK2%2CB000093HYV%2CB01EZV35QU&srpt=ABIS_BOOK"target="_blank">
+				<img src="Sale Link.png" id="SalePng"></a>
+		</div>
+
+		<div id="author">
+			<button onclick="Author()"><img src="Author.png" id="AuthorPng"></button>
+		</div>
 
 		<div id="dynamic_box">
 			<button onclick="Author()" style="position: relative; left: 100px;" class="dynamicBoxButton">About the Author</button>
@@ -91,13 +100,6 @@
 			<p id="TextBox"></p>
 		</div>
 
-		<div id="bookcover">
-			<a href="https://www.amazon.com/Robert-Shelly-206th-Street-Crossing/dp/B098GY3WYX/ref=sr_1_1?crid=3O91UL0YCL839&dchild=1&keywords=robert+and+shelly+yakov&qid=1635262038&qsid=134-5354740-6621008&sprefix=robert+and+shelly+yakov%2Caps%2C94&sr=8-1&sres=B098GY3WYX%2CB08SRFDFK2%2CB000093HYV%2CB01EZV35QU&srpt=ABIS_BOOK"target="_blank"><img src="Sale Link.png"></a>
-		</div>
-
-		<div id="author">
-			<button onclick="Author()"><img src="Author.png"></button>
-		</div>
 
 		<script>
 			var dynamicBoxH = 0
@@ -114,12 +116,14 @@
 
 
 			var dyBB = document.getElementsByClassName("dynamicBoxButton")
-			for (let i=0; i<dyBB.length-1; i++){
+			for (let i=0; i<dyBB.length; i++){
 				dyBB[i].style.fontSize = "30px"
 			}
 			
 			document.getElementById("dynamic_box").style.marginLeft = "40px";
-			document.getElementById("dynamic_box").style.width = "50%";
+			document.getElementById("dynamic_box").style.width = "100%";
+			document.getElementById("SalePng").style.width = "100%";
+			document.getElementById("AuthorPng").style.width = "100%";
 			dynamicBoxH = 1
 		}
 
