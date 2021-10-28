@@ -79,7 +79,7 @@
 
 		</style>
 		<header>
-			<img src="Header.png">
+			<img src="Header.png" id="banner">
 		</header>
 		
 		<div id="bookcover">
@@ -92,8 +92,8 @@
 		</div>
 
 		<div id="dynamic_box">
-			<button onclick="Author()" style="position: relative; left: 100px;" class="dynamicBoxButton">About the Author</button>
-			<button onclick="Testimonials()" style="position: relative; left: 100px;" class="dynamicBoxButton">Testimonials and Recommendations</button>
+			<button onclick="Author()" style="position: relative; left: 110px;" class="dynamicBoxButton">About the Author</button>
+			<button onclick="Testimonials()" style="position: relative; left: 110px;" class="dynamicBoxButton">Testimonials and Recommendations</button>
 			<button onclick="Whackedinhead()" class="dynamicBoxButton">Sioux Shaman Whackedinhead</button>
 			<button onclick="College()" class="dynamicBoxButton">Shelly in College</button>
 			<button onclick="Ex()" class="dynamicBoxButton">Email with Robert’s Ex</button>
@@ -127,6 +127,7 @@
 			document.getElementById("dynamic_box").style.width = "100%";
 			document.getElementById("SalePng").style.width = (WinWidth).toString() + "px";
 			document.getElementById("AuthorPng").style.width = (WinWidth).toString() + "px";
+			document.getElementById("banner").style.width = (WinWidth).toString() + "px";
 			//dynamicBoxH = 1
 		}
 
