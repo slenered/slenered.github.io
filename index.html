@@ -99,8 +99,8 @@
 			<button onclick="Ex()" class="dynamicBoxButton">Email with Robert’s Ex</button>
 			<p id="TextBox"></p>
 		</div>
-
-
+		
+		
 		<script>
 			var dynamicBoxH = 0
 			WinWidth = window.innerWidth
@@ -121,11 +121,13 @@
 			var dyBB = document.getElementsByClassName("dynamicBoxButton")
 			for (let i=0; i<dyBB.length; i++){
 				dyBB[i].style.fontSize = "30px"
+				dyBB[i].style.position = "unset"
 			}
 			
 			document.getElementById("dynamic_box").style.marginLeft = "0px";
 			document.getElementById("dynamic_box").style.width = (WinWidth).toString() + "px";
 			document.getElementById("dynamic_box").style.fontSize = "32px";
+			document.getElementById("dynamic_box").style.height = "300px";
 			document.getElementById("SalePng").style.width = (WinWidth-20).toString() + "px";
 			document.getElementById("AuthorPng").style.width = (WinWidth-20).toString() + "px";
 			document.getElementById("banner").style.width = (WinWidth-20).toString() + "px";
