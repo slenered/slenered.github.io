@@ -185,7 +185,7 @@
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
 					document.getElementById("dynamic_box").style.height = (300+700*dynamicBoxH).toString() + "px";
 					dynamicClose = 3;
-					//if (dynamicBoxH==1) {window.open("#TextBox","_self");}
+					if (dynamicBoxH==1) {window.open("#TextBox","_self");}
 				}else if(dynamicClose!=3){
 					await FdynamicClose()
 					dynamicClose = 0
