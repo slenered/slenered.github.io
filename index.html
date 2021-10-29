@@ -108,9 +108,19 @@
 			WinWidth = window.innerWidth
 					|| document.documentElement.clientWidth
 					|| document.body.clientWidth;
+			WinHight = window.innerHeight
+					|| document.documentElement.clientHeight
+					|| document.body.clientHeight
+
+
 
 		if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
 			//document.getElementById("TextBox").innerHTML ="mobile";
+			if (WinWidth<WinHight){
+				var GetWidth = WinHight
+			}else{
+				var GetWidth = WinWidth
+			}
 			document.getElementById("bookcover").style.position = "relative";
 			document.getElementById("bookcover").style.left = "0px";
 			document.getElementById("bookcover").style.top = "0px";
@@ -127,14 +137,15 @@
 			}
 			
 			document.getElementById("dynamic_box").style.marginLeft = "0px";
-			document.getElementById("dynamic_box").style.width = (WinWidth-(WinWidth/100)*2).toString() + "px";
+			document.getElementById("dynamic_box").style.width = (GetWidth-(GetWidth/100)*2).toString() + "px";
 			document.getElementById("dynamic_box").style.fontSize = "50px";
 			document.getElementById("dynamic_box").style.height = "450px";
-			document.getElementById("SalePng").style.width = (WinWidth-20).toString() + "px";
-			document.getElementById("AuthorPng").style.width = (WinWidth-20).toString() + "px";
-			document.getElementById("banner").style.width = (WinWidth-20).toString() + "px";
+			document.getElementById("SalePng").style.width = (GetWidth-20).toString() + "px";
+			document.getElementById("AuthorPng").style.width = (GetWidth-20).toString() + "px";
+			document.getElementById("banner").style.width = (GetWidth-20).toString() + "px";
 			document.getElementById("banner").src = "/MobileHeader.png"
 			dynamicBoxH = 1
+
 		}
 
 
@@ -167,7 +178,7 @@
 					// document.getElementById("dynamic_box").style.height = "130px";
 					// await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "1s";
-					document.getElementById("dynamic_box").style.height = (4700+7500*dynamicBoxH).toString() + "px";
+					document.getElementById("dynamic_box").style.height = (4700+8000*dynamicBoxH).toString() + "px";
 					dynamicClose = 2;
 				}else if(dynamicClose!=2){
 					await FdynamicClose()
