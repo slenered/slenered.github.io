@@ -98,7 +98,6 @@
 			<button onclick="Whackedinhead()" class="dynamicBoxButton">Sioux Shaman Whackedinhead</button>
 			<button onclick="College()" class="dynamicBoxButton">Shelly in College</button>
 			<button onclick="Ex()" class="dynamicBoxButton">Email with Robert’s Ex</button>
-			<p></p>
 			<p id="TextBox"></p>
 		</div>
 		
@@ -228,7 +227,7 @@
 			}
 
 			async function FdynamicClose() {
-				document.getElementById("dynamic_box").style.height = (130+290*dynamicBoxH).toString() + "px";
+				document.getElementById("dynamic_box").style.height = (130+250*dynamicBoxH).toString() + "px";
 				await sleep(parseFloat(document.getElementById("dynamic_box").style.transitionDuration.slice(0,-1))*1000)
 				//document.getElementById("TextBox").innerHTML = "";
 			}
