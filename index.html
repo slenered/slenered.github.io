@@ -98,11 +98,12 @@
 			<button onclick="Whackedinhead()" class="dynamicBoxButton">Sioux Shaman Whackedinhead</button>
 			<button onclick="College()" class="dynamicBoxButton">Shelly in College</button>
 			<button onclick="Ex()" class="dynamicBoxButton">Email with Robert’s Ex</button>
-			<p id="TextBox"></p>
+			<p id="dynamicBoxH"></p>
 		</div>
 		
 		
 		<script>
+			var dynamicClose
 			var dynamicBoxH = 0
 			WinWidth = window.innerWidth
 					|| document.documentElement.clientWidth
@@ -144,46 +145,92 @@
 			var vEx = loadFile("/Text/Email with Robert’s Ex.txt");
 
 			async function Whackedinhead(){
+				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vWhackedinhead;
 					document.getElementById("dynamic_box").style.transitionDuration = "0s";
 					document.getElementById("dynamic_box").style.height = "130px";
-					await sleep(1)
+					await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
 					document.getElementById("dynamic_box").style.height = (670+1000*dynamicBoxH).toString() + "px";
+					dynamicClose = 1;
+				}else if(dynamicClose!=1){
+					await FdynamicClose()
+					dynamicClose = 0
+					Whackedinhead()
+				}else{FdynamicClose()
+					dynamicClose = 0}
 			}
 			async function College(){
+				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vCollege;
 					document.getElementById("dynamic_box").style.transitionDuration = "0s";
 					document.getElementById("dynamic_box").style.height = "130px";
-					await sleep(1)
+					await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "1s";
 					document.getElementById("dynamic_box").style.height = (4700+6000*dynamicBoxH).toString() + "px";
+					dynamicClose = 2;
+				}else if(dynamicClose!=2){
+					await FdynamicClose()
+					dynamicClose = 0
+					College()
+				}else{FdynamicClose()
+					dynamicClose = 0}
 			}
 			async function Author(){
+				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vAuthor;
 					document.getElementById("dynamic_box").style.transitionDuration = "0s";
 					document.getElementById("dynamic_box").style.height = "130px";
-					await sleep(1)
+					await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
 					document.getElementById("dynamic_box").style.height = (300+600*dynamicBoxH).toString() + "px";
+					dynamicClose = 3;
+					if (dynamicBoxH==1) {window.open("#TextBox","_self");}
+				}else if(dynamicClose!=3){
+					await FdynamicClose()
+					dynamicClose = 0
+					Author()
+				}else{FdynamicClose()
+					dynamicClose = 0}
 			}
 			async function Testimonials(){
+				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vTestimonials;
 					document.getElementById("dynamic_box").style.transitionDuration = "0s";
 					document.getElementById("dynamic_box").style.height = "130px";
-					await sleep(1)
+					await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.5s";
 					document.getElementById("dynamic_box").style.height = (1130+1300*dynamicBoxH).toString() + "px";
+					dynamicClose = 4;
+				}else if(dynamicClose!=4){
+					await FdynamicClose()
+					dynamicClose = 0
+					Testimonials()
+				}else{FdynamicClose()
+					dynamicClose = 0}
 			}
 			async function Ex(){
+				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vEx;
 					document.getElementById("dynamic_box").style.transitionDuration = "0s";
 					document.getElementById("dynamic_box").style.height = "130px";
-					await sleep(1)
+					await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.8s";
 					document.getElementById("dynamic_box").style.height = (2320+3000*dynamicBoxH).toString() + "px";
+					dynamicClose = 5;
+				}else if(dynamicClose!=5){
+					await FdynamicClose()
+					dynamicClose = 0
+					Ex()
+				}else{FdynamicClose()
+					dynamicClose = 0}
 			}
 
+			async function FdynamicClose() {
+				document.getElementById("dynamic_box").style.height = "130px";
+				await sleep(parseFloat(document.getElementById("dynamic_box").style.transitionDuration.slice(0,-1))*1000)
+				//document.getElementById("TextBox").innerHTML = "";
+			}
 
 
 			function loadFile(filePath) {
