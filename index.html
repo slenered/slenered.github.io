@@ -24,7 +24,7 @@
 			}
 			#dynamic_box{
 				transition-duration: 0.3s;
-				margin-left: 115px;
+				margin-left: 6.0430898%;
 				margin-bottom: 115px;
 				padding: 8px;
 				width: 43%;
@@ -47,26 +47,32 @@
 				cursor: pointer;
 				text-decoration: underline;
 			}
+			@media (max-width: 1680px) {.dynamicBoxButton {
+				font-size: 18px;
+			}}
+			@media (max-width: 1680px) {#dynamic_box {
+				font-size: 18px;
+			}}
 			#dynamic_box p{
 				margin: 16px;
 			}
 
 			#bookcover{
 				position: absolute;
-				left: 1000px;
+				left: 52.5486074%;
 				top: 700px;
 				cursor: pointer;
 			}
 			#bookcover img{
-				width: 843px;
+				width: 93.35548%;
 			}
 			#author{
 				position: absolute;
-				left: 1000px;
+				left: 52.5486074%;
 				top: 1300px;
 			}
 			#author img{
-				width: 840px;
+				width: 44.140830267%;
 			}
 			#author button{
 				display: inline-block;
@@ -105,12 +111,17 @@
 		<script>
 			var dynamicClose = 0
 			var dynamicBoxH = 0
+			var smallDisplay = 0
 			WinWidth = window.innerWidth
 					|| document.documentElement.clientWidth
 					|| document.body.clientWidth;
 			WinHight = window.innerHeight
 					|| document.documentElement.clientHeight
 					|| document.body.clientHeight
+
+			if(WinWidth <= 1680){
+				smallDisplay = 1
+			}
 
 
 
@@ -144,6 +155,7 @@
 			document.getElementById("AuthorPng").style.width = (GetWidth-20).toString() + "px";
 			document.getElementById("banner").style.width = (GetWidth-20).toString() + "px";
 			document.getElementById("banner").src = "/MobileHeader.png"
+			smallDisplay = 0
 			dynamicBoxH = 1
 
 		}
@@ -158,9 +170,6 @@
 			async function Whackedinhead(){
 				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vWhackedinhead;
-					// document.getElementById("dynamic_box").style.transitionDuration = "0s";
-					// document.getElementById("dynamic_box").style.height = "130px";
-					// await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
 					document.getElementById("dynamic_box").style.height = (670+1600*dynamicBoxH).toString() + "px";
 					dynamicClose = 1;
@@ -174,9 +183,6 @@
 			async function College(){
 				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vCollege;
-					// document.getElementById("dynamic_box").style.transitionDuration = "0s";
-					// document.getElementById("dynamic_box").style.height = "130px";
-					// await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "1s";
 					document.getElementById("dynamic_box").style.height = (4700+9300*dynamicBoxH).toString() + "px";
 					dynamicClose = 2;
@@ -190,9 +196,6 @@
 			async function Author(){
 				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vAuthor;
-					// document.getElementById("dynamic_box").style.transitionDuration = "0s";
-					// document.getElementById("dynamic_box").style.height = "130px";
-					// await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.3s";
 					document.getElementById("dynamic_box").style.height = (300+700*dynamicBoxH).toString() + "px";
 					dynamicClose = 3;
@@ -207,9 +210,6 @@
 			async function Testimonials(){
 				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vTestimonials;
-					// document.getElementById("dynamic_box").style.transitionDuration = "0s";
-					// document.getElementById("dynamic_box").style.height = "130px";
-					// await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.5s";
 					document.getElementById("dynamic_box").style.height = (1130+1900*dynamicBoxH).toString() + "px";
 					dynamicClose = 4;
@@ -223,9 +223,6 @@
 			async function Ex(){
 				if (dynamicClose==0){
 					document.getElementById("TextBox").innerHTML = vEx;
-					// document.getElementById("dynamic_box").style.transitionDuration = "0s";
-					// document.getElementById("dynamic_box").style.height = "130px";
-					// await sleep(1);
 					document.getElementById("dynamic_box").style.transitionDuration = "0.8s";
 					document.getElementById("dynamic_box").style.height = (2320+4600*dynamicBoxH).toString() + "px";
 					dynamicClose = 5;
@@ -238,9 +235,8 @@
 			}
 
 			async function FdynamicClose() {
-				document.getElementById("dynamic_box").style.height = (130+250*dynamicBoxH).toString() + "px";
+				document.getElementById("dynamic_box").style.height = (130+(250*dynamicBoxH)-(30*smallDisplay)).toString() + "px";
 				await sleep(parseFloat(document.getElementById("dynamic_box").style.transitionDuration.slice(0,-1))*1000)
-				//document.getElementById("TextBox").innerHTML = "";
 			}
 
 
