@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+	<!--Jadon Was Here!-->
+	<head>
+		<meta charset="utf-8">
+		<link rel=icon type=image/png href=/corwynfavicon.png>
+		<title>Rebekkah Kniffen - Tendrils of Nahasmen - Book One of The Children of Opella</title>
+	</head>
+	<body>
+		
+		<style>
+			:root{
+				--bodyHight: 1000px;
+			}
+
+			body{
+				color: black;
+				transition: all 0.3s;
+				background-color: white;;
+				overflow-x: hidden;
+				font-family: 'Times New Roman', Times, serif;
+			}
+			html{
+				scroll-behavior: smooth;
+			}
+
+			*{
+				margin: 0;
+				padding: 0;
+			}
+
+			
+
+
+
+
+			#top_banner{
+				position: fixed;
+				width: 100%;
+				height: 300px;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+
+
+
+			#left_top_text{
+				position: fixed;
+				top: 74px;
+				left: 20%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+
+
+
+			#right_top_top_text{
+				position: fixed;
+				top: 74px;
+				right: 23%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+			#right_bottom_top_text{
+				position: fixed;
+				top: 170px;
+				right: 11%;
+				font-size: 100px;
+				color: yellow;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				z-index: 5;
+				transition: all 0.5s;
+			}
+
+			@media (max-width: 1252px) {#left_top_text {
+				left: 1% !important;
+				top: 104px !important;
+			}}
+			@media (max-width: 1252px) {#right_top_top_text {right: 10% !important;}}
+			@media (max-width: 1252px) {#right_bottom_top_text {right: 1% !important;}}
+
+			#Kniffen1{
+				position: fixed;
+				top: 319px;
+				left: 50px;
+				width: 420px;
+				opacity: 100%;
+				z-index: 100;
+				transition-property: opacity;
+				transition-duration: 0.3s;
+			}
+
+			#Kniffen2{
+				position: fixed;
+				top: 319px;
+				left: 50px;
+				width: 420px;
+				opacity: 0%;
+				z-index: 100;
+				transition-property: opacity;
+				transition-duration: 0.3s;
+			}
+
+			#Kniffen_text{
+				position: absolute;
+				top: 0px;
+				left: 200%;
+				font-size: 30px;
+						}
+
+			#Kniffen{
+				position: absolute;
+				top: 300px;
+				left: 25%;
+				width: 1300px;
+				height: 200px;
+				overflow: hidden;
+				margin: 1%;
+				color: white;
+				background-color: rgba(0, 0, 0, 0.5);
+				transition: all 0.3s;
+				font-size: 25px;
+			}
+
+			#Bio_Button{
+				position: absolute;
+				top: 489px;
+				left: 91.1%;
+				width: 60px;
+				height: 30px;
+				font-size: 25px;
+				overflow: hidden;
+				color: white;
+				background-color: black;
+				border: 0;
+				transition: all 0.3s;
+			}
+
+			#tester{
+				opacity: 0;
+				width: 225;
+				height: 300;
+			}
+
+
+			#Page{
+				position: relative;
+				top: 0;
+				width: 100%;
+				height: var(--bodyHight);
+				transition: height 0.3s;
+			}
+
+
+
+
+
+			#footer{
+				position: relative;
+				background-color: rgb(65, 53, 53);
+				display: block;
+				width: 100%;
+				height: 100px;
+				bottom: 0px;
+				overflow: hidden;
+				padding: 20px;
+				color: rgb(219, 196, 196);
+			}
+		</style>
+	
+		<div id="Page">
+			<div w3-include-html="/authors/corwyn/corwynNavBar.html"></div> 
+
+			<!--<p id="Kniffen_text">Kniffen</p>
+			<img src="/characters/Kniffen1Big.png" id="tester">
+			<img src="/characters/Kniffen1Big.png" id="Kniffen1">
+			<img src="/characters/Kniffen2Big.png" id="Kniffen2">-->
+			<p id="Kniffen">
+				
+
+			</p>
+
+			<Button id="Bio_Button" onclick="BioButton()">More</Button>
+		</div>
+
+
+
+		<script>
+		var body = document.querySelector('body');
+		var root = document.querySelector(':root');
+		console.debug(document.cookie)
+		if (document.cookie === "DarkMode=true") {
+					var DarkMode=1;
+					body.style.setProperty('--DarkMode', '1');
+					document.body.style.color = "white";
+				}else{
+					var DarkMode=0;
+				}
+		console.debug(DarkMode)
+		
+
+
+
+			function DarkButton(){
+				if(DarkMode===0){
+					document.cookie = "DarkMode=true";
+					body.style.setProperty('--DarkMode', '1');
+					document.body.style.color = "white";
+					DarkMode=1
+				}else{
+					document.cookie = "DarkMode=false";
+					body.style.setProperty('--DarkMode', '0');
+					document.body.style.color = "black";
+					DarkMode=0
+				}
+				console.debug(DarkMode)
+			}
+
+
+			function resize() {
+				WinWidth = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
+
+						if(WinWidth < 846){
+							
+							document.getElementById("left_top_text").style.fontSize = "50px";
+							document.getElementById("right_top_top_text").style.fontSize = "50px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "50px";
+
+							document.getElementById("right_top_top_text").style.top = "124px";
+						}
+						else{
+							
+							document.getElementById("right_top_top_text").style.top = "74px";
+							document.getElementById("left_top_text").style.fontSize = "100px";
+							document.getElementById("right_top_top_text").style.fontSize = "100px";
+							document.getElementById("right_bottom_top_text").style.fontSize = "100px";
+
+					
+						}
+	
+			}
+			
+
+			WinWidth = window.innerWidth
+					|| document.documentElement.clientWidth
+					|| document.body.clientWidth;
+		console.log(WinWidth)
+			window.onresize = function() {resize()};
+
+
+
+
+			var ms=0;
+			var Kniffenimg=0;
+			var KniffenNum=0;
+
+			var d = new Date();
+
+			var KniffenBio = loadFile("/authors/bio/KniffenBio.txt");
+
+			document.getElementById("Kniffen").innerHTML = KniffenBio;
+			var KniffenLongBio = loadFile("/authors/bio/KniffenLongBio.txt");
+
+			var KniffenLongestBio = loadFile("/authors/bio/KniffenLongestBio.txt");
+
+			var KniffenPos = {
+				x: 50,
+				y: 319,
+				xx: 50+420,
+				yy: 319+560
+			}
+			async function BioButton(){
+				if (KniffenNum===0){
+					window.open("#top","_self");
+					document.getElementById("Kniffen").style.left = "8%";
+					document.getElementById("Kniffen").style.height = "700px";
+					document.getElementById("Kniffen").style.width = "1500px";
+					document.getElementById("Kniffen").innerHTML = KniffenLongBio;
+					document.getElementById("Bio_Button").innerHTML = "Much More";
+					document.getElementById("Bio_Button").style.top = "989px";
+					document.getElementById("Bio_Button").style.left = "80.9%";
+					document.getElementById("Bio_Button").style.width = "130px";
+					root.style.setProperty('--bodyHight', '1300px');
+					KniffenNum=1;
+				}else if(KniffenNum===1){
+					window.open("#top","_self");
+					document.getElementById("Kniffen").style.left = "8%";
+					document.getElementById("Kniffen").style.height = "2100px";
+					document.getElementById("Kniffen").style.width = "1600px";
+					document.getElementById("Kniffen").innerHTML = KniffenLongestBio;
+					document.getElementById("Bio_Button").innerHTML = "Less";
+					document.getElementById("Bio_Button").style.top = "2389px";
+					document.getElementById("Bio_Button").style.left = "89.9%";
+					document.getElementById("Bio_Button").style.width = "60px";
+					//document.getElementById("footer").style.bottom = "-2000px";
+					root.style.setProperty('--bodyHight', '2500px');
+					KniffenNum=2;
+				}else if(KniffenNum===2){
+					window.open("#top","_self");
+					await sleep(10)
+					document.getElementById("Kniffen").style.left = "25%";
+					document.getElementById("Kniffen").style.height = "200px";
+					document.getElementById("Kniffen").style.width = "1300px";
+					document.getElementById("Kniffen").innerHTML = KniffenBio;
+					document.getElementById("Bio_Button").innerHTML = "More";
+					document.getElementById("Bio_Button").style.top = "489px";
+					document.getElementById("Bio_Button").style.left = "91.1%";
+					//document.getElementById("Bio_Button").style.width = "60px";
+					root.style.setProperty('--bodyHight', '1000px');
+					KniffenNum=0;
+				}
+			}
+			function loadFile(filePath) {
+				var result = null;
+				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open("GET", filePath, false);
+				xmlhttp.send();
+				if (xmlhttp.status==200) {
+					result = xmlhttp.responseText;
+				}
+				return result;
+			}
+
+			var WinWidth = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+
+			var WinHeight = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+
+			function sleep(milliseconds) {  
+			return new Promise(resolve => setTimeout(resolve, milliseconds));  
+		}
+			/*(function() {
+			var mousePos;
+
+			document.onmousemove = handleMouseMove;
+			setInterval(getMousePosition, 100); // setInterval repeats every X ms
+
+			function handleMouseMove(event) {
+				var dot, eventDoc, doc, body, pageX, pageY;
+
+				event = event || window.event; // IE-ism
+
+				// If pageX/Y aren't available and clientX/Y are,
+				// calculate pageX/Y - logic taken from jQuery.
+				// (This is to support old IE)
+				if (event.pageX == null && event.clientX != null) {
+					eventDoc = (event.target && event.target.ownerDocument) || document;
+					doc = eventDoc.documentElement;
+					body = eventDoc.body;
+
+					event.pageX = event.clientX +
+					(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+					(doc && doc.clientLeft || body && body.clientLeft || 0);
+					event.pageY = event.clientY +
+					(doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+					(doc && doc.clientTop  || body && body.clientTop  || 0 );
+				}
+
+				mousePos = {
+					x: event.pageX,
+					y: event.pageY
+				};
+			}
+			function getMousePosition() {
+				var pos = mousePos;
+				if (!pos) {
+					// We haven't seen any movement yet
+				}
+				else {
+					if (KniffenPos.x <= pos.x && KniffenPos.xx >= pos.x && KniffenPos.y <= pos.y-document.documentElement.scrollTop && KniffenPos.yy >= pos.y-document.documentElement.scrollTop)
+					{
+						WinWidth = window.innerWidth
+						|| document.documentElement.clientWidth
+						|| document.body.clientWidth;
+
+						WinHeight = window.innerHeight
+						|| document.documentElement.clientHeight
+						|| document.body.clientHeight;
+
+						var rndX = getRndInteger(0,99);
+						var rndXx = getRndInteger(0,100);
+						rndX = (rndX + (rndXx/100))/100*WinWidth;
+						var rndY = getRndInteger(0,99);
+						var rndYy = getRndInteger(0,100);
+						rndY = (rndY + (rndYy/100))/100*WinHeight;
+						if(rndX+400 > WinWidth) {console.debug("X:"+rndX); rndX=rndX-(rndX+420-WinWidth)}
+						if(rndY+400 > WinHeight) {console.debug("Y:"+rndY); rndY=rndY-(rndY+560-WinHeight)}
+
+						var rndS = getRndInteger(225, 500);
+
+
+						console.debug("rndX:"+rndX);
+						console.debug("rndY:"+rndY);
+						console.debug("rndS:"+rndS);
+						
+
+						document.getElementById("tester").style.width = rndS.toString()+"px";
+
+						KniffenPos = {
+							x: rndX,
+							y: rndY,
+							xx: rndX+document.getElementById("tester").offsetWidth,
+							yy: rndY+document.getElementById("tester").offsetHeight
+						}
+						
+						document.getElementById("Kniffen1").style.left = KniffenPos.x.toString()+"px";
+						document.getElementById("Kniffen1").style.top = KniffenPos.y.toString()+"px";
+						document.getElementById("Kniffen1").style.width = rndS.toString()+"px";
+						document.getElementById("Kniffen2").style.left = KniffenPos.x.toString()+"px";
+						document.getElementById("Kniffen2").style.top = KniffenPos.y.toString()+"px";
+						document.getElementById("Kniffen2").style.width = rndS.toString()+"px";
+						console.debug(KniffenPos.x.toString());
+						console.debug(KniffenPos);
+
+						console.debug("offsetWidth:"+document.getElementById("Kniffen1").offsetWidth);
+						console.debug("offsetHeight:"+document.getElementById("Kniffen1").offsetHeight);
+						}
+
+					}
+					//console.debug(pos)
+					// Use pos.x and pos.y
+					ms++;
+
+						//console.debug(ms);
+
+						if(ms===40){
+
+							if(d.getMonth() === 3) {
+								
+								if(getRndInteger(0, 1000)===0){Kniffenimg=-301}
+							}
+							Kniffenimg++;
+
+
+							switch (Kniffenimg
+								
+							) {
+								case 1:
+									document.getElementById("Kniffen2").src = "/characters/Kniffen2Big.png";
+									document.getElementById("Kniffen1").style.opacity = "0%"
+									document.getElementById("Kniffen2").style.opacity = "100%"
+									document.getElementById("Kniffen1").style.transitionDuration = "2s"
+									document.getElementById("Kniffen2").style.transitionDuration = "1s"
+									Kniffenimg=-1;
+									ms=0;
+
+									//console.debug(Kniffenimg);
+									break;
+
+									case -300:
+									document.getElementById("Kniffen2").src = "/authors/Ohno.png";
+									document.getElementById("Kniffen1").style.opacity = "0%"
+									document.getElementById("Kniffen2").style.opacity = "100%"
+									document.getElementById("Kniffen1").style.transitionDuration = "2s"
+									document.getElementById("Kniffen2").style.transitionDuration = "1s"
+									Kniffenimg=-301;
+									ms=0;
+
+									//console.debug(Kniffenimg);
+									break;
+							
+								default:
+									document.getElementById("Kniffen1").src = "/characters/Kniffen1Big.png";
+									document.getElementById("Kniffen1").style.opacity = "100%"
+									document.getElementById("Kniffen2").style.opacity = "0%"
+									document.getElementById("Kniffen1").style.transitionDuration = "0s"
+									document.getElementById("Kniffen2").style.transitionDuration = "1s"
+									ms=0;
+									//console.debug(Kniffenimg);
+									break;
+							}
+
+				}
+			}*/
+		
+		
+		/*function getRndInteger(min, max) {
+				return Math.floor(Math.random() * (max - min)) + min;
+			}*/
+		
+
+		function includeHTML() {
+		var z, i, elmnt, file, xhttp;
+		/* Loop through a collection of all HTML elements: */
+		z = document.getElementsByTagName("*");
+		for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+				/* Make an HTTP request using the attribute value as the file name: */
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+					if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+					if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+					/* Remove the attribute, and call this function once more: */
+					elmnt.removeAttribute("w3-include-html");
+					includeHTML();
+				}
+				}
+				xhttp.open("GET", file, true);
+				xhttp.send();
+				/* Exit the function: */
+				return;
+			}
+		}
+		}
+		console.debug("includeHTML");
+		includeHTML();
+		</script>
+
+			<footer id="footer">
+
+				© JAG
+			</footer>
+	</body>
+</html>
