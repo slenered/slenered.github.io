@@ -8,6 +8,7 @@
 		"editor.mouseWheelZoom": true,
 		"explorer.incrementalNaming": "smart",
 		"search.collapseResults": "auto",
-		"workbench.editor.highlightModifiedTabs": true
+		"workbench.editor.highlightModifiedTabs": true,
+		"liveServer.settings.port": 5501
 	}
 }

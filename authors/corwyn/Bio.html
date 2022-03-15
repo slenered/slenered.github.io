@@ -20,7 +20,9 @@
 				overflow-x: hidden;
 				font-family: 'Times New Roman', Times, serif;
 			}
-			
+			html{
+				scroll-behavior: smooth;
+			}
 
 			*{
 				margin: 0;
@@ -155,6 +157,7 @@
 				top: 0;
 				width: 100%;
 				height: var(--bodyHight);
+				transition: height 0.3s;
 			}
 
 
@@ -277,7 +280,7 @@
 				xx: 50+420,
 				yy: 319+560
 			}
-			function BioButton(){
+			async function BioButton(){
 				if (KniffenNum===0){
 					window.open("#top","_self");
 					document.getElementById("Kniffen").style.left = "8%";
@@ -305,6 +308,7 @@
 					KniffenNum=2;
 				}else if(KniffenNum===2){
 					window.open("#top","_self");
+					await sleep(10)
 					document.getElementById("Kniffen").style.left = "25%";
 					document.getElementById("Kniffen").style.height = "200px";
 					document.getElementById("Kniffen").style.width = "1300px";
@@ -336,6 +340,9 @@
 			|| document.documentElement.clientHeight
 			|| document.body.clientHeight;
 
+			function sleep(milliseconds) {  
+			return new Promise(resolve => setTimeout(resolve, milliseconds));  
+		}
 			/*(function() {
 			var mousePos;
 
