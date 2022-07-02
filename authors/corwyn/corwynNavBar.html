@@ -45,7 +45,7 @@
 			padding: 20px 100px;
 			text-decoration: none;
 			font-size: 17px;
-			transition-property: width, height, top, left, font-size, color, background-color, z-index;
+			transition-property: width, height, top, font-size, color, background-color, z-index;
 			transition-duration: 0.3s !important;
 
 		
@@ -98,10 +98,9 @@
 		.topnav ul li.dropDown ul{
 			position: fixed;
 			float: left;    
-			top: -300px;
-			left: 0px;
-			transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-			transition-duration: 0.3s !important;
+			top: 25px;
+			left: -500px;
+			transition: width 0.3s, height 0.3s, top 0.3s, left 0s 0.4s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 		}
 
 		.topnav ul li.dropDown li.BookCover ul{
@@ -109,8 +108,7 @@
 			float: left;    
 			top: -157px;
 			left: 0px;
-			transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-			transition-duration: 0.3s !important;
+			transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 		}
 
 		.topnav ul li.dropDown li.BookCover ul li img{
@@ -118,14 +116,12 @@
 			height: 36px;*/
 			opacity: 0;
 
-			transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-			transition-duration: 0.3s !important;
+			transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 		}
 
 		.topnav a.active {
 			background-color: rgba(110, 110, 110, 0.5);
-			transition-property: width, height, top, left, font-size, color, background-color, z-index, opacity;
-			transition-duration: 0.3s !important;
+			transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 		
 		}
 		
@@ -134,6 +130,8 @@
 			position: fixed;
 			float: left;
 			top: 57px;
+			left: 0px;
+			transition: opacity .3s, top .3s, left 0s 0s !important;
 		}
 
 		.topnav ul li.dropDown:hover ul li.BookCover ul{
@@ -270,17 +268,17 @@
 
 
 
-		.topnav ul li a.navHome {
+		/* .topnav ul li a.Home {
 			background-color: rgba(85, 47, 47, 0.75);
 			color: white;
 		
 		}
 
-		.topnav ul li:hover a.navHome {
+		.topnav ul li:hover a.Home {
 			background-color: rgb(155, 29, 29, 0.75);
 			color: white;
 		
-		}
+		} */
 
 
 
@@ -376,13 +374,13 @@
 		
 	<ul>
 		<li class="dropDown" id="home">
-			<a href="/authors/corwyn/corwyn.html" class="navHome">Home</a>
+			<a href="/authors/corwyn/corwyn.html" class="Home">Home</a>
 				<ul>
 					<li><a href="/index.html" >Top Menu</a></li>
 				</ul>
 		</li>
-		<li>
-			<a href="/authors/corwyn/Bio.html">Bio</a>
+		<li id="bio">
+			<a href="/authors/corwyn/Bio.html" class="bio">Bio</a>
 		</li>
 		<!--<li class="dropDown" id="book">
 			<a href="/authors/corwyn/books.html">Books</a>
@@ -404,11 +402,11 @@
 		<li>
 			<a href="/audio.html">Audio</a>
 		</li>-->
-		<li>
-			<a href="/authors/corwyn/logolepsy.html">Logolepsy</a>
+		<li id="logolepsy">
+			<a href="/authors/corwyn/logolepsy.html" class="logolepsy">Logolepsy</a>
 		</li>
-		<li>
-			<a href="/authors/corwyn/corwyns Q&A.html">Corwyn's Q & A</a>
+		<li id="qasa">
+			<a href="/authors/corwyn/corwyns Q&A.html" class="qaa">Corwyn's Q & A</a>
 		</li>
 		<li class="dropDown" id="downArrow">
 			<a><img src="/downArrow.png" width="30px"></a>

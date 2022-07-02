@@ -7,135 +7,94 @@
 		<title>Main</title>
 	</head>
 	<body>
-		
+
 		<style>
 			body{
-				background-color: silver;
+				color: rgb(219, 226, 230);
 				font-family: 'Times New Roman', Times, serif;
+				/* height: 3000px; */
 			}
 
-			#kathrineG_text{
+			.topnav ul li a.Home {
+			background-color: rgba(85, 47, 47, 0.75);
+			color: white;
+		
+		}
+
+		.topnav ul li:hover a.Home {
+			background-color: rgb(155, 29, 29, 0.75);
+			color: white;
+		
+		}
+
+			#header{
+				height: 195px;
+				background-color: #2f2e2e;
+			}
+
+			#header li{
 				position: absolute;
-				top: 120px;
-				left: 8%;
+				top: -16px;
+				left: 44.4%;
 			}
 
-			#kathrineG{
-				position: relative;
+			#header li img{
+				position: absolute;
+				height: 119px;
+				left: 45%;
 				top: 50px;
-				right: 6.4%;
-				width: 41.1%;
 			}
 
-			#kathrineG_hidden{
+			#header li p{
 				position: absolute;
-				top: 186px;
-				left: 7.1%;
-				width: 109px;
-				height: 109px;
-				opacity: 0.0;
-				overflow: hidden;
-				transition: all 0.3s;
+				color: white;
+				font-size: 40px;
+				font-family: "PAPYRUS";
+				left: -20.3px;
+				top: 143px;
+				width: 230px;
 			}
-
-			#kathrineG_hidden img{
-				position: relative;
-				margin: -120px 0px 0px -300px;
-				width: 800px;
-				opacity: 0.90;
-				overflow: hidden;
-			}
-
-			#kathrineG_hidden:hover{
-				position: absolute;
-				top: 141px;
-				left: 4.8%;
-				width: 200px;
-				height: 200px;
-				opacity: 0.95;
-				z-index: 3;
-				overflow: hidden;
-			}
-
-
-			#Kniffen_text{
-				position: absolute;
-				top: 360px;
-				left: 13.7%;
-			}
-
-			#Kniffen{
-				position: absolute;
-				top: 326px;
-				left: 136px;
-				width: 109px;
-				height: 109px;
-				overflow: hidden;
-			}
-
-/*            #Kniffen img{
-				position: relative;
-				margin: -50px 0px 0px -55px;
-				width: 200px;
-				overflow: hidden;
-			}*/
-
-			#Kniffen_hidden{
-				position: absolute;
-				top: 326px;
-				left: 7.1%;
-				width: 109px;
-				height: 109px;
-				opacity: 0.00;
-				overflow: hidden;
-				transition: all 0.3s;
-			}
-
-			#Kniffen_hidden img{
-				position: relative;
-				margin: 0px 0px 0px -260px;
-				width: 800px;
-				opacity: 0.90;
-				overflow: hidden;
-			}
-
-			#Kniffen_hidden:hover{
-				position: absolute;
-				top: 280px;
-				left: 4.6%;
-				width: 200px;
-				height: 200px;
-				opacity: 0.95;
-				z-index: 3;
-				overflow: hidden;
-			}
-
-
-
-
-			#publisher{
-				position: absolute;
-				top: 250px;
-				right: 10%;
-				width: 700px;
-			}
-
-
 		</style>
-		<p style="font-size: 190%;">Image and blank pages are work in progess</p>
-		<div>
-			<p id="kathrineG_text"><img src="/authors/kathrineG.png" id="kathrineG">Kathrine Garvin</p>
-			<div id="kathrineG_hidden"><a href="/authors/author1.html"><img src="/nottop_banner.png"></a></div>
+		<div w3-include-html="NavBar.html"></div>
+
+
+		<div id="header">
+			<li>
+				<img src="White Alonili Logo.png">
+				<p>Alonili ᠎ Press</p>
+			</li>
 		</div>
 
-		<div>
-			<p id="Kniffen_text">Rebekkah Kniffen</p>
-			<img src="/authors/Kniffen.png" id="Kniffen">
-			<div id="Kniffen_hidden"><a href="/authors/corwyn/corwyn.html"><img src="/top_banner.png"></a></div>
-		</div>
 
-		<a href="/publisher.html"><img src="/Alonili_Press.jpg" id="publisher"></a>
-
-
+		<script>
+			function includeHTML() {
+				var z, i, elmnt, file, xhttp;
+				/* Loop through a collection of all HTML elements: */
+				z = document.getElementsByTagName("*");
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i];
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html");
+					if (file) {
+						/* Make an HTTP request using the attribute value as the file name: */
+						xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function() {
+						if (this.readyState == 4) {
+							if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+							if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+						}
+						xhttp.open("GET", file, true);
+						xhttp.send();
+						/* Exit the function: */
+						return;
+					}
+				}
+			}
+			includeHTML();
+		</script>
 	</body>
 </html>

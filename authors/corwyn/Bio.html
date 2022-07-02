@@ -29,10 +29,17 @@
 				padding: 0;
 			}
 
-			
+			.topnav ul li a.bio {
+			background-color: rgba(85, 47, 47, 0.75);
+			color: white;
+		
+		}
 
-
-
+		.topnav ul li:hover a.bio {
+			background-color: rgb(155, 29, 29, 0.75);
+			color: white;
+		
+		}
 
 			#top_banner{
 				position: fixed;
@@ -41,9 +48,6 @@
 				z-index: 5;
 				transition: all 0.5s;
 			}
-
-
-
 
 			#left_top_text{
 				position: fixed;
@@ -55,9 +59,6 @@
 				z-index: 5;
 				transition: all 0.5s;
 			}
-
-
-
 
 			#right_top_top_text{
 				position: fixed;
@@ -151,7 +152,6 @@
 				height: 300;
 			}
 
-
 			#Page{
 				position: relative;
 				top: 0;
@@ -159,10 +159,6 @@
 				height: var(--bodyHight);
 				transition: height 0.3s;
 			}
-
-
-
-
 
 			#footer{
 				position: relative;
@@ -192,8 +188,6 @@
 			<Button id="Bio_Button" onclick="BioButton()">More</Button>
 		</div>
 
-
-
 		<script>
 		var body = document.querySelector('body');
 		var root = document.querySelector(':root');
@@ -207,8 +201,6 @@
 				}
 		console.debug(DarkMode)
 		
-
-
 
 			function DarkButton(){
 				if(DarkMode===0){
@@ -224,7 +216,6 @@
 				}
 				console.debug(DarkMode)
 			}
-
 
 			function resize() {
 				WinWidth = window.innerWidth
@@ -248,18 +239,13 @@
 
 					
 						}
-	
 			}
 			
-
 			WinWidth = window.innerWidth
 					|| document.documentElement.clientWidth
 					|| document.body.clientWidth;
 		console.log(WinWidth)
 			window.onresize = function() {resize()};
-
-
-
 
 			var ms=0;
 			var Kniffenimg=0;

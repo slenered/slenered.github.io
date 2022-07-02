@@ -21,7 +21,17 @@
 				transition: all 0.3s;
 			}
 
-			
+			.topnav ul li a.Home {
+			background-color: rgba(85, 47, 47, 0.75);
+			color: white;
+		
+		}
+
+		.topnav ul li:hover a.Home {
+			background-color: rgb(155, 29, 29, 0.75);
+			color: white;
+		
+		}
 
 			*{
 				margin: 0;
@@ -1680,14 +1690,14 @@
 					document.getElementById("right_bottom_top_text").style.top = "170px";
 
 
-					if(WinWidth < 1252){
+				if(WinWidth < 1252){
 					document.getElementById("top_banner").style.fontSize = "50px";
 					document.getElementById("left_top_text").style.fontSize = "50px";
 					document.getElementById("right_top_top_text").style.fontSize = "50px";
 					document.getElementById("right_bottom_top_text").style.fontSize = "50px";
 
 					document.getElementById("right_top_top_text").style.top = "124px";
-					}else{
+				}else{
 					document.getElementById("top_banner").style.fontSize = "100px";
 					document.getElementById("left_top_text").style.fontSize = "100px";
 					document.getElementById("right_top_top_text").style.fontSize = "100px";
@@ -1710,31 +1720,31 @@
 				//console.debug(document.documentElement.scrollTop)
 			}
 			function includeHTML() {
-			var z, i, elmnt, file, xhttp;
-			/* Loop through a collection of all HTML elements: */
-			z = document.getElementsByTagName("*");
-			for (i = 0; i < z.length; i++) {
-				elmnt = z[i];
-				/*search for elements with a certain atrribute:*/
-				file = elmnt.getAttribute("w3-include-html");
-				if (file) {
-					/* Make an HTTP request using the attribute value as the file name: */
-					xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function() {
-					if (this.readyState == 4) {
-						if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-						if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-						/* Remove the attribute, and call this function once more: */
-						elmnt.removeAttribute("w3-include-html");
-						includeHTML();
+				var z, i, elmnt, file, xhttp;
+				/* Loop through a collection of all HTML elements: */
+				z = document.getElementsByTagName("*");
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i];
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html");
+					if (file) {
+						/* Make an HTTP request using the attribute value as the file name: */
+						xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function() {
+						if (this.readyState == 4) {
+							if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+							if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+						}
+						xhttp.open("GET", file, true);
+						xhttp.send();
+						/* Exit the function: */
+						return;
 					}
-					}
-					xhttp.open("GET", file, true);
-					xhttp.send();
-					/* Exit the function: */
-					return;
 				}
-			}
 			}
 			
 			includeHTML();
