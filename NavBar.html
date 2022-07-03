@@ -105,9 +105,10 @@
 	
 			.topnav ul li.dropDown ul{
 				position: fixed;
-				float: left;    
+				float: left;
 				top: 25px;
 				left: -500px;
+				width: 350px;
 				transition: width 0.3s, height 0.3s, top 0.3s, left 0s 0.4s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 			}
 	
@@ -137,9 +138,16 @@
 			.topnav ul li.dropDown:hover ul{
 				position: fixed;
 				float: left;
-				top: 57px;
+				top: 45px;
 				left: 0px;
+				width: 350px;
 				transition: opacity .3s, top .3s, left 0s 0s !important;
+			}
+
+			.topnav ul li.dropDown:hover ul{
+				position: fixed;
+				float: left;
+				left: 785px;
 			}
 	
 			.topnav ul li.dropDown:hover ul li.BookCover ul{
@@ -382,13 +390,19 @@
 			
 		<ul>
 			<li id="home">
-				<a href="" class="sHome">Home</a>
+				<a href="" class="home">Home</a>
 			</li>
 			<li id="WWA">
 				<a href="">Who We Are</a>
 			</li>
-			<li id="authors">
-				<a href="=">Our Authors</a>
+			<li class="dropDown" id="authors">
+				<a href="">Our Authors</a>
+				<ul>
+					<li>
+						<a href="">Katherine Munson</a>
+						<a href="">Rebekkah Kniffen</a>
+					</li>
+				</ul>
 			</li>
 			<li id="events">
 				<a href="">Events</a>
@@ -401,7 +415,6 @@
 				<ul>
 					<li>
 						<a href="">Who We Are</a>
-						<a href="">Logolepsy</a>
 						<a href="">Our Authors</a>
 						<a href="">Events</a>
 						<a href="">Contact Us</a>
