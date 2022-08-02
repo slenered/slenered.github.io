@@ -2,38 +2,34 @@
 <html>
 	<!--Jadon Was Here!-->
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 		<link rel=icon type=image/png href=/corwynfavicon.png>
-		<title>Rebekkah Kniffen - Tendrils of Nahasmen - Book One of The Children of Opella</title>
+		<title>
+			Rebekkah Kniffen - Tendrils of Nahasmen - Book One of The Children of
+			Opella
+		</title>
 	</head>
 	<body>
-		
 		<style>
-			:root{
+			:root {
 				--bodyHight: 1700px;
 			}
 
-			html{
+			html {
 				scroll-behavior: smooth;
 			}
 
-			body{
-				background-color: white;;
+			body {
+				background-color: white;
 				overflow-x: hidden;
-
 			}
 
-			*{
+			* {
 				margin: 0;
 				padding: 0;
 			}
 
-			
-
-
-
-
-			#top_banner{
+			#top_banner {
 				position: fixed;
 				width: 100%;
 				height: 300px;
@@ -41,10 +37,7 @@
 				transition: all 0.5s;
 			}
 
-
-
-
-			#left_top_text{
+			#left_top_text {
 				position: fixed;
 				top: 74px;
 				left: 20%;
@@ -55,10 +48,7 @@
 				transition: all 0.5s;
 			}
 
-
-
-
-			#right_top_top_text{
+			#right_top_top_text {
 				position: fixed;
 				top: 74px;
 				right: 23%;
@@ -69,7 +59,7 @@
 				transition: all 0.5s;
 			}
 
-			#right_bottom_top_text{
+			#right_bottom_top_text {
 				position: fixed;
 				top: 170px;
 				right: 11%;
@@ -80,14 +70,24 @@
 				transition: all 0.5s;
 			}
 
-			@media (max-width: 1252px) {#left_top_text {
-				left: 1% !important;
-				top: 104px !important;
-			}}
-			@media (max-width: 1252px) {#right_top_top_text {right: 10% !important;}}
-			@media (max-width: 1252px) {#right_bottom_top_text {right: 1% !important;}}
+			@media (max-width: 1252px) {
+				#left_top_text {
+					left: 1% !important;
+					top: 104px !important;
+				}
+			}
+			@media (max-width: 1252px) {
+				#right_top_top_text {
+					right: 10% !important;
+				}
+			}
+			@media (max-width: 1252px) {
+				#right_bottom_top_text {
+					right: 1% !important;
+				}
+			}
 
-			#corwyn1{
+			#corwyn1 {
 				position: fixed;
 				top: 319px;
 				left: 50px;
@@ -98,7 +98,7 @@
 				transition-duration: 0.3s;
 			}
 
-			#corwyn2{
+			#corwyn2 {
 				position: fixed;
 				top: 319px;
 				left: 50px;
@@ -109,14 +109,14 @@
 				transition-duration: 0.3s;
 			}
 
-			#corwyn_text{
+			#corwyn_text {
 				position: absolute;
 				top: 0px;
 				left: 200%;
 				font-size: 30px;
-						}
+			}
 
-			#corwyn{
+			#corwyn {
 				position: absolute;
 				top: 300px;
 				left: 25%;
@@ -130,7 +130,7 @@
 				font-size: 25px;
 			}
 
-			#corwyn_button{
+			#corwyn_button {
 				position: absolute;
 				top: 489px;
 				left: 91.1%;
@@ -144,25 +144,19 @@
 				transition: all 0.3s;
 			}
 
-			#tester{
+			#tester {
 				opacity: 0;
 				width: 225;
 				height: 300;
 			}
-			#Page{
+			#Page {
 				position: relative;
 				top: 0;
 				width: 100%;
 				height: var(--bodyHight);
 			}
 
-
-
-
-
-
-
-			#footer{
+			#footer {
 				position: relative;
 				background-color: rgb(65, 53, 53);
 				display: block;
@@ -174,63 +168,56 @@
 				color: rgb(219, 196, 196);
 			}
 		</style>
-	
-	<div w3-include-html="/authors/corwyn/corwynNavBar.html"></div> 
+
+		<div w3-include-html="/authors/corwyn/corwynNavBar.html"></div>
 
 		<p id="corwyn_text">Corwyn</p>
-		<img src="/characters/Corwyn1Big.png" id="tester">
-		<img src="/characters/Corwyn1Big.png" id="corwyn1">
-		<img src="/characters/Corwyn2Big.png" id="corwyn2">
-		<p id="corwyn">
-			
+		<img src="/characters/Corwyn1Big.png" id="tester" />
+		<img src="/characters/Corwyn1Big.png" id="corwyn1" />
+		<img src="/characters/Corwyn2Big.png" id="corwyn2" />
+		<p id="corwyn"></p>
 
-		</p>
-
-		<Button id="corwyn_button" onclick="corwynButton()">More
-		</Button>
-
-
-
+		<button id="corwyn_button" onclick="corwynButton()">More</button>
 
 		<script>
 			function resize() {
-				WinWidth = window.innerWidth
-					|| document.documentElement.clientWidth
-					|| document.body.clientWidth;
+				WinWidth =
+					window.innerWidth ||
+					document.documentElement.clientWidth ||
+					document.body.clientWidth;
 
-						if(WinWidth < 846){
-							
-							document.getElementById("left_top_text").style.fontSize = "50px";
-							document.getElementById("right_top_top_text").style.fontSize = "50px";
-							document.getElementById("right_bottom_top_text").style.fontSize = "50px";
+				if (WinWidth < 846) {
+					document.getElementById("left_top_text").style.fontSize = "50px";
+					document.getElementById("right_top_top_text").style.fontSize =
+						"50px";
+					document.getElementById("right_bottom_top_text").style.fontSize =
+						"50px";
 
-							document.getElementById("right_top_top_text").style.top = "124px";
-						}
-						else{
-							
-							document.getElementById("right_top_top_text").style.top = "74px";
-							document.getElementById("left_top_text").style.fontSize = "100px";
-							document.getElementById("right_top_top_text").style.fontSize = "100px";
-							document.getElementById("right_bottom_top_text").style.fontSize = "100px";
-
-					
-						}
-	
+					document.getElementById("right_top_top_text").style.top =
+						"124px";
+				} else {
+					document.getElementById("right_top_top_text").style.top = "74px";
+					document.getElementById("left_top_text").style.fontSize =
+						"100px";
+					document.getElementById("right_top_top_text").style.fontSize =
+						"100px";
+					document.getElementById("right_bottom_top_text").style.fontSize =
+						"100px";
+				}
 			}
-			
 
-			WinWidth = window.innerWidth
-					|| document.documentElement.clientWidth
-					|| document.body.clientWidth;
-			console.log(WinWidth)
-			window.onresize = function() {resize()};
+			WinWidth =
+				window.innerWidth ||
+				document.documentElement.clientWidth ||
+				document.body.clientWidth;
+			console.log(WinWidth);
+			window.onresize = function () {
+				resize();
+			};
 
-
-
-
-			var ms=0;
-			var corwynimg=0;
-			var corwynNum=0;
+			var ms = 0;
+			var corwynimg = 0;
+			var corwynNum = 0;
 
 			var d = new Date();
 
@@ -239,18 +226,20 @@
 			document.getElementById("corwyn").innerHTML = CorwynBio;
 			var CorwynLongBio = loadFile("/characters/bio/CorwynLongBio.txt");
 
-			var CorwynLongestBio = loadFile("/characters/bio/CorwynLongestBio.txt");
+			var CorwynLongestBio = loadFile(
+				"/characters/bio/CorwynLongestBio.txt"
+			);
 
 			var CorwynPos = {
 				x: 50,
 				y: 319,
-				xx: 50+420,
-				yy: 319+560
-			}
-			console.debug(CorwynPos)
-			function corwynButton(){
-				if (corwynNum===0){
-					window.open("#top","_self");
+				xx: 50 + 420,
+				yy: 319 + 560,
+			};
+			console.debug(CorwynPos);
+			function corwynButton() {
+				if (corwynNum === 0) {
+					window.open("#top", "_self");
 					document.getElementById("corwyn").style.left = "8%";
 					document.getElementById("corwyn").style.height = "700px";
 					document.getElementById("corwyn").style.width = "1500px";
@@ -259,9 +248,9 @@
 					document.getElementById("corwyn_button").style.top = "989px";
 					document.getElementById("corwyn_button").style.left = "80.9%";
 					document.getElementById("corwyn_button").style.width = "130px";
-					corwynNum=1;
-				}else if(corwynNum===1){
-					window.open("#top","_self");
+					corwynNum = 1;
+				} else if (corwynNum === 1) {
+					window.open("#top", "_self");
 					document.getElementById("corwyn").style.left = "8%";
 					document.getElementById("corwyn").style.height = "2100px";
 					document.getElementById("corwyn").style.width = "1600px";
@@ -271,9 +260,9 @@
 					document.getElementById("corwyn_button").style.left = "89.9%";
 					document.getElementById("corwyn_button").style.width = "60px";
 					document.getElementById("footer").style.bottom = "-2000px";
-					corwynNum=2;
-				}else if(corwynNum===2){
-					window.open("#top","_self");
+					corwynNum = 2;
+				} else if (corwynNum === 2) {
+					window.open("#top", "_self");
 					document.getElementById("corwyn").style.left = "25%";
 					document.getElementById("corwyn").style.height = "200px";
 					document.getElementById("corwyn").style.width = "1300px";
@@ -282,213 +271,260 @@
 					document.getElementById("corwyn_button").style.top = "489px";
 					document.getElementById("corwyn_button").style.left = "91.1%";
 					document.getElementById("corwyn_button").style.width = "60px";
-					corwynNum=0;
+					corwynNum = 0;
 				}
-
 			}
 			function loadFile(filePath) {
 				var result = null;
 				var xmlhttp = new XMLHttpRequest();
 				xmlhttp.open("GET", filePath, false);
 				xmlhttp.send();
-				if (xmlhttp.status==200) {
+				if (xmlhttp.status == 200) {
 					result = xmlhttp.responseText;
 				}
 				return result;
 			}
 
-			var WinWidth = window.innerWidth
-			|| document.documentElement.clientWidth
-			|| document.body.clientWidth;
+			var WinWidth =
+				window.innerWidth ||
+				document.documentElement.clientWidth ||
+				document.body.clientWidth;
 
-			var WinHeight = window.innerHeight
-			|| document.documentElement.clientHeight
-			|| document.body.clientHeight;
+			var WinHeight =
+				window.innerHeight ||
+				document.documentElement.clientHeight ||
+				document.body.clientHeight;
 
-			(function() {
-			var mousePos;
+			(function () {
+				var mousePos;
 
-			document.onmousemove = handleMouseMove;
-			setInterval(getMousePosition, 100); // setInterval repeats every X ms
+				document.onmousemove = handleMouseMove;
+				setInterval(getMousePosition, 100); // setInterval repeats every X ms
 
-			function handleMouseMove(event) {
-				var dot, eventDoc, doc, body, pageX, pageY;
+				function handleMouseMove(event) {
+					var dot, eventDoc, doc, body, pageX, pageY;
 
-				event = event || window.event; // IE-ism
+					event = event || window.event; // IE-ism
 
-				// If pageX/Y aren't available and clientX/Y are,
-				// calculate pageX/Y - logic taken from jQuery.
-				// (This is to support old IE)
-				if (event.pageX == null && event.clientX != null) {
-					eventDoc = (event.target && event.target.ownerDocument) || document;
-					doc = eventDoc.documentElement;
-					body = eventDoc.body;
+					// If pageX/Y aren't available and clientX/Y are,
+					// calculate pageX/Y - logic taken from jQuery.
+					// (This is to support old IE)
+					if (event.pageX == null && event.clientX != null) {
+						eventDoc =
+							(event.target && event.target.ownerDocument) || document;
+						doc = eventDoc.documentElement;
+						body = eventDoc.body;
 
-					event.pageX = event.clientX +
-					(doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-					(doc && doc.clientLeft || body && body.clientLeft || 0);
-					event.pageY = event.clientY +
-					(doc && doc.scrollTop  || body && body.scrollTop  || 0) -
-					(doc && doc.clientTop  || body && body.clientTop  || 0 );
+						event.pageX =
+							event.clientX +
+							((doc && doc.scrollLeft) ||
+								(body && body.scrollLeft) ||
+								0) -
+							((doc && doc.clientLeft) ||
+								(body && body.clientLeft) ||
+								0);
+						event.pageY =
+							event.clientY +
+							((doc && doc.scrollTop) || (body && body.scrollTop) || 0) -
+							((doc && doc.clientTop) || (body && body.clientTop) || 0);
+					}
+
+					mousePos = {
+						x: event.pageX,
+						y: event.pageY,
+					};
 				}
+				function getMousePosition() {
+					var pos = mousePos;
+					if (!pos) {
+						// We haven't seen any movement yet
+					} else {
+						if (
+							CorwynPos.x <= pos.x &&
+							CorwynPos.xx >= pos.x &&
+							CorwynPos.y <=
+								pos.y - document.documentElement.scrollTop &&
+							CorwynPos.yy >= pos.y - document.documentElement.scrollTop
+						) {
+							WinWidth =
+								window.innerWidth ||
+								document.documentElement.clientWidth ||
+								document.body.clientWidth;
 
-				mousePos = {
-					x: event.pageX,
-					y: event.pageY
-				};
-			}
-			function getMousePosition() {
-				var pos = mousePos;
-				if (!pos) {
-					// We haven't seen any movement yet
-				}
-				else {
-					if (CorwynPos.x <= pos.x && CorwynPos.xx >= pos.x && CorwynPos.y <= pos.y-document.documentElement.scrollTop && CorwynPos.yy >= pos.y-document.documentElement.scrollTop)
-					{
-						WinWidth = window.innerWidth
-						|| document.documentElement.clientWidth
-						|| document.body.clientWidth;
+							WinHeight =
+								window.innerHeight ||
+								document.documentElement.clientHeight ||
+								document.body.clientHeight;
 
-						WinHeight = window.innerHeight
-						|| document.documentElement.clientHeight
-						|| document.body.clientHeight;
+							var rndX = getRndInteger(0, 99);
+							var rndXx = getRndInteger(0, 100);
+							rndX = ((rndX + rndXx / 100) / 100) * WinWidth;
+							var rndY = getRndInteger(0, 99);
+							var rndYy = getRndInteger(0, 100);
+							rndY = ((rndY + rndYy / 100) / 100) * WinHeight;
+							if (rndX + 400 > WinWidth) {
+								console.debug("X:" + rndX);
+								rndX = rndX - (rndX + 420 - WinWidth);
+							}
+							if (rndY + 400 > WinHeight) {
+								console.debug("Y:" + rndY);
+								rndY = rndY - (rndY + 560 - WinHeight);
+							}
 
-						var rndX = getRndInteger(0,99);
-						var rndXx = getRndInteger(0,100);
-						rndX = (rndX + (rndXx/100))/100*WinWidth;
-						var rndY = getRndInteger(0,99);
-						var rndYy = getRndInteger(0,100);
-						rndY = (rndY + (rndYy/100))/100*WinHeight;
-						if(rndX+400 > WinWidth) {console.debug("X:"+rndX); rndX=rndX-(rndX+420-WinWidth)}
-						if(rndY+400 > WinHeight) {console.debug("Y:"+rndY); rndY=rndY-(rndY+560-WinHeight)}
+							var rndS = getRndInteger(225, 500);
 
-						var rndS = getRndInteger(225, 500);
+							console.debug("rndX:" + rndX);
+							console.debug("rndY:" + rndY);
+							console.debug("rndS:" + rndS);
 
+							document.getElementById("tester").style.width =
+								rndS.toString() + "px";
 
-						console.debug("rndX:"+rndX);
-						console.debug("rndY:"+rndY);
-						console.debug("rndS:"+rndS);
-						
+							CorwynPos = {
+								x: rndX,
+								y: rndY,
+								xx:
+									rndX + document.getElementById("tester").offsetWidth,
+								yy:
+									rndY +
+									document.getElementById("tester").offsetHeight,
+							};
 
-						document.getElementById("tester").style.width = rndS.toString()+"px";
+							document.getElementById("corwyn1").style.left =
+								CorwynPos.x.toString() + "px";
+							document.getElementById("corwyn1").style.top =
+								CorwynPos.y.toString() + "px";
+							document.getElementById("corwyn1").style.width =
+								rndS.toString() + "px";
+							document.getElementById("corwyn2").style.left =
+								CorwynPos.x.toString() + "px";
+							document.getElementById("corwyn2").style.top =
+								CorwynPos.y.toString() + "px";
+							document.getElementById("corwyn2").style.width =
+								rndS.toString() + "px";
+							console.debug(CorwynPos.x.toString());
+							console.debug(CorwynPos);
 
-						CorwynPos = {
-							x: rndX,
-							y: rndY,
-							xx: rndX+document.getElementById("tester").offsetWidth,
-							yy: rndY+document.getElementById("tester").offsetHeight
+							console.debug(
+								"offsetWidth:" +
+									document.getElementById("corwyn1").offsetWidth
+							);
+							console.debug(
+								"offsetHeight:" +
+									document.getElementById("corwyn1").offsetHeight
+							);
 						}
-						
-						document.getElementById("corwyn1").style.left = CorwynPos.x.toString()+"px";
-						document.getElementById("corwyn1").style.top = CorwynPos.y.toString()+"px";
-						document.getElementById("corwyn1").style.width = rndS.toString()+"px";
-						document.getElementById("corwyn2").style.left = CorwynPos.x.toString()+"px";
-						document.getElementById("corwyn2").style.top = CorwynPos.y.toString()+"px";
-						document.getElementById("corwyn2").style.width = rndS.toString()+"px";
-						console.debug(CorwynPos.x.toString());
-						console.debug(CorwynPos);
-
-						console.debug("offsetWidth:"+document.getElementById("corwyn1").offsetWidth);
-						console.debug("offsetHeight:"+document.getElementById("corwyn1").offsetHeight);
-						}
-
 					}
 					//console.debug(pos)
 					// Use pos.x and pos.y
 					ms++;
 
-						//console.debug(ms);
+					//console.debug(ms);
 
-						if(ms===40){
-
-							if(d.getMonth() === 3) {
-								
-								if(getRndInteger(0, 1000)===0){corwynimg=-301}
+					if (ms === 40) {
+						if (d.getMonth() === 3) {
+							if (getRndInteger(0, 1000) === 0) {
+								corwynimg = -301;
 							}
-							corwynimg++;
+						}
+						corwynimg++;
 
+						switch (corwynimg) {
+							case 1:
+								document.getElementById("corwyn2").src =
+									"/characters/Corwyn2Big.png";
+								document.getElementById("corwyn1").style.opacity = "0%";
+								document.getElementById("corwyn2").style.opacity =
+									"100%";
+								document.getElementById(
+									"corwyn1"
+								).style.transitionDuration = "2s";
+								document.getElementById(
+									"corwyn2"
+								).style.transitionDuration = "1s";
+								corwynimg = -1;
+								ms = 0;
 
-							switch (corwynimg
-								
-							) {
-								case 1:
-									document.getElementById("corwyn2").src = "/characters/Corwyn2Big.png";
-									document.getElementById("corwyn1").style.opacity = "0%"
-									document.getElementById("corwyn2").style.opacity = "100%"
-									document.getElementById("corwyn1").style.transitionDuration = "2s"
-									document.getElementById("corwyn2").style.transitionDuration = "1s"
-									corwynimg=-1;
-									ms=0;
+								//console.debug(corwynimg);
+								break;
 
-									//console.debug(corwynimg);
-									break;
+							case -300:
+								document.getElementById("corwyn2").src =
+									"/authors/Ohno.png";
+								document.getElementById("corwyn1").style.opacity = "0%";
+								document.getElementById("corwyn2").style.opacity =
+									"100%";
+								document.getElementById(
+									"corwyn1"
+								).style.transitionDuration = "2s";
+								document.getElementById(
+									"corwyn2"
+								).style.transitionDuration = "1s";
+								corwynimg = -301;
+								ms = 0;
 
-									case -300:
-									document.getElementById("corwyn2").src = "/authors/Ohno.png";
-									document.getElementById("corwyn1").style.opacity = "0%"
-									document.getElementById("corwyn2").style.opacity = "100%"
-									document.getElementById("corwyn1").style.transitionDuration = "2s"
-									document.getElementById("corwyn2").style.transitionDuration = "1s"
-									corwynimg=-301;
-									ms=0;
+								//console.debug(corwynimg);
+								break;
 
-									//console.debug(corwynimg);
-									break;
-							
-								default:
-									document.getElementById("corwyn1").src = "/characters/Corwyn1Big.png";
-									document.getElementById("corwyn1").style.opacity = "100%"
-									document.getElementById("corwyn2").style.opacity = "0%"
-									document.getElementById("corwyn1").style.transitionDuration = "0s"
-									document.getElementById("corwyn2").style.transitionDuration = "1s"
-									ms=0;
-									//console.debug(corwynimg);
-									break;
-							}
-
+							default:
+								document.getElementById("corwyn1").src =
+									"/characters/Corwyn1Big.png";
+								document.getElementById("corwyn1").style.opacity =
+									"100%";
+								document.getElementById("corwyn2").style.opacity = "0%";
+								document.getElementById(
+									"corwyn1"
+								).style.transitionDuration = "0s";
+								document.getElementById(
+									"corwyn2"
+								).style.transitionDuration = "1s";
+								ms = 0;
+								//console.debug(corwynimg);
+								break;
+						}
+					}
 				}
-			}
-		})();
-		
-		function getRndInteger(min, max) {
+			})();
+
+			function getRndInteger(min, max) {
 				return Math.floor(Math.random() * (max - min)) + min;
 			}
 
-
 			function includeHTML() {
-			var z, i, elmnt, file, xhttp;
-			/* Loop through a collection of all HTML elements: */
-			z = document.getElementsByTagName("*");
-			for (i = 0; i < z.length; i++) {
-				elmnt = z[i];
-				/*search for elements with a certain atrribute:*/
-				file = elmnt.getAttribute("w3-include-html");
-				if (file) {
-					/* Make an HTTP request using the attribute value as the file name: */
-					xhttp = new XMLHttpRequest();
-					xhttp.onreadystatechange = function() {
-					if (this.readyState == 4) {
-						if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-						if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-						/* Remove the attribute, and call this function once more: */
-						elmnt.removeAttribute("w3-include-html");
-						includeHTML();
+				var z, i, elmnt, file, xhttp;
+				/* Loop through a collection of all HTML elements: */
+				z = document.getElementsByTagName("*");
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i];
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html");
+					if (file) {
+						/* Make an HTTP request using the attribute value as the file name: */
+						xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function () {
+							if (this.readyState == 4) {
+								if (this.status == 200) {
+									elmnt.innerHTML = this.responseText;
+								}
+								if (this.status == 404) {
+									elmnt.innerHTML = "Page not found.";
+								}
+								/* Remove the attribute, and call this function once more: */
+								elmnt.removeAttribute("w3-include-html");
+								includeHTML();
+							}
+						};
+						xhttp.open("GET", file, true);
+						xhttp.send();
+						/* Exit the function: */
+						return;
 					}
-					}
-					xhttp.open("GET", file, true);
-					xhttp.send();
-					/* Exit the function: */
-					return;
 				}
 			}
-			}
-			
+
 			includeHTML();
 		</script>
 
-			<footer id="footer">
-
-				© JAG
-			</footer>
+		<footer id="footer">© JAG</footer>
 	</body>
 </html>

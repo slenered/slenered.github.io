@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
 	</head>
 	<body>
-
 		<style>
-
-			*{
+			* {
 				margin: 0;
 				padding: 0;
 			}
 
-			:root{
-					--DarkMode:0;
-				}
-				body::after {
-					background-color: rgb(49, 49, 49);
-					bottom: calc(var(--bodyHight) - var(--bodyHight) * 2 + 790px);/*-900px;*/
-					content: "";
-					position: absolute;
-					left: 0;
-					opacity: var(--DarkMode);
-					right: 0;
-					top: 0;
-					z-index: -1;
-					transition: all 0.3s;
-				}
+			:root {
+				--DarkMode: 0;
+			}
+			body::after {
+				background-color: rgb(49, 49, 49);
+				bottom: calc(
+					var(--bodyHight) - var(--bodyHight) * 2 + 790px
+				); /*-900px;*/
+				content: "";
+				position: absolute;
+				left: 0;
+				opacity: var(--DarkMode);
+				right: 0;
+				top: 0;
+				z-index: -1;
+				transition: all 0.3s;
+			}
 			/* Add a black background color to the top navigation */
 			.topnav {
 				position: absolute;
@@ -36,14 +36,13 @@
 				width: 53%;
 				overflow: hidden;
 				z-index: 6;
-			
 			}
-	
-			.topnav ul{
+
+			.topnav ul {
 				list-style: none;
 				line-height: 1;
 			}
-	
+
 			/* Style the links inside the navigation bar */
 			.topnav a {
 				float: left;
@@ -53,122 +52,190 @@
 				text-decoration: none;
 				font-family: verdana;
 				font-size: 17px;
-				transition-property: width, height, top, font-size, color, background-color, z-index;
+				transition-property: width, height, top, font-size, color,
+					background-color, z-index;
 				transition-duration: 0.3s !important;
-	
-			
 			}
-			
-			@media (max-width: 1636px) {.topnav ul li:nth-of-type(6) a {display: none;}}
-			@media (max-width: 1440px) {.topnav ul li:nth-of-type(5) a {display: none;}}
-			@media (max-width: 1167px) {.topnav ul li:nth-of-type(4) a {display: none;}}
-			@media (max-width: 925px) {.topnav ul li:nth-of-type(3) a {display: none;}}
-			@media (max-width: 683px) {.topnav ul li:nth-of-type(2) a {display: none;}}
-			@media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}
+
+			@media (max-width: 1636px) {
+				.topnav ul li:nth-of-type(6) a {
+					display: none;
+				}
+			}
+			@media (max-width: 1440px) {
+				.topnav ul li:nth-of-type(5) a {
+					display: none;
+				}
+			}
+			@media (max-width: 1167px) {
+				.topnav ul li:nth-of-type(4) a {
+					display: none;
+				}
+			}
+			@media (max-width: 925px) {
+				.topnav ul li:nth-of-type(3) a {
+					display: none;
+				}
+			}
+			@media (max-width: 683px) {
+				.topnav ul li:nth-of-type(2) a {
+					display: none;
+				}
+			}
+			@media (max-width: 227px) {
+				.topnav ul li:nth-of-type(1) a {
+					display: none;
+				}
+			}
 			/*@media (max-width: 1636px) {.topnav ul li:nth-of-type(6) a {display: none;}}
 			@media (max-width: 1440px) {.topnav ul li:nth-of-type(5) a {display: none;}}
 			@media (max-width: 1167px) {.topnav ul li:nth-of-type(4) a {display: none;}}
 			@media (max-width: 925px) {.topnav ul li:nth-of-type(3) a {display: none;}}
 			@media (max-width: 683px) {.topnav ul li:nth-of-type(2) a {display: none;}}
 			@media (max-width: 227px) {.topnav ul li:nth-of-type(1) a {display: none;}}*/
-	
-			@media (min-width: 1636px) {#downArrow {display: none;}}
-	
-			@media (min-width: 1636px) {li#downArrow ul li a:nth-of-type(5) {display: none;}}
-			@media (min-width: 1440px) {li#downArrow ul li a:nth-of-type(4) {display: none;}}
-			@media (min-width: 1167px) {li#downArrow ul li a:nth-of-type(3) {display: none;}}
-			@media (min-width: 925px) {li#downArrow ul li a:nth-of-type(2) {display: none;}}
-			@media (min-width: 683px) {li#downArrow ul li a:nth-of-type(1) {display: none;}}
-	
-		/*			@media (min-width: 1636px) {li#downArrow ul li{left: 1224px;}*/
-	
-			@media (max-width: 1636px) {li#downArrow ul li {left: 1224px;}}
-			@media (max-width: 1440px) {li#downArrow ul li {left: 952px;}}
-			@media (max-width: 1167px) {li#downArrow ul li {left: 710px;}}
-			@media (max-width: 925px) {li#downArrow ul li {left: 466px;}}
-			@media (max-width: 683px) {li#downArrow ul li {left: 242px;}}
-	
+
+			@media (min-width: 1636px) {
+				#downArrow {
+					display: none;
+				}
+			}
+
+			@media (min-width: 1636px) {
+				li#downArrow ul li a:nth-of-type(5) {
+					display: none;
+				}
+			}
+			@media (min-width: 1440px) {
+				li#downArrow ul li a:nth-of-type(4) {
+					display: none;
+				}
+			}
+			@media (min-width: 1167px) {
+				li#downArrow ul li a:nth-of-type(3) {
+					display: none;
+				}
+			}
+			@media (min-width: 925px) {
+				li#downArrow ul li a:nth-of-type(2) {
+					display: none;
+				}
+			}
+			@media (min-width: 683px) {
+				li#downArrow ul li a:nth-of-type(1) {
+					display: none;
+				}
+			}
+
+			/*			@media (min-width: 1636px) {li#downArrow ul li{left: 1224px;}*/
+
+			@media (max-width: 1636px) {
+				li#downArrow ul li {
+					left: 1224px;
+				}
+			}
+			@media (max-width: 1440px) {
+				li#downArrow ul li {
+					left: 952px;
+				}
+			}
+			@media (max-width: 1167px) {
+				li#downArrow ul li {
+					left: 710px;
+				}
+			}
+			@media (max-width: 925px) {
+				li#downArrow ul li {
+					left: 466px;
+				}
+			}
+			@media (max-width: 683px) {
+				li#downArrow ul li {
+					left: 242px;
+				}
+			}
+
 			/* Change the color of links on hover */
 			.topnav ul li:hover a {
-				background-color: rgba(221, 221, 221, 0.90);
+				background-color: rgba(221, 221, 221, 0.9);
 				color: black;
-			
 			}
-	
+
 			.topnav ul li:active a {
-				background-color: rgba(221, 221, 221, 0.90);
+				background-color: rgba(221, 221, 221, 0.9);
 				color: black;
-			
 			}
-	
+
 			/* Add a color to the active/current link */
-	
-			.topnav ul li.dropDown ul{
+
+			.topnav ul li.dropDown ul {
 				position: fixed;
 				float: left;
 				top: 25px;
 				left: -500px;
 				width: 350px;
-				transition: width 0.3s, height 0.3s, top 0.3s, left 0s 0.4s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
+				transition: width 0.3s, height 0.3s, top 0.3s, left 0s 0.4s,
+					font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s,
+					opacity 0.3s !important;
 			}
-	
-			.topnav ul li.dropDown li.BookCover ul{
+
+			.topnav ul li.dropDown li.BookCover ul {
 				position: fixed;
-				float: left;    
+				float: left;
 				top: -157px;
 				left: 0px;
-				transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
+				transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s,
+					color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 			}
-	
-			.topnav ul li.dropDown li.BookCover ul li img{
+
+			.topnav ul li.dropDown li.BookCover ul li img {
 				/*width: 273px;
 				height: 36px;*/
 				opacity: 0;
-	
-				transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
+
+				transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s,
+					color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 			}
-	
+
 			.topnav a.active {
-				background-color: rgba(110, 110, 110, 0.5);
-				transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s, color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
-			
+				background-color: rgba(255, 255, 255, 0.932);
+				transition: width 0.3s, height 0.3s, top 0.3s, font-size 0.3s,
+					color 0.3s, background-color 0.3s, z-index 0.3s, opacity 0.3s !important;
 			}
-			
-	
-			.topnav ul li.dropDown:hover ul{
+
+			.topnav ul li.dropDown:hover ul {
 				position: fixed;
 				float: left;
 				top: 45px;
 				left: 0px;
 				width: 350px;
-				transition: opacity .3s, top .3s, left 0s 0s !important;
+				transition: opacity 0.3s, top 0.3s, left 0s 0s !important;
 			}
 
-			.topnav ul li.dropDown:hover ul{
+			.topnav ul li.dropDown:hover ul {
 				position: fixed;
 				float: left;
 				left: 785px;
 			}
-	
-			.topnav ul li.dropDown:hover ul li.BookCover ul{
+
+			.topnav ul li.dropDown:hover ul li.BookCover ul {
 				position: fixed;
 				float: left;
 				top: 57px;
 			}
-	
-			.topnav ul li.dropDown:active ul{
+
+			.topnav ul li.dropDown:active ul {
 				position: fixed;
 				float: left;
 				top: 57px;
 			}
-	
-			.topnav ul li.dropDown:active ul li.BookCover ul{
+
+			.topnav ul li.dropDown:active ul li.BookCover ul {
 				position: fixed;
 				float: left;
 				top: 57px;
 			}
-	
-			.topnav ul li.dropDown ul li a{
+
+			.topnav ul li.dropDown ul li a {
 				float: left;
 				color: rgba(196, 35, 35, 0);
 				text-align: center;
@@ -178,11 +245,32 @@
 				white-space: nowrap;
 				overflow: hidden;
 				background-color: rgba(134, 105, 105, 0);
-				
-			
 			}
-	
-			.topnav ul li.dropDown:hover ul li a{
+
+			.topnav ul li.dropDown:hover ul li a {
+				float: left;
+				color: #000000;
+				text-align: center;
+				padding: 10px 3.62%;
+				font-size: 100%;
+				white-space: normal;
+				overflow: auto;
+				background-color: rgba(255, 255, 255, 0.932);
+			}
+
+			.topnav ul li.dropDown ul li a:hover {
+				background-color: rgba(221, 221, 221, 0.9);
+				color: black;
+			}
+
+			.topnav ul li.dropDown ul li.BookCover:hover ul {
+				position: fixed;
+				float: left;
+				top: 57px;
+				left: 0px;
+			}
+
+			.topnav ul li.dropDown:active ul li a {
 				float: left;
 				color: #f2f2f2;
 				text-align: center;
@@ -192,59 +280,20 @@
 				overflow: auto;
 				background-color: rgba(0, 0, 0, 0.5);
 			}
-	
-	
-			.topnav ul li.dropDown ul li a:hover{
-				background-color: rgba(221, 221, 221, 0.90);
+
+			.topnav ul li.dropDown ul li a:active {
+				background-color: rgba(221, 221, 221, 0.9);
 				color: black;
 			}
-	
-	
-	
-	
-			.topnav ul li.dropDown ul li.BookCover:hover ul{
+
+			.topnav ul li.dropDown ul li.BookCover:active ul {
 				position: fixed;
 				float: left;
 				top: 57px;
 				left: 0px;
 			}
-	
-	
-	
-	
-	
-			.topnav ul li.dropDown:active ul li a{
-				float: left;
-				color: #f2f2f2;
-				text-align: center;
-				padding: 10px 3.62%;
-				font-size: 100%;
-				white-space: normal;
-				overflow: auto;
-				background-color: rgba(0, 0, 0, 0.5);
-			}
-	
-	
-			.topnav ul li.dropDown ul li a:active{
-				background-color: rgba(221, 221, 221, 0.90);
-				color: black;
-			}
-	
-	
-	
-	
-			.topnav ul li.dropDown ul li.BookCover:active ul{
-				position: fixed;
-				float: left;
-				top: 57px;
-				left: 0px;
-			}
-	
-	
-	
-	
-	
-			.topnav ul li.dropDown ul li.BookCover ul li img{
+
+			.topnav ul li.dropDown ul li.BookCover ul li img {
 				position: relative;
 				float: left;
 				color: rgba(196, 35, 35, 0);
@@ -256,8 +305,8 @@
 				background-color: rgba(134, 105, 105, 0);
 				z-index: -10;
 			}
-	
-			.topnav ul li.dropDown ul li.BookCover:hover ul li img{
+
+			.topnav ul li.dropDown ul li.BookCover:hover ul li img {
 				float: left;
 				color: #f2f2f2;
 				text-align: center;
@@ -268,8 +317,8 @@
 				opacity: 1;
 				background-color: rgba(0, 0, 0, 0.5);
 			}
-	
-			.topnav ul li.dropDown ul li.BookCover:active ul li img{
+
+			.topnav ul li.dropDown ul li.BookCover:active ul li img {
 				float: left;
 				color: #f2f2f2;
 				text-align: center;
@@ -280,10 +329,7 @@
 				opacity: 1;
 				background-color: rgba(0, 0, 0, 0.5);
 			}
-	
-	
-	
-	
+
 			/* .topnav ul li a.Home {
 				background-color: rgba(85, 47, 47, 0.75);
 				color: white;
@@ -295,134 +341,130 @@
 				color: white;
 			
 			} */
-	
-	
-	
-			.topnav ul li.dropDown#home ul li{
+
+			.topnav ul li.dropDown#home ul li {
 				position: relative;
 				left: 0%;
 			}
-	
-			.topnav ul li.dropDown#home ul li a{
+
+			.topnav ul li.dropDown#home ul li a {
 				width: 226px;
 			}
-	
-			.topnav ul li.dropDown#book ul li{
+
+			.topnav ul li.dropDown#book ul li {
 				position: relative;
 				left: 466px;
 			}
-	
-			.topnav ul li.dropDown#book ul li a{
+
+			.topnav ul li.dropDown#book ul li a {
 				width: 227.5px;
 			}
-	
-			.topnav ul li.dropDown#book ul li.BookCover ul li{
+
+			.topnav ul li.dropDown#book ul li.BookCover ul li {
 				position: relative;
 				left: 710px;
 				width: 100px;
 			}
-	
-			.topnav ul li.dropDown#book ul li.BookCover ul li img{
+
+			.topnav ul li.dropDown#book ul li.BookCover ul li img {
 				width: 100px;
 			}
-	
-			#downArrow a{
+
+			#downArrow a {
 				padding: 19px 5px;
 			}
-	
-			li#downArrow ul li{
+
+			li#downArrow ul li {
 				position: fixed;
 				width: 80px;
 			}
-	
-			li#downArrow ul li a{
+
+			li#downArrow ul li a {
 				width: 80px;
 			}
-			#twitter{
+			#twitter {
 				position: fixed;
 				width: 50px;
 				top: 5px;
-				right:0px;
+				right: 0px;
 				z-index: 6;
 				transition: all 0.5s;
 			}
-			#twitter:hover{
-				top:0px
+			#twitter:hover {
+				top: 0px;
 			}
-			#instagram{
+			#instagram {
 				position: fixed;
 				width: 50px;
 				top: 5px;
-				right:50px;
+				right: 50px;
 				z-index: 6;
 				transition: all 0.5s;
 			}
-			#instagram:hover{
-			top:0px
+			#instagram:hover {
+				top: 0px;
 			}
-			#facebook{
+			#facebook {
 				position: fixed;
 				width: 50px;
 				top: 5px;
-				right:100px;
+				right: 100px;
 				z-index: 6;
 				transition: all 0.5s;
 			}
-			#facebook:hover{
-			top:0px		
+			#facebook:hover {
+				top: 0px;
 			}
-			#Dark_Button{
+			#Dark_Button {
 				position: fixed;
 				width: 50px;
 				top: 5px;
-				right:150px;
+				right: 150px;
 				z-index: 6;
 				color: white;
 				border: 0;
 				background-color: rgba(0, 0, 0, 0);
-				}
-				#Dark_Button img{
-					width: 50px;
-				}
+			}
+			#Dark_Button img {
+				width: 50px;
+			}
 		</style>
 
 		<div class="topnav">
-			
-		<ul>
-			<li id="home">
-				<a href="" class="home">Home</a>
-			</li>
-			<li id="WWA">
-				<a href="">Who We Are</a>
-			</li>
-			<li class="dropDown" id="authors">
-				<a href="">Our Authors</a>
-				<ul>
-					<li>
-						<a href="">Katherine Munson</a>
-						<a href="">Rebekkah Kniffen</a>
-					</li>
-				</ul>
-			</li>
-			<li id="events">
-				<a href="">Events</a>
-			</li>
-			<li id="contact">
-				<a href="">Contact Us</a>
-			</li>
-			<li class="dropDown" id="downArrow">
-				<a><img src="/downArrow.png" width="30px"></a>
-				<ul>
-					<li>
-						<a href="">Who We Are</a>
-						<a href="">Our Authors</a>
-						<a href="">Events</a>
-						<a href="">Contact Us</a>
-					</li>
-				</ul>
-			</li>
-
-		</ul>
+			<ul>
+				<li id="home">
+					<a href="" class="home">Home</a>
+				</li>
+				<li id="WWA">
+					<a href="">Who We Are</a>
+				</li>
+				<li class="dropDown" id="authors">
+					<a href="">Our Authors</a>
+					<ul>
+						<li>
+							<a href="">Katherine Munson</a>
+							<a href="">Rebekkah Kniffen</a>
+						</li>
+					</ul>
+				</li>
+				<li id="events">
+					<a href="">Events</a>
+				</li>
+				<li id="contact">
+					<a href="">Contact Us</a>
+				</li>
+				<li class="dropDown" id="downArrow">
+					<a><img src="/downArrow.png" width="30px" /></a>
+					<ul>
+						<li>
+							<a href="">Who We Are</a>
+							<a href="">Our Authors</a>
+							<a href="">Events</a>
+							<a href="">Contact Us</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
 		</div>
 
 		<!--
@@ -434,6 +476,5 @@
 				</div>
 			</p>
 		-->
-			
 	</body>
 </html>
