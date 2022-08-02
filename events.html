@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<!--Jadon Was Here!-->
+	<head>
+		<meta charset="utf-8" />
+		<link rel=icon type=image/png href=/favicon.png>
+		<title>Main</title>
+	</head>
+	<body>
+		<style>
+			body {
+				/* overflow: hidden; */
+				color: rgb(219, 226, 230);
+				font-family: "Times New Roman", Times, serif;
+				/* height: 3000px; */
+			}
+
+			.topnav ul li a.home {
+				background-color: rgba(67, 98, 78, 0.75);
+				color: white;
+			}
+
+			.topnav ul li:hover a.home {
+				background-color: rgba(1, 55, 20, 0.75);
+				color: white;
+			}
+
+			#header {
+				height: 195px;
+				background-color: #2f2e2e;
+			}
+
+			#header li {
+				position: absolute;
+				top: -16px;
+				left: 44.4%;
+			}
+
+			#header li img {
+				position: absolute;
+				height: 119px;
+				left: 45%;
+				top: 50px;
+			}
+
+			#header li p {
+				position: absolute;
+				color: white;
+				font-size: 40px;
+				font-family: "PAPYRUS";
+				left: -20.3px;
+				top: 143px;
+				width: 230px;
+			}
+			#image {
+				height: 511px;
+			}
+			#image div:nth-of-type(1) {
+				position: relative;
+				left: 500px;
+				top: 0px;
+				width: 525px;
+				height: 700px;
+				overflow: hidden;
+			}
+			#image div:nth-of-type(1) img {
+				height: 700px;
+				margin: 0px 0px 0px 0px;
+			}
+			#image div:nth-of-type(2) {
+				position: absolute;
+				border: black solid 1px;
+				color: black;
+				top: 257px;
+				left: 820px;
+				width: 395px;
+				height: 314px;
+				background-color: white;
+				padding: 10px 10px 10px 10px;
+				font-size: 18px;
+				font-family: "Times New Roman", Times, serif;
+			}
+			#image div:nth-of-type(2) p:nth-of-type(1) {
+				padding: 20px 20px 20px 20px;
+				font-size: 26px;
+				text-align: center;
+			}
+			#image div:nth-of-type(2) p:nth-of-type(2) {
+				text-align: center;
+			}
+		</style>
+		<div w3-include-html="NavBar.html"></div>
+
+		<div id="header">
+			<li>
+				<img src="White Alonili Logo.png" />
+				<p>Alonili Press</p>
+			</li>
+		</div>
+		<div id="image">
+			<div>
+				<img src="writing.png" />
+			</div>
+			<div>
+				<p>Upcoming Events</p>
+				<p>No upcoming events yet. Stay tuned!</p>
+			</div>
+		</div>
+
+		<div w3-include-html="footer.html"></div>
+
+		<script>
+			function includeHTML() {
+				var z, i, elmnt, file, xhttp;
+				/* Loop through a collection of all HTML elements: */
+				z = document.getElementsByTagName("*");
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i];
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html");
+					if (file) {
+						/* Make an HTTP request using the attribute value as the file name: */
+						xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function () {
+							if (this.readyState == 4) {
+								if (this.status == 200) {
+									elmnt.innerHTML = this.responseText;
+								}
+								if (this.status == 404) {
+									elmnt.innerHTML = "Page not found.";
+								}
+								/* Remove the attribute, and call this function once more: */
+								elmnt.removeAttribute("w3-include-html");
+								includeHTML();
+							}
+						};
+						xhttp.open("GET", file, true);
+						xhttp.send();
+						/* Exit the function: */
+						return;
+					}
+				}
+			}
+			includeHTML();
+		</script>
+	</body>
+</html>
