@@ -53,10 +53,14 @@
 				width: 230px;
 			}
 			#typewriter {
+				display: flex;
+				justify-content: center;
+			}
+			#typewriter img {
 				position: relative;
 				height: 500px;
 				top: 0px;
-				left: 29%;
+				/* left: 29%; */
 			}
 			#books {
 				position: relative;
@@ -66,18 +70,28 @@
 				text-align: center;
 				/* left: 44%; */
 			}
+			#showcase div {
+				position: relative;
+				/* left: -25px; */
+				display: flex;
+				justify-content: center;
+			}
 			#Book1 {
 				position: relative;
-				width: 301px;
-				left: 551px;
+				height: 464px;
+				/* left: 551px; */
+				padding-right: 70px;
+				padding-bottom: 10px;
 			}
 			#Book2 {
 				position: relative;
-				width: 301px;
-				left: 697px;
+				height: 464px;
+				/* left: 697px; */
+				padding-left: 70px;
+				padding-bottom: 10px;
 			}
 		</style>
-		<div w3-include-html="NavBar.html"></div>
+		<div w3-include-html="NavBar.html" class="NavContainer"></div>
 
 		<div id="header">
 			<li>
@@ -85,13 +99,15 @@
 				<p>Alonili Press</p>
 			</li>
 		</div>
-
-		<img src="typewriter.png" id="typewriter" />
-
-		<div>
+		<div id="typewriter">
+			<img src="typewriter.png" />
+		</div>
+		<div id="showcase">
 			<p id="books">New Books</p>
-			<img src="books/Tendrils of Nahasmen - Book One.png" id="Book1" />
-			<img src="books/Gap in the Road - Book One.png" id="Book2" />
+			<div>
+				<img src="books/Gap in the Road - Book One.png" id="Book1" />
+				<img src="books/Tendrils of Nahasmen - Book One.png" id="Book2" />
+			</div>
 		</div>
 
 		<div w3-include-html="footer.html"></div>

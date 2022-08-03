@@ -13,6 +13,10 @@
 			:root {
 				--DarkMode: 0;
 			}
+			.NavContainer {
+				display: flex;
+				justify-content: center;
+			}
 			body::after {
 				background-color: rgb(49, 49, 49);
 				bottom: calc(
@@ -31,9 +35,10 @@
 			.topnav {
 				position: absolute;
 				top: auto;
-				left: 23%;
-				background-color: rgba(255, 255, 255, 0.932);
-				width: 1008px;
+				/* left: 26.5%; */
+				background-color: rgba(255, 255, 255, 0);
+				width: 45.8%;
+				height: 45px;
 				overflow: hidden;
 				z-index: 6;
 			}
@@ -48,7 +53,7 @@
 				float: left;
 				color: #000000;
 				text-align: center;
-				padding: 14px 60px;
+				padding: 14px 46px;
 				text-decoration: none;
 				font-family: verdana;
 				font-size: 17px;
@@ -154,7 +159,12 @@
 				}
 			}
 
+			.topnav ul li a {
+				background-color: rgba(255, 255, 255, 0.932);
+				color: black;
+			}
 			/* Change the color of links on hover */
+
 			.topnav ul li:hover a {
 				background-color: rgba(221, 221, 221, 0.9);
 				color: black;
