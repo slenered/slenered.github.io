@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<!--Jadon Was Here!-->
+	<head>
+		<meta charset="utf-8" />
+		<link rel=icon type=image/png href=/favicon.png>
+		<title>Main</title>
+	</head>
+	<body>
+		<style>
+			body {
+				/* overflow: hidden; */
+				color: rgb(219, 226, 230);
+				font-family: "Times New Roman", Times, serif;
+				/* height: 3000px; */
+			}
+
+			.topnav ul li a.home {
+				background-color: rgba(67, 98, 78, 0.75);
+				color: white;
+			}
+
+			.topnav ul li:hover a.home {
+				background-color: rgba(1, 55, 20, 0.75);
+				color: white;
+			}
+
+			#header {
+				height: 195px;
+				background-color: #2f2e2e;
+			}
+
+			#header li {
+				position: absolute;
+				top: -16px;
+				left: 44.4%;
+			}
+
+			#header li img {
+				position: absolute;
+				height: 119px;
+				left: 45%;
+				top: 50px;
+			}
+
+			#header li p {
+				position: absolute;
+				color: white;
+				font-size: 40px;
+				font-family: "PAPYRUS";
+				left: -20.3px;
+				top: 143px;
+				width: 230px;
+			}
+
+			h1 {
+				position: relative;
+				top: 20px;
+				color: black;
+				text-align: center;
+				font-family: sans-serif;
+			}
+			#links {
+				list-style: none;
+				position: relative;
+				top: 50px;
+				text-align: center;
+				display: ruby block;
+				transition: all 0.3s;
+			}
+			#links div {
+				position: relative;
+				border: black 1px solid;
+				background-color: rgb(40, 38, 38);
+				padding: 10px;
+				width: 130px;
+				transition: inherit;
+			}
+			#links p {
+				position: relative;
+				text-decoration: none;
+				color: white;
+				transition: inherit;
+				user-select: none;
+			}
+			#links a {
+				text-decoration: none;
+			}
+			#links div:hover {
+				position: relative;
+				border: black 1px solid;
+				background-color: rgba(40, 38, 38, 0);
+				padding: 10px;
+				width: 130px;
+				transition: inherit;
+			}
+			#links div:hover p {
+				position: relative;
+				text-decoration: none;
+				color: black;
+				transition: inherit;
+			}
+			.active {
+				position: relative !important;
+				border: black 1px solid !important;
+				background-color: rgba(40, 38, 38, 0) !important;
+				padding: 10px !important;
+				width: 130px !important;
+				transition: inherit !important;
+			}
+			.active p {
+				position: relative !important;
+				text-decoration: none !important;
+				color: black !important;
+				transition: inherit !important;
+			}
+
+			#images {
+				position: relative;
+				top: 100px;
+				display: grid;
+				justify-items: center;
+			}
+			#images div {
+				position: relative;
+				display: flex;
+				/* justify-content: center; */
+			}
+			#images img {
+				position: relative;
+				/* width: 488px; */
+				padding: 50px;
+				/*padding-bottom: 0px; */
+			}
+			#images div div {
+				display: flex;
+				flex-direction: column;
+			}
+			#images div div div {
+				background-color: rgb(241, 236, 236);
+				padding: 10px;
+			}
+			#images p {
+				position: relative;
+				color: black;
+				text-align: center;
+				font-size: 45px;
+			}
+			#gap {
+				width: 488px;
+			}
+			#ashs {
+				width: 397px;
+			}
+			#snack {
+				width: 417px;
+			}
+			#sleeping {
+				width: 321px;
+				margin-bottom: 100px;
+			}
+		</style>
+		<div w3-include-html="\NavBar.html" class="NavContainer"></div>
+
+		<div id="header">
+			<li>
+				<img src="\White Alonili Logo.png" />
+				<p>Alonili Press</p>
+			</li>
+		</div>
+		<h1>Katherine Munson</h1>
+
+		<div id="links">
+			<a href="katherine.html">
+				<div>
+					<p>Bio</p>
+				</div>
+			</a>
+
+			<a href="characters.html">
+				<div>
+					<p>Characters</p>
+				</div>
+			</a>
+
+			<a href="world.html">
+				<div>
+					<p>World</p>
+				</div>
+			</a>
+
+			<a>
+				<div class="active">
+					<p>Books</p>
+				</div>
+			</a>
+		</div>
+
+		<div id="images">
+			<p>Novels</p>
+			<img src="/books/Gap in the Road - Book One.png" alt="" id="gap" />
+			<p>Short Stories</p>
+			<img src="/books/ashescover.png" alt="" id="ashs" />
+			<img src="/books/Midnight Snack.png" alt="" id="snack" />
+			<img src="/books/cover sleeping elephant.png" alt="" id="sleeping" />
+		</div>
+
+		<div w3-include-html="\footer.html"></div>
+
+		<script>
+			function includeHTML() {
+				var z, i, elmnt, file, xhttp;
+				/* Loop through a collection of all HTML elements: */
+				z = document.getElementsByTagName("*");
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i];
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html");
+					if (file) {
+						/* Make an HTTP request using the attribute value as the file name: */
+						xhttp = new XMLHttpRequest();
+						xhttp.onreadystatechange = function () {
+							if (this.readyState == 4) {
+								if (this.status == 200) {
+									elmnt.innerHTML = this.responseText;
+								}
+								if (this.status == 404) {
+									elmnt.innerHTML = "Page not found.";
+								}
+								/* Remove the attribute, and call this function once more: */
+								elmnt.removeAttribute("w3-include-html");
+								includeHTML();
+							}
+						};
+						xhttp.open("GET", file, true);
+						xhttp.send();
+						/* Exit the function: */
+						return;
+					}
+				}
+			}
+			includeHTML();
+		</script>
+	</body>
+</html>
