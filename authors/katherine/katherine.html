@@ -43,46 +43,6 @@
 				top: 50px;
 			}
 
-			#header li p {
-				position: absolute;
-				color: white;
-				font-size: 40px;
-				font-family: "PAPYRUS";
-				left: -20.3px;
-				top: 143px;
-				width: 230px;
-			}
-			#image {
-				position: relative;
-				top: 100px;
-				height: 860px;
-			}
-			#image div {
-				position: relative;
-				left: 500px;
-				top: 20px;
-				width: 460px;
-				height: auto;
-				overflow: hidden;
-			}
-			#image div img {
-				height: 597px;
-				margin: 0px 0px 0px 0px;
-			}
-			#image div:nth-of-type(2) {
-				position: absolute;
-				border: black solid 1px;
-				color: black;
-				top: 36px;
-				left: 855px;
-				width: 500px;
-				height: 530px;
-				background-color: white;
-				padding: 10px 10px 10px 10px;
-				font-size: 18px;
-				font-family: "Times New Roman", Times, serif;
-			}
-
 			h1 {
 				position: relative;
 				top: 20px;
@@ -144,6 +104,48 @@
 				color: black !important;
 				transition: inherit !important;
 			}
+
+			#header li p {
+				position: absolute;
+				color: white;
+				font-size: 40px;
+				font-family: "PAPYRUS";
+				left: -20.3px;
+				top: 143px;
+				width: 230px;
+			}
+			#image {
+				position: relative;
+				top: 100px;
+				height: 860px;
+				display: flex;
+				justify-content: center;
+			}
+			#image div {
+				position: relative;
+				/* left: -198px; */
+				top: 20px;
+				width: 873px;
+				height: 700px;
+				overflow: hidden;
+			}
+			#image div img {
+				height: 597px;
+				margin: 0px 0px 0px 0px;
+			}
+			#image div div {
+				position: relative;
+				border: black solid 1px;
+				color: black;
+				top: -582px;
+				left: 351px;
+				width: 500px;
+				height: 530px;
+				background-color: white;
+				padding: 10px 10px 10px 10px;
+				font-size: 18px;
+				font-family: "Times New Roman", Times, serif;
+			}
 		</style>
 		<div w3-include-html="\NavBar.html" class="NavContainer"></div>
 
@@ -184,24 +186,25 @@
 		<div id="image">
 			<div>
 				<img src="images/katherine.png" />
-			</div>
-			<div>
-				<p>
-					Katherine Munson is an Oregon author who began writing stories at
-					four years old. Her very first story was inspired by an ugly
-					hand-me-down doll, Grumpy Gorana, who became the sympathetic
-					villain in a series of superhero books. Ever since then,
-					Katherine has been unable to stop telling stories, whether on the
-					page or through other art forms such as music, dance, or theatre.
-					Today, among many other projects, she continues to write and
-					rewrite the books in her Eye of the Master series, which she
-					started in 2010. Other facts about Katherine include that she is
-					the oldest of six siblings, one of whom is also a writer. She is
-					the proud owner of a beautiful python named Ariadne, and even
-					more proudly the wife of her sweet and goofy husband, Garrett.
-					She graduated from Corban University in 2019 with a double major
-					in Creative Writing and General Psychology.
-				</p>
+				<div>
+					<p>
+						Katherine Munson is an Oregon author who began writing stories
+						at four years old. Her very first story was inspired by an
+						ugly hand-me-down doll, Grumpy Gorana, who became the
+						sympathetic villain in a series of superhero books. Ever since
+						then, Katherine has been unable to stop telling stories,
+						whether on the page or through other art forms such as music,
+						dance, or theatre. Today, among many other projects, she
+						continues to write and rewrite the books in her Eye of the
+						Master series, which she started in 2010. Other facts about
+						Katherine include that she is the oldest of six siblings, one
+						of whom is also a writer. She is the proud owner of a
+						beautiful python named Ariadne, and even more proudly the wife
+						of her sweet and goofy husband, Garrett. She graduated from
+						Corban University in 2019 with a double major in Creative
+						Writing and General Psychology.
+					</p>
+				</div>
 			</div>
 		</div>
 
